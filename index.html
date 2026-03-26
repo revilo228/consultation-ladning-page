@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rafi's World — Stop Guessing. Start Knowing.</title>
+<title>The Entrepreneur's Numerology Playbook 2026 — Stop Guessing When to Move</title>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -12,12 +12,10 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "u7qcnghg1s");
 </script>
-<script src="https://fast.wistia.com/embed/medias/1mjtycwa3l.jsonp" async></script>
-<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 <style>
 /* ============================================
    DESIGN SYSTEM — DARK LUXURY / EDITORIAL
-   Matching Gap & Bridge guide aesthetic
+   Matching existing Rafi's World aesthetic
    ============================================ */
 :root {
   --bg: #0C0A09;
@@ -40,7 +38,6 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
@@ -60,7 +57,6 @@ body {
    UTILITY
    ============================================ */
 .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-.container-wide { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
 .section-label {
   display: inline-flex;
@@ -126,7 +122,7 @@ strong.white { color: var(--text); }
 .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 20px var(--amber-glow); }
 
 /* ============================================
-   URGENCY BANNER
+   URGENCY BANNER — Maciek: 48hr urgency code
    ============================================ */
 .urgency-bar {
   background: linear-gradient(90deg, var(--amber-dim), rgba(245,158,11,0.15));
@@ -150,8 +146,7 @@ strong.white { color: var(--text); }
 }
 
 /* ============================================
-   HERO / ATF (Above The Fold)
-   Maciek: VSL left, order form right on desktop
+   HERO / ATF — Maciek: VSL left, form right
    ============================================ */
 .hero {
   padding: 60px 0 80px;
@@ -168,7 +163,7 @@ strong.white { color: var(--text); }
   pointer-events: none;
 }
 
-/* ICP Callout — Maciek: eyebrow section */
+/* ICP Callout — Maciek: eyebrow hook calling out dream ICP */
 .icp-callout {
   text-align: center;
   margin-bottom: 12px;
@@ -195,7 +190,7 @@ strong.white { color: var(--text); }
   font-size: clamp(36px, 5vw, 64px);
   font-weight: 400;
   line-height: 1.15;
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
 }
 .hero-headline h1 em { color: var(--amber); font-style: italic; }
@@ -209,7 +204,7 @@ strong.white { color: var(--text); }
   line-height: 1.6;
 }
 
-/* ATF Layout: VSL + Form */
+/* ATF Grid — Maciek: VSL + Order Form */
 .atf-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -218,14 +213,11 @@ strong.white { color: var(--text); }
   max-width: 1000px;
   margin: 0 auto;
 }
-
 @media (max-width: 900px) {
-  .atf-grid {
-    grid-template-columns: 1fr;
-  }
+  .atf-grid { grid-template-columns: 1fr; }
 }
 
-/* VSL */
+/* VSL Wrapper */
 .vsl-wrapper {
   background: var(--surface);
   border: 1px solid var(--surface2);
@@ -233,28 +225,113 @@ strong.white { color: var(--text); }
   overflow: hidden;
   position: relative;
 }
-.vsl-wrapper::after {
-  content: '▶ WATCH: Why 90% of "self-help" fails you';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  background: linear-gradient(0deg, rgba(12,10,9,0.95), transparent);
-  padding: 40px 20px 16px;
+
+/* Product Preview — Calendar mockup */
+.product-preview {
+  position: relative;
+  padding: 48px 32px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(245,158,11,0.08), transparent);
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.product-preview .calendar-icon {
+  font-size: 72px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 4px 24px rgba(245,158,11,0.3));
+}
+.product-preview h3 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+.product-preview .edition {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 16px;
+}
+.product-preview .preview-features {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product-preview .preview-feat {
+  background: var(--bg);
+  border: 1px solid var(--surface2);
+  border-radius: 8px;
+  padding: 8px 14px;
   font-size: 12px;
+  color: var(--text-dim);
   font-weight: 600;
+}
+.product-preview .preview-feat span { color: var(--amber); margin-right: 4px; }
+
+/* Sample Entry Preview */
+.sample-entry {
+  background: var(--bg);
+  border: 1px solid var(--surface2);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 24px;
+  text-align: left;
+  max-width: 380px;
+  width: 100%;
+}
+.sample-entry .sample-date {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 8px;
+}
+.sample-entry .sample-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.sample-entry .sample-body {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+.sample-entry .sample-avoid {
+  font-size: 12px;
+  color: var(--rose);
+  margin-top: 8px;
+  font-weight: 600;
+}
+.sample-entry .sample-blur {
+  margin-top: 12px;
+  height: 40px;
+  background: linear-gradient(180deg, var(--text-muted), transparent);
+  border-radius: 4px;
+  opacity: 0.15;
+  position: relative;
+}
+.sample-entry .sample-blur::after {
+  content: '365 more entries inside...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 11px;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--amber);
-  text-align: center;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.5s;
+  opacity: 1;
+  white-space: nowrap;
 }
-.vsl-wrapper:hover::after { opacity: 1; }
 
-.wistia_responsive_padding { padding: 56.25% 0 0 0; position: relative; }
-.wistia_responsive_wrapper { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
-
-/* Mini Order Form / CTA Panel */
+/* CTA Panel / Order Form — Maciek: 2-step order form concept */
 .cta-panel {
   background: var(--surface);
   border: 1px solid var(--surface2);
@@ -295,6 +372,29 @@ strong.white { color: var(--text); }
   margin-bottom: 20px;
 }
 
+/* NESB Badges — Maciek: New Easy Safe Big */
+.nesb-badges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.nesb-badge {
+  background: rgba(245,158,11,0.06);
+  border: 1px solid rgba(245,158,11,0.15);
+  border-radius: 8px;
+  padding: 10px 12px;
+  text-align: center;
+}
+.nesb-badge .nesb-icon { font-size: 18px; margin-bottom: 4px; }
+.nesb-badge .nesb-text {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+}
+.nesb-badge .nesb-text strong { color: var(--text); }
+
 .cta-checklist {
   list-style: none;
   margin-bottom: 24px;
@@ -312,6 +412,67 @@ strong.white { color: var(--text); }
   color: var(--emerald);
   font-weight: 700;
   flex-shrink: 0;
+}
+
+/* Order Bump — Maciek: order bump as missing piece */
+.order-bump {
+  background: rgba(34, 211, 238, 0.06);
+  border: 2px dashed var(--cyan);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+.order-bump-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.order-bump-check {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--cyan);
+  border-radius: 4px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.order-bump-check.checked {
+  background: var(--cyan);
+}
+.order-bump-check.checked::after {
+  content: '✓';
+  color: var(--bg);
+  font-size: 12px;
+  font-weight: 800;
+}
+.order-bump-header .bump-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.order-bump p {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+.order-bump .bump-price {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+.order-bump .bump-price .bump-orig {
+  text-decoration: line-through;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-left: 6px;
+  font-size: 13px;
 }
 
 .btn-primary {
@@ -350,29 +511,6 @@ strong.white { color: var(--text); }
   100% { left: 100%; }
 }
 
-.btn-secondary {
-  display: block;
-  width: 100%;
-  background: transparent;
-  color: var(--cyan);
-  padding: 14px;
-  border: 2px solid var(--cyan);
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.3s;
-  margin-top: 10px;
-}
-.btn-secondary:hover {
-  background: var(--cyan);
-  color: var(--bg);
-}
-
 .guarantee-micro {
   display: flex;
   align-items: center;
@@ -385,7 +523,7 @@ strong.white { color: var(--text); }
 
 /* ============================================
    COPY HINGE — Maciek: beneath first CTA
-   Social proof strip + publication features
+   Social proof + overcome deep limitations
    ============================================ */
 .copy-hinge {
   padding: 48px 0;
@@ -401,9 +539,7 @@ strong.white { color: var(--text); }
   flex-wrap: wrap;
   margin-bottom: 24px;
 }
-.proof-stat {
-  text-align: center;
-}
+.proof-stat { text-align: center; }
 .proof-stat .num {
   font-family: 'Instrument Serif', serif;
   font-size: 36px;
@@ -429,12 +565,9 @@ strong.white { color: var(--text); }
 }
 
 /* ============================================
-   GAP SECTION — "The Real Reason You're Stuck"
-   Gap & Bridge storytelling applied
+   GAP SECTION — David: Gap storytelling
    ============================================ */
-.gap-section {
-  padding: 100px 0;
-}
+.gap-section { padding: 100px 0; }
 .gap-content {
   max-width: 720px;
   margin: 0 auto;
@@ -447,7 +580,6 @@ strong.white { color: var(--text); }
   margin-bottom: 32px;
 }
 .gap-content h2 em { color: var(--amber); font-style: italic; }
-
 .gap-content p {
   font-size: 17px;
   color: var(--text-dim);
@@ -477,8 +609,63 @@ strong.white { color: var(--text); }
 }
 
 /* ============================================
-   FAILED SOLUTIONS — "The Graveyard"
-   Avatar psychographic: tried solutions table
+   WHAT'S INSIDE — Product breakdown
+   ============================================ */
+.inside-section { padding: 100px 0; }
+.inside-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+@media (max-width: 768px) { .inside-grid { grid-template-columns: 1fr; } }
+
+.inside-card {
+  background: var(--surface);
+  border: 1px solid var(--surface2);
+  border-radius: 16px;
+  padding: 36px 28px;
+  text-align: center;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.inside-card:hover {
+  border-color: var(--amber);
+  transform: translateY(-4px);
+}
+.inside-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--amber), var(--cyan));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.inside-card:hover::before { opacity: 1; }
+.inside-card .icon { font-size: 40px; margin-bottom: 16px; }
+.inside-card h3 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.inside-card .role {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 12px;
+}
+.inside-card p {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+/* ============================================
+   FAILED SOLUTIONS — David: Avatar graveyard
    ============================================ */
 .failed-section {
   padding: 80px 0;
@@ -521,12 +708,9 @@ strong.white { color: var(--text); }
 }
 
 /* ============================================
-   BRIDGE SECTION — "The Trinity Method"
-   The unique mechanism reveal
+   BRIDGE — The Calendar System
    ============================================ */
-.bridge-section {
-  padding: 100px 0;
-}
+.bridge-section { padding: 100px 0; }
 .bridge-intro {
   max-width: 720px;
   margin: 0 auto 60px;
@@ -544,59 +728,55 @@ strong.white { color: var(--text); }
   line-height: 1.7;
 }
 
-.trinity-grid {
+/* How It Works Steps */
+.steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
 }
-@media (max-width: 768px) { .trinity-grid { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .steps-grid { grid-template-columns: 1fr; } }
 
-.trinity-card {
+.step-card {
   background: var(--surface);
   border: 1px solid var(--surface2);
   border-radius: 16px;
-  padding: 36px 28px;
+  padding: 32px 24px;
   text-align: center;
-  transition: all 0.3s;
   position: relative;
-  overflow: hidden;
 }
-.trinity-card:hover {
-  border-color: var(--amber);
-  transform: translateY(-4px);
+.step-num {
+  width: 40px;
+  height: 40px;
+  background: var(--amber);
+  color: var(--bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 auto 16px;
 }
-.trinity-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--amber), var(--cyan));
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.trinity-card:hover::before { opacity: 1; }
-.trinity-card .icon { font-size: 40px; margin-bottom: 16px; }
-.trinity-card h3 {
+.step-card h4 {
   font-family: 'Instrument Serif', serif;
-  font-size: 22px;
-  margin-bottom: 6px;
+  font-size: 20px;
+  margin-bottom: 8px;
 }
-.trinity-card .role {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--amber);
-  margin-bottom: 12px;
-}
-.trinity-card p {
+.step-card p {
   font-size: 14px;
   color: var(--text-dim);
   line-height: 1.5;
 }
+.step-time {
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--emerald);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
-/* Bridge Reveal */
 .bridge-reveal {
   background: var(--surface);
   border: 1px solid var(--amber);
@@ -631,8 +811,7 @@ strong.white { color: var(--text); }
 }
 
 /* ============================================
-   ORIGIN STORY — "Us vs Them" + Reluctant Hero
-   David: story selling, personal branding
+   ORIGIN / RELUCTANT HERO — David: story selling
    ============================================ */
 .origin-section {
   padding: 80px 0;
@@ -662,7 +841,6 @@ strong.white { color: var(--text); }
   height: 100%;
   object-fit: cover;
 }
-
 .origin-text h2 {
   font-family: 'Instrument Serif', serif;
   font-size: 32px;
@@ -687,161 +865,10 @@ strong.white { color: var(--text); }
 }
 
 /* ============================================
-   PRODUCTS / OFFER STACK
-   Maciek: NESB emotions, perceived value
-   ============================================ */
-.offers-section {
-  padding: 100px 0;
-}
-.offers-section > .container > h2 {
-  font-family: 'Instrument Serif', serif;
-  font-size: clamp(28px, 4vw, 44px);
-  text-align: center;
-  margin-bottom: 8px;
-}
-.offers-section > .container > h2 em { color: var(--amber); font-style: italic; }
-.offers-sub {
-  text-align: center;
-  font-size: 16px;
-  color: var(--text-dim);
-  margin-bottom: 48px;
-}
-
-.offers-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-@media (max-width: 900px) { .offers-grid { grid-template-columns: 1fr; } }
-
-.offer-card {
-  background: var(--surface);
-  border: 1px solid var(--surface2);
-  border-radius: 16px;
-  padding: 36px;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s;
-  position: relative;
-}
-.offer-card:hover {
-  border-color: var(--surface3);
-  transform: translateY(-3px);
-}
-.offer-card.featured {
-  border: 2px solid var(--amber);
-  background: linear-gradient(180deg, rgba(245,158,11,0.06) 0%, var(--surface) 40%);
-}
-.offer-card.featured:hover { border-color: var(--amber); }
-
-.offer-badge {
-  position: absolute;
-  top: -1px; right: 36px;
-  background: var(--amber);
-  color: var(--bg);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 5px 14px;
-  border-radius: 0 0 8px 8px;
-}
-
-.offer-card .icon { font-size: 32px; margin-bottom: 12px; }
-.offer-card h3 {
-  font-family: 'Instrument Serif', serif;
-  font-size: 24px;
-  margin-bottom: 4px;
-}
-.offer-card .tagline {
-  font-size: 14px;
-  color: var(--amber);
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-.offer-card .desc {
-  font-size: 15px;
-  color: var(--text-dim);
-  margin-bottom: 20px;
-  flex-grow: 1;
-  line-height: 1.6;
-}
-.offer-card .price-row {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  margin-bottom: 16px;
-}
-.offer-card .price {
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--amber);
-}
-
-.offer-features {
-  list-style: none;
-  background: rgba(0,0,0,0.2);
-  border-radius: 10px;
-  padding: 16px 20px;
-  margin-bottom: 20px;
-}
-.offer-features li {
-  font-size: 14px;
-  color: var(--text-dim);
-  padding: 5px 0;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-}
-.offer-features li::before {
-  content: '✓';
-  color: var(--emerald);
-  font-weight: 700;
-  flex-shrink: 0;
-}
-.offer-features li strong { color: var(--text); }
-
-.offer-card .btn-primary { margin-top: auto; }
-
-/* Bonus Banner */
-.bonus-banner {
-  margin-top: 32px;
-  background: linear-gradient(135deg, rgba(245,158,11,0.1), rgba(34,211,238,0.1));
-  border: 1px dashed var(--amber);
-  border-radius: 12px;
-  padding: 24px 32px;
-  text-align: center;
-}
-.bonus-banner h4 {
-  font-family: 'Instrument Serif', serif;
-  font-size: 20px;
-  margin-bottom: 6px;
-}
-.bonus-banner p {
-  font-size: 14px;
-  color: var(--text-dim);
-}
-.bonus-banner .bonus-tag {
-  display: inline-block;
-  background: var(--amber);
-  color: var(--bg);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 3px 12px;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-/* ============================================
    TRANSFORMATION — Before/After
    ============================================ */
 .transform-section {
   padding: 80px 0;
-  background: var(--surface);
-  border-top: 1px solid var(--surface2);
-  border-bottom: 1px solid var(--surface2);
 }
 .transform-grid {
   display: grid;
@@ -857,7 +884,7 @@ strong.white { color: var(--text); }
 }
 
 .transform-col {
-  background: var(--bg);
+  background: var(--surface);
   border-radius: 12px;
   padding: 32px;
   border: 1px solid var(--surface2);
@@ -892,59 +919,211 @@ strong.white { color: var(--text); }
 }
 
 /* ============================================
-   SOCIAL PROOF / TESTIMONIALS
-   David: belief system engineering levels
+   SOCIAL PROOF — David: belief system engineering
    ============================================ */
-.proof-section {
-  padding: 100px 0;
-}
+.proof-section { padding: 100px 0; }
 .proof-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
   margin-top: 40px;
 }
 .proof-card {
   background: var(--surface);
   border: 1px solid var(--surface2);
   border-radius: 12px;
-  padding: 28px;
+  padding: 0;
+  overflow: hidden;
   transition: border-color 0.3s;
 }
 .proof-card:hover { border-color: var(--amber); }
-.proof-card .stars { color: var(--amber); font-size: 14px; margin-bottom: 12px; }
-.proof-card .quote {
+.proof-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   OFFER STACK — Maciek: SLO with upsell seeds
+   ============================================ */
+.offer-section {
+  padding: 100px 0;
+  background: var(--surface);
+  border-top: 1px solid var(--surface2);
+  border-bottom: 1px solid var(--surface2);
+}
+.offer-box {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--bg);
+  border: 2px solid var(--amber);
+  border-radius: 20px;
+  padding: 48px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.offer-box::before {
+  content: '';
+  position: absolute;
+  top: -100px; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.offer-badge-top {
+  display: inline-block;
+  background: var(--amber);
+  color: var(--bg);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 18px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.offer-box h3 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 28px;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 1;
+}
+.offer-box .offer-sub {
   font-size: 15px;
   color: var(--text-dim);
-  line-height: 1.6;
-  margin-bottom: 16px;
-  font-style: italic;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
 }
-.proof-card .author {
-  font-size: 13px;
+
+.offer-stack {
+  list-style: none;
+  text-align: left;
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+.offer-stack li {
+  font-size: 14px;
+  color: var(--text-dim);
+  padding: 8px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border-bottom: 1px solid var(--surface2);
+}
+.offer-stack li:last-child { border: none; }
+.offer-stack li::before {
+  content: '✓';
+  color: var(--emerald);
   font-weight: 700;
-  color: var(--text);
+  flex-shrink: 0;
 }
-.proof-card .product-bought {
-  font-size: 12px;
+.offer-stack li strong { color: var(--text); }
+.offer-stack li .value {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.offer-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: rgba(245,158,11,0.08);
+  border: 1px solid rgba(245,158,11,0.2);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.offer-total .total-label {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+.offer-total .total-label strong { color: var(--text); font-size: 16px; }
+.offer-total .total-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.offer-total .total-price .orig {
+  font-size: 18px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+.offer-total .total-price .now {
+  font-size: 36px;
+  font-weight: 800;
   color: var(--amber);
-  margin-top: 2px;
+}
+
+.offer-box .btn-primary {
+  position: relative;
+  z-index: 1;
+  font-size: 16px;
+  padding: 18px;
+}
+.offer-box .guarantee-micro {
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Bonus — Maciek: implementation call plants high ticket seeds */
+.bonus-banner {
+  margin-top: 24px;
+  background: linear-gradient(135deg, rgba(245,158,11,0.1), rgba(34,211,238,0.1));
+  border: 1px dashed var(--amber);
+  border-radius: 12px;
+  padding: 20px 24px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.bonus-banner .bonus-tag {
+  display: inline-block;
+  background: var(--amber);
+  color: var(--bg);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 12px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.bonus-banner h4 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.bonus-banner p {
+  font-size: 13px;
+  color: var(--text-dim);
 }
 
 /* ============================================
    GUARANTEE
    ============================================ */
-.guarantee-section {
-  padding: 80px 0;
-  background: var(--surface);
-  border-top: 1px solid var(--surface2);
-  border-bottom: 1px solid var(--surface2);
-}
+.guarantee-section { padding: 80px 0; }
 .guarantee-box {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
-  background: var(--bg);
+  background: var(--surface);
   border: 2px solid var(--emerald);
   border-radius: 16px;
   padding: 48px 40px;
@@ -962,42 +1141,16 @@ strong.white { color: var(--text); }
   max-width: 520px;
   margin: 0 auto;
 }
-.guarantee-sig {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 24px;
-  padding-top: 24px;
-  border-top: 1px solid var(--surface2);
-}
-.guarantee-sig img {
-  width: 56px; height: 56px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.guarantee-sig .name {
-  font-weight: 700;
-  font-size: 14px;
-}
-.guarantee-sig .title {
-  font-size: 12px;
-  color: var(--text-muted);
-}
 
 /* ============================================
    FAQ
    ============================================ */
-.faq-section {
-  padding: 80px 0;
-}
+.faq-section { padding: 80px 0; }
 .faq-list {
   max-width: 700px;
   margin: 40px auto 0;
 }
-.faq-item {
-  border-bottom: 1px solid var(--surface2);
-}
+.faq-item { border-bottom: 1px solid var(--surface2); }
 .faq-q {
   width: 100%;
   background: none;
@@ -1122,281 +1275,108 @@ strong.white { color: var(--text); }
 .fade-up-d3 { animation-delay: 0.3s; }
 
 /* ============================================
-   MOBILE OVERHAUL — 768px and below
-   Primary traffic: IG, TikTok, WhatsApp
-   Optimised for thumb-scrolling, fast CTA 
-   visibility, and compact vertical rhythm
+   MOBILE — 768px and below
    ============================================ */
 @media (max-width: 768px) {
-
-  /* --- GLOBAL MOBILE SPACING --- */
-  .container, .container-wide { padding: 0 16px; }
-
-  /* --- NAV: Slimmer --- */
+  .container { padding: 0 16px; }
   .nav { padding: 10px 16px; }
   .nav-logo { font-size: 17px; }
   .nav-cta { padding: 7px 16px; font-size: 12px; }
 
-  /* --- URGENCY BAR: Compact --- */
-  .urgency-bar {
-    padding: 8px 16px;
-    font-size: 12px;
-    margin-top: 43px;
-    line-height: 1.4;
-  }
-  .urgency-bar .timer { margin-left: 4px; }
+  .urgency-bar { padding: 8px 16px; font-size: 12px; margin-top: 43px; line-height: 1.4; }
 
-  /* --- HERO: Tight, CTA visible within 1-2 scrolls --- */
   .hero { padding: 28px 0 40px; }
-
   .icp-callout { margin-bottom: 8px; }
-  .icp-callout span {
-    font-size: 11px;
-    padding: 5px 14px;
-    letter-spacing: 0.5px;
-  }
+  .icp-callout span { font-size: 11px; padding: 5px 14px; letter-spacing: 0.5px; }
+  .hero-headline h1 { font-size: 28px; padding: 0 4px; }
+  .hero-sub { font-size: 15px; margin: 12px auto 24px; padding: 0 4px; }
 
-  .hero-headline h1 {
-    font-size: 28px;
-    padding: 0 4px;
-  }
+  .product-preview { padding: 28px 20px; min-height: 280px; }
+  .product-preview .calendar-icon { font-size: 52px; }
+  .product-preview h3 { font-size: 20px; }
+  .sample-entry { padding: 16px; }
 
-  .hero-sub {
-    font-size: 15px;
-    margin: 12px auto 24px;
-    padding: 0 4px;
-    line-height: 1.6;
-  }
-
-  /* --- VSL: Full width, no hover overlay on touch --- */
-  .vsl-wrapper {
-    border-radius: 10px;
-    margin-bottom: 18px;
-  }
-  .vsl-wrapper::after { display: none; }
-
-  /* --- CTA PANEL: Static on mobile, not sticky --- */
-  .cta-panel {
-    position: static;
-    padding: 24px 20px;
-    border-radius: 12px;
-  }
+  .cta-panel { position: static; padding: 24px 20px; border-radius: 12px; }
   .cta-panel h3 { font-size: 20px; }
-  .cta-panel .sub { font-size: 13px; margin-bottom: 16px; }
   .cta-panel .price { font-size: 30px; }
-  .cta-panel .price-orig { font-size: 15px; }
-  .cta-panel .price-note { font-size: 11px; margin-bottom: 16px; }
-  .cta-checklist li { font-size: 13px; padding: 5px 0; }
 
-  /* --- BUTTONS: Fat thumb targets (min 48px per Apple/Google guidelines) --- */
-  .btn-primary {
-    padding: 18px;
-    font-size: 15px;
-    border-radius: 10px;
-    min-height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .btn-secondary {
-    padding: 16px;
-    font-size: 14px;
-    border-radius: 10px;
-    min-height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  .btn-primary { padding: 18px; font-size: 15px; border-radius: 10px; min-height: 56px; display: flex; align-items: center; justify-content: center; }
 
-  .guarantee-micro { font-size: 11px; }
-
-  /* --- COPY HINGE --- */
   .copy-hinge { padding: 28px 0; }
-  .proof-stats { gap: 20px; flex-wrap: wrap; justify-content: center; }
+  .proof-stats { gap: 20px; }
   .proof-stat .num { font-size: 26px; }
-  .proof-stat .label { font-size: 10px; letter-spacing: 0.5px; }
-  .proof-logos {
-    font-size: 11px;
-    gap: 8px;
-    letter-spacing: 1px;
-    flex-direction: column;
-    line-height: 1.5;
-  }
+  .proof-stat .label { font-size: 10px; }
+  .proof-logos { font-size: 11px; gap: 8px; letter-spacing: 1px; flex-direction: column; }
 
-  /* --- GAP SECTION --- */
   .gap-section { padding: 48px 0; }
   .gap-content h2 { font-size: 24px; }
   .gap-content p { font-size: 15px; margin-bottom: 16px; }
-  .gap-content .highlight-pain,
-  .gap-content .highlight-reveal {
-    padding: 14px 16px;
-    font-size: 14px;
-    margin: 20px 0;
-    line-height: 1.7;
-  }
+  .gap-content .highlight-pain, .gap-content .highlight-reveal { padding: 14px 16px; font-size: 14px; margin: 20px 0; }
 
-  /* --- FAILED SOLUTIONS --- */
+  .inside-section { padding: 48px 0; }
+  .inside-grid { grid-template-columns: 1fr; gap: 14px; }
+  .inside-card { padding: 24px 20px; }
+  .inside-card .icon { font-size: 30px; }
+  .inside-card h3 { font-size: 19px; }
+
   .failed-section { padding: 48px 0; }
-  .failed-section h2 { font-size: 24px !important; }
-  .failed-grid {
-    grid-template-columns: 1fr !important;
-    gap: 12px;
-  }
-  .failed-card { padding: 20px 18px; border-radius: 10px; }
-  .failed-card .emoji { font-size: 22px; margin-bottom: 8px; }
-  .failed-card h4 { font-size: 14px; }
-  .failed-card p { font-size: 13px; line-height: 1.5; }
-  .failed-card .verdict { font-size: 12px; margin-top: 10px; }
+  .failed-grid { grid-template-columns: 1fr !important; gap: 12px; }
+  .failed-card { padding: 20px 18px; }
 
-  /* --- BRIDGE / TRINITY --- */
   .bridge-section { padding: 48px 0; }
   .bridge-intro { margin-bottom: 36px; }
   .bridge-intro h2 { font-size: 24px; }
-  .bridge-intro p { font-size: 15px; }
-  .trinity-grid { grid-template-columns: 1fr; gap: 14px; }
-  .trinity-card { padding: 24px 20px; border-radius: 12px; }
-  .trinity-card .icon { font-size: 30px; margin-bottom: 10px; }
-  .trinity-card .role { font-size: 11px; }
-  .trinity-card h3 { font-size: 19px; }
-  .trinity-card p { font-size: 13px; }
-  .bridge-reveal { padding: 28px 20px; border-radius: 12px; }
+  .steps-grid { grid-template-columns: 1fr; gap: 14px; }
+  .bridge-reveal { padding: 28px 20px; }
   .bridge-reveal h3 { font-size: 20px; }
-  .bridge-reveal p { font-size: 14px; }
 
-  /* --- ORIGIN STORY --- */
   .origin-section { padding: 48px 0; }
-  .origin-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .origin-photo {
-    max-width: 200px;
-    margin: 0 auto;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-  }
+  .origin-grid { grid-template-columns: 1fr; gap: 24px; }
+  .origin-photo { max-width: 200px; margin: 0 auto; aspect-ratio: 1/1; border-radius: 50%; }
   .origin-text h2 { font-size: 24px; text-align: center; }
   .origin-text p { font-size: 15px; }
-  .origin-text .us-vs-them {
-    font-size: 14px;
-    padding: 14px 16px;
-    line-height: 1.6;
-  }
 
-  /* --- TRANSFORMATION BEFORE/AFTER --- */
   .transform-section { padding: 48px 0; }
-  .transform-section h2 { font-size: 24px !important; }
-  .transform-grid {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  .transform-col { padding: 22px 18px; border-radius: 10px; }
-  .transform-col li { font-size: 13px; padding: 5px 0; }
-  .transform-arrow {
-    transform: rotate(90deg);
-    padding: 10px 0;
-    font-size: 20px;
-  }
+  .transform-grid { grid-template-columns: 1fr; gap: 0; }
+  .transform-col { padding: 22px 18px; }
+  .transform-arrow { transform: rotate(90deg); padding: 10px 0; font-size: 20px; }
 
-  /* --- TESTIMONIALS --- */
   .proof-section { padding: 48px 0; }
-  .proof-section h2 { font-size: 24px !important; }
-  .proof-cards {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    margin-top: 28px;
-  }
+  .proof-cards { grid-template-columns: 1fr !important; gap: 12px; }
 
-  /* --- OFFERS --- */
-  .offers-section { padding: 48px 0; }
-  .offers-section > .container > h2 { font-size: 24px; }
-  .offers-sub { font-size: 14px; margin-bottom: 28px; }
-  .offer-card {
-    padding: 24px 20px;
-    border-radius: 12px;
-  }
-  .offer-card h3 { font-size: 20px; }
-  .offer-card .tagline { font-size: 13px; }
-  .offer-card .price { font-size: 28px; }
-  .offer-card .desc { font-size: 14px; margin-bottom: 16px; }
-  .offer-features { padding: 12px 14px; border-radius: 8px; }
-  .offer-features li { font-size: 13px; padding: 4px 0; }
-  .offer-badge { right: 20px; font-size: 10px; padding: 4px 10px; }
-  .bonus-banner {
-    padding: 20px 18px;
-    border-radius: 10px;
-    margin-top: 24px;
-  }
-  .bonus-banner h4 { font-size: 17px; }
-  .bonus-banner p { font-size: 13px; }
+  .offer-section { padding: 48px 0; }
+  .offer-box { padding: 28px 20px; }
+  .offer-box h3 { font-size: 22px; }
+  .offer-total { flex-direction: column; gap: 8px; text-align: center; }
+  .offer-total .total-price .now { font-size: 30px; }
 
-  /* --- GUARANTEE --- */
   .guarantee-section { padding: 48px 0; }
-  .guarantee-box {
-    padding: 28px 20px;
-    border-radius: 12px;
-  }
-  .guarantee-box .shield { font-size: 36px; margin-bottom: 12px; }
+  .guarantee-box { padding: 28px 20px; }
   .guarantee-box h3 { font-size: 20px; }
   .guarantee-box p { font-size: 14px; }
-  .guarantee-sig { gap: 12px; margin-top: 20px; padding-top: 20px; }
-  .guarantee-sig img { width: 48px; height: 48px; }
-  .guarantee-sig .name { font-size: 13px; }
 
-  /* --- FAQ --- */
   .faq-section { padding: 48px 0; }
-  .faq-section h2 { font-size: 24px !important; }
-  .faq-list { margin-top: 28px; }
-  .faq-q {
-    font-size: 15px;
-    padding: 16px 0;
-    gap: 12px;
-  }
-  .faq-q::after { font-size: 20px; }
-  .faq-a-inner { font-size: 14px; padding-bottom: 16px; }
+  .faq-q { font-size: 15px; padding: 16px 0; }
+  .faq-a-inner { font-size: 14px; }
 
-  /* --- FINAL CTA --- */
   .final-cta { padding: 48px 0; }
   .final-cta h2 { font-size: 24px; }
-  .final-cta p { font-size: 15px; margin-bottom: 24px; }
-  .final-cta .btn-primary {
-    max-width: 100%;
-    padding: 18px;
-    font-size: 15px;
-  }
+  .final-cta .btn-primary { max-width: 100%; }
 
-  /* --- POPUP: Full-width bottom toast on mobile --- */
-  .popup {
-    left: 10px;
-    right: 10px;
-    bottom: 12px;
-    max-width: none;
-    border-radius: 10px;
-    padding: 12px 14px;
-  }
-  .popup .emoji { font-size: 20px; }
-  .popup .popup-text { font-size: 12px; }
+  .popup { left: 10px; right: 10px; bottom: 12px; max-width: none; border-radius: 10px; padding: 12px 14px; }
 
-  /* --- SECTION LABELS --- */
   .section-label { font-size: 10px; letter-spacing: 1.5px; }
-  .section-label::before { width: 16px; }
-
-  /* --- FOOTER --- */
   .footer { padding: 24px 16px; font-size: 12px; }
+
+  .nesb-badges { grid-template-columns: 1fr 1fr; gap: 6px; }
 }
 
-/* ============================================
-   SMALL PHONES — 390px and below (iPhone SE, etc)
-   ============================================ */
 @media (max-width: 390px) {
   .hero-headline h1 { font-size: 25px; }
   .hero-sub { font-size: 14px; }
   .cta-panel h3 { font-size: 18px; }
   .cta-panel .price { font-size: 28px; }
   .gap-content h2 { font-size: 22px; }
-  .offer-card h3 { font-size: 18px; }
-  .proof-stats { gap: 16px; }
-  .proof-stat .num { font-size: 24px; }
 }
 </style>
 </head>
@@ -1405,72 +1385,111 @@ strong.white { color: var(--text); }
 <!-- ===== NAV ===== -->
 <nav class="nav">
   <a href="#" class="nav-logo">☿ Rafi's World</a>
-  <a href="#offers" class="nav-cta">Choose Your Reading →</a>
+  <a href="#offer" class="nav-cta">Get The Playbook — $28 →</a>
 </nav>
 
-<!-- ===== URGENCY BANNER ===== -->
+<!-- ===== URGENCY BANNER — Maciek: 48hr urgency ===== -->
 <div class="urgency-bar">
-  🔥 Your Exclusive New Client Discount Expires In: <span class="timer" id="countdown">47:59:59</span>
+  🔥 Your Exclusive Discount Expires In: <span class="timer" id="countdown">47:59:59</span>
 </div>
 
 <!-- ===== HERO / ATF ===== -->
 <section class="hero">
   <div class="container">
 
-    <!-- ICP Callout — Maciek: eyebrow hook -->
+    <!-- ICP Callout — Maciek: call out dream ICP directly -->
     <div class="icp-callout fade-up">
-      <span>For Ambitious People Sick of Guessing Their Way Through Life</span>
+      <span>For Business Owners Sick of Launching on the Wrong Day &amp; Wondering Why Nothing Lands</span>
     </div>
 
-    <!-- Headline: Gap & Bridge hook -->
+    <!-- Headline — David: Gap hook + Maciek: dream outcome without limitation -->
     <div class="hero-headline fade-up fade-up-d1">
-      <h1>Stop Swimming Upstream.<br>Start Reading <em>The Map.</em></h1>
+      <h1>Know <em>Exactly</em> When to Push, Pitch, Launch &amp; Rest — Every Day of 2026</h1>
     </div>
 
     <p class="hero-sub fade-up fade-up-d2">
-      You've tried therapy, manifestation, and grinding harder — but the invisible wall won't move. That's because you're fighting a <strong>timing problem</strong>, not a you problem. Your Vedic birth chart holds the exact dates, directions, and remedies to fix it.
+      You have 24 hours. So does everyone else. The difference? <strong>Allocation.</strong> This calendar shows you which days amplify action and which days punish it — so you stop fighting the current and start riding it.
     </p>
 
-    <!-- ATF Grid: VSL + CTA Panel — Maciek: VSL left, form right -->
+    <!-- ATF Grid: Product Preview + CTA Panel — Maciek: VSL left, order form right -->
     <div class="atf-grid fade-up fade-up-d3">
 
-      <!-- VSL -->
+      <!-- Product Preview (replaces VSL — compact delivery for SLO) -->
       <div class="vsl-wrapper">
-        <div class="wistia_responsive_padding">
-          <div class="wistia_responsive_wrapper">
-            <div class="wistia_embed wistia_async_1mjtycwa3l videoFoam=true" style="height:100%;position:relative;width:100%">
-              <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                <img src="https://fast.wistia.com/embed/medias/1mjtycwa3l/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
-              </div>
-            </div>
+        <div class="product-preview">
+          <div class="calendar-icon">📅</div>
+          <div class="edition">2026 Edition</div>
+          <h3>The Entrepreneur's Numerology Playbook</h3>
+          <div class="preview-features">
+            <div class="preview-feat"><span>📊</span> 365 Daily Entries</div>
+            <div class="preview-feat"><span>⚡</span> Action + Avoid</div>
+            <div class="preview-feat"><span>🔢</span> Energy Codes</div>
+          </div>
+
+          <!-- Sample Entry — Maciek: activate perceived value -->
+          <div class="sample-entry">
+            <div class="sample-date">Sample Entry — Feb 5th</div>
+            <div class="sample-title">Legacy Transforms</div>
+            <div class="sample-body">The 17 is generational wealth + the 5 is change. Pivot your wealth strategy. The way you've been building legacy needs evolution. Adapt the model to match your growth.</div>
+            <div class="sample-avoid">Avoid: Rigid wealth plans. Even legacy needs flexibility.</div>
+            <div class="sample-blur"></div>
           </div>
         </div>
       </div>
 
-      <!-- CTA Panel / Mini-Form -->
+      <!-- CTA Panel / Order Form -->
       <div class="cta-panel">
-        <h3>Start With The <span style="color:var(--amber)">Trinity Compatibility</span></h3>
-        <p class="sub">The #1 reading people book first. Find out if they're "the one" — or a karmic lesson.</p>
+        <h3>The <span style="color:var(--amber)">Timing Edge</span> for 2026</h3>
+        <p class="sub">365 days of strategic numerology intel. Check the date. Read the entry. Execute the move.</p>
 
         <div class="price-row">
-          <span class="price">$131</span>
-          <span class="price-orig">$250</span>
+          <span class="price">$28</span>
+          <span class="price-orig">$67</span>
         </div>
-        <p class="price-note">New client pricing · Limited spots per month</p>
+        <p class="price-note">Launch pricing · First 200 copies only</p>
+
+        <!-- NESB Badges — Maciek: New Easy Safe Big -->
+        <div class="nesb-badges">
+          <div class="nesb-badge">
+            <div class="nesb-icon">🆕</div>
+            <div class="nesb-text"><strong>New</strong> angle on timing</div>
+          </div>
+          <div class="nesb-badge">
+            <div class="nesb-icon">⚡</div>
+            <div class="nesb-text"><strong>10 mins</strong> to start</div>
+          </div>
+          <div class="nesb-badge">
+            <div class="nesb-icon">🛡</div>
+            <div class="nesb-text"><strong>500+</strong> charts done</div>
+          </div>
+          <div class="nesb-badge">
+            <div class="nesb-icon">🎯</div>
+            <div class="nesb-text"><strong>365</strong> daily plays</div>
+          </div>
+        </div>
 
         <ul class="cta-checklist">
-          <li>Vedic + Numerology + Chinese Zodiac combined</li>
-          <li>Relationship "Blind Spot" detection</li>
-          <li>Long-term compatibility score</li>
-          <li>60-minute deep-dive call with Rafi</li>
-          <li>5-day personalised chart preparation</li>
+          <li>Every day of 2026 decoded with energy type</li>
+          <li>Specific "DO this" and "AVOID this" actions</li>
+          <li>High-Output vs Recovery days mapped</li>
+          <li>The 60/40 Rule explained (universal + personal)</li>
+          <li>9-Day Cycle framework for any month</li>
         </ul>
 
-        <a href="https://buy.stripe.com/4gM5kFgxogpif1MgiCasg02" class="btn-primary" target="_blank">Get Clarity Now →</a>
-        <a href="#offers" class="btn-secondary">See All Readings</a>
+        <!-- Order Bump — Maciek: the missing piece that completes the solution -->
+        <div class="order-bump">
+          <div class="order-bump-header">
+            <div class="order-bump-check" id="bumpCheck" onclick="toggleBump()"></div>
+            <div class="bump-label">⚡ Yes! Add My Personal Reading</div>
+          </div>
+          <p>The calendar shows universal energy (60%). A <strong>Personal Numerology Reading</strong> gives you the other 40% — your Life Path layered on top of the calendar for hyper-specific timing. Without it, you're using a map without your coordinates.</p>
+          <div class="bump-price">+ $49 <span class="bump-orig">$77</span></div>
+        </div>
+
+        <a href="YOUR_STRIPE_LINK_HERE" class="btn-primary" id="mainCta" target="_blank">Get The 2026 Playbook — $28 →</a>
 
         <div class="guarantee-micro">
-          <span>🛡</span> 100% money-back guarantee if you don't feel 10x the value in clarity.
+          <span>🛡</span> 100% money-back guarantee. If the first week doesn't change how you plan, I'll refund every cent.
         </div>
       </div>
     </div>
@@ -1486,12 +1505,12 @@ strong.white { color: var(--text); }
         <div class="label">Charts Decoded</div>
       </div>
       <div class="proof-stat">
-        <div class="num">12+</div>
-        <div class="label">Countries Served</div>
+        <div class="num">20K+</div>
+        <div class="label">Community</div>
       </div>
       <div class="proof-stat">
-        <div class="num">99%</div>
-        <div class="label">Accuracy Rate (Trinity)</div>
+        <div class="num">12+</div>
+        <div class="label">Countries Served</div>
       </div>
       <div class="proof-stat">
         <div class="num">4.9★</div>
@@ -1499,157 +1518,199 @@ strong.white { color: var(--text); }
       </div>
     </div>
     <div class="proof-logos">
-      <span>Vedic · Numerology · Chinese Zodiac</span>
+      <span>Numerology · 9-Day Cycle · Life Path Energy</span>
       <span>|</span>
-      <span>The "Triangulation" System for 99% Accuracy</span>
+      <span>The Calendar That Tells You When to Move</span>
     </div>
   </div>
 </div>
 
-<!-- ===== GAP SECTION — The core storytelling ===== -->
+<!-- ===== GAP SECTION — David: storytelling, why they're stuck ===== -->
 <section class="gap-section">
   <div class="container">
     <div class="gap-content">
-      <div class="section-label">The Truth No One Tells You</div>
-      <h2>You're Not Broken. You're Not Lazy. You're <em>Desynchronised.</em></h2>
+      <div class="section-label">The Timing Problem</div>
+      <h2>You're Not Bad at Business. You're <em>Launching on the Wrong Days.</em></h2>
 
-      <p>You wake up anxious. You check another horoscope app — it says "expect a surprise." <strong>Useless.</strong> You need to know if you're going to lose your job, if your relationship is going to survive, if this heaviness in your chest will ever lift.</p>
+      <p>You planned the launch for weeks. Refined the offer. Shot the content. Pressed "post" on a Tuesday at 2pm because some marketing guru told you that's the best time.</p>
 
-      <p>At work, you watch less talented people get promoted while you feel invisible. You think: <em>"Is it my fate to struggle? Is there a block I can't see?"</em></p>
+      <p><strong>It flopped.</strong></p>
+
+      <p>Meanwhile, your competitor threw something together in 48 hours and it landed. Different offer? No. Different audience? Same one. Different timing? <strong>Exactly.</strong></p>
 
       <div class="highlight-pain">
-        "I'm working twice as hard as everyone else, but I'm moving half as fast. It feels like there's an invisible wall blocking my blessings, and I don't know how to break it down."
+        "I'm doing everything right — the strategy, the content, the hustle. But it feels like I'm pushing a boulder uphill while other people are coasting downhill with worse ideas."
       </div>
 
-      <p>So you do what any smart person does. You try harder. More discipline. More books. More "positive thinking."</p>
+      <p>You blame the algorithm. The economy. Yourself. You buy another course. Rewrite the copy. Try again.</p>
 
-      <p><strong>But the wall doesn't move.</strong></p>
+      <p><strong>Same wall.</strong></p>
 
-      <p>Because the wall was never about your effort. It was never about your mindset. It was never about your childhood trauma.</p>
+      <p>Because the wall was never about your offer, your audience, or your work ethic. It was about <em>when</em> you moved.</p>
 
       <div class="highlight-reveal">
-        It's not in your head. It's in your Chart. You're running a "Summer strategy" during a "Winter season" of your life — and no amount of hustle can force a harvest when the soil is frozen.
+        Energy moves in 9-day cycles. Some days amplify action. Some days punish it. Scheduling a launch on a "7 Energy" day is like opening a shop during a storm — the product's fine, the timing's catastrophic.
       </div>
 
-      <p>In Vedic Astrology, your life operates on precise planetary cycles called <strong>Dashas</strong>. Each one changes the operating system of your life for years at a time. Right now, you might be in a period designed for <em>stripping away</em>, not building up. Pushing harder during this cycle is like pressing the gas pedal with the car in park.</p>
-
-      <p><strong>The engine screams. But you go nowhere.</strong></p>
+      <p>The entrepreneurs who seem "lucky" aren't smarter. They're (often unknowingly) aligned with the current. This calendar makes that alignment <strong>deliberate.</strong></p>
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- ===== FAILED SOLUTIONS — Avatar "Graveyard" ===== -->
+<!-- ===== FAILED SOLUTIONS — David: graveyard of tried solutions ===== -->
 <section class="failed-section">
   <div class="container">
     <div style="text-align:center; max-width:600px; margin:0 auto;">
       <div class="section-label">Why Nothing Has Worked</div>
-      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,3.5vw,40px); margin-bottom:12px;">The Graveyard of <em class="gold">Tried Solutions</em></h2>
-      <p style="font-size:16px; color:var(--text-dim);">You're not here because you haven't tried. You're here because everything you tried addresses the <em>symptom</em> — not the source.</p>
+      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,3.5vw,40px); margin-bottom:12px;">The Graveyard of <em class="gold">"Productivity" Tools</em></h2>
+      <p style="font-size:16px; color:var(--text-dim);">You're not here because you're lazy. You're here because none of these tools address the <em>invisible variable</em>.</p>
     </div>
 
     <div class="failed-grid">
       <div class="failed-card">
+        <div class="emoji">📋</div>
+        <h4>Notion / Planners / Calendars</h4>
+        <p>Beautiful systems. Colour-coded everything. But they organise <em>what</em> you do — they can't tell you <em>when</em> to do it for maximum impact.</p>
+        <div class="verdict">"I'm the most organised person in the room. I'm also the most stuck."</div>
+      </div>
+      <div class="failed-card">
+        <div class="emoji">📈</div>
+        <h4>Marketing Courses / "Best Time to Post"</h4>
+        <p>They gave you tactics. Posting schedules. Content pillars. But the tactics work sometimes and not others — and nobody can explain why.</p>
+        <div class="verdict">"Same strategy. Some weeks it works, some weeks it's crickets. There's a variable I'm not seeing."</div>
+      </div>
+      <div class="failed-card">
         <div class="emoji">🧠</div>
-        <h4>Talk Therapy / CBT</h4>
-        <p>Gave you coping mechanisms. Helped you understand why you hurt. But it can't explain why bad luck keeps happening — a breakup, then a lost client, then a health scare — all in the same month.</p>
-        <div class="verdict">"Therapy holds the umbrella. It doesn't explain why it's been raining on ME for 7 years."</div>
+        <h4>Hustle Culture / Discipline</h4>
+        <p>You wake at 5am. You follow the routine. You grind 7 days a week. But forcing output on a day designed for recovery is like running with the handbrake on.</p>
+        <div class="verdict">"I'm burning out trying to brute-force results that other people get effortlessly."</div>
       </div>
       <div class="failed-card">
         <div class="emoji">✨</div>
-        <h4>Manifestation / Law of Attraction</h4>
-        <p>You visualised the promotion for months. Kept your "vibration high." Then you got laid off anyway. Now you feel guilty — like you didn't believe hard enough.</p>
-        <div class="verdict">"You can't manifest a harvest in the middle of winter, no matter how positive your mindset is."</div>
-      </div>
-      <div class="failed-card">
-        <div class="emoji">📱</div>
-        <h4>Western Astrology Apps</h4>
-        <p>Co-Star told you to "expect chaos." Thanks. Very helpful. These apps explain personality but never predict <em>when</em> your life will actually change.</p>
-        <div class="verdict">"Entertainment, not a tool. It tells me WHO I am but never WHEN things will shift."</div>
-      </div>
-      <div class="failed-card">
-        <div class="emoji">🔮</div>
-        <h4>Tarot / Psychic Readings</h4>
-        <p>Yesterday the cards said "He's coming back." Today they say "Move on." A dopamine hit that leaves you more confused than when you started.</p>
-        <div class="verdict">"Guesswork without a system. I don't want magic tricks — I want a diagnostic."</div>
-      </div>
-      <div class="failed-card">
-        <div class="emoji">📚</div>
-        <h4>Hustle / Self-Help Books</h4>
-        <p>Atomic Habits. 5 AM Club. You optimised everything. You're still stuck. Because hard work isn't the missing ingredient — <strong>timing</strong> is.</p>
-        <div class="verdict">"I'm swimming upstream against a current I can't see."</div>
-      </div>
-      <div class="failed-card">
-        <div class="emoji">💎</div>
-        <h4>Crystals & Light Energy Work</h4>
-        <p>Nice placebo. But rose quartz on your desk didn't fix a toxic relationship. The problems you're dealing with need a stronger medicine.</p>
-        <div class="verdict">"I'm wearing the stone but my life is still falling apart."</div>
+        <h4>Manifestation / Vision Boards</h4>
+        <p>You visualised the revenue goal for months. Kept the vibration high. But manifestation without timing is like planting seeds in winter and wondering why nothing grows.</p>
+        <div class="verdict">"I believed harder than anyone. The universe didn't deliver. Maybe the calendar was off."</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== BRIDGE — The Trinity Method ===== -->
-<section class="bridge-section" id="method">
+<!-- ===== WHAT'S INSIDE — Maciek: activate perceived value ===== -->
+<section class="inside-section">
   <div class="container">
-    <div class="bridge-intro">
-      <div class="section-label">The Bridge</div>
-      <h2>Introducing The <em>Trinity Method</em></h2>
-      <p>Most astrologers use one system. I use three — cross-referenced for a level of precision that borders on uncomfortable. This isn't personality fluff. This is a <strong>strategic life audit</strong> that tells you exactly what's happening, when it changes, and what to do about it.</p>
+    <div style="text-align:center; max-width:640px; margin:0 auto;">
+      <div class="section-label">What You Get</div>
+      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,4vw,44px); margin-bottom:8px;">Every Day of 2026, <em class="gold">Decoded</em></h2>
+      <p style="font-size:16px; color:var(--text-dim);">Check the date. Read the entry. Execute the action. Avoid the pitfall. 10 minutes changes how you plan your week.</p>
     </div>
 
-    <div class="trinity-grid">
-      <div class="trinity-card">
-        <div class="icon">🌟</div>
-        <div class="role">The "What"</div>
-        <h3>Vedic Astrology</h3>
-        <p>The detailed map of your karma, timing windows, and planetary periods. Shows you the exact dates things shift — and the specific remedies to accelerate or ease the transition.</p>
+    <div class="inside-grid">
+      <div class="inside-card">
+        <div class="icon">📊</div>
+        <div class="role">The Daily Intel</div>
+        <h3>365 Entries</h3>
+        <p>Every single day of 2026 has a specific entry with Life Path energy, daily energy, a clear action directive, and what to avoid. No guesswork.</p>
       </div>
-      <div class="trinity-card">
-        <div class="icon">🔢</div>
-        <div class="role">The "How"</div>
-        <h3>Numerology</h3>
-        <p>The underlying frequency code of your life path. Reveals your natural strengths, hidden blind spots, and the personal year cycle you're operating in right now.</p>
+      <div class="inside-card">
+        <div class="icon">🟢</div>
+        <div class="role">The Traffic Light</div>
+        <h3>High-Output vs Recovery</h3>
+        <p>1, 8, 11 Energy days = push hard. 7, 6 Energy days = think and rest. Know which gear to be in before you start the engine.</p>
       </div>
-      <div class="trinity-card">
-        <div class="icon">🐉</div>
-        <div class="role">The "When"</div>
-        <h3>Chinese Zodiac</h3>
-        <p>The primal energy driving your compatibility and yearly cycles. The final cross-reference that pushes accuracy from "good guess" to "how do you know this about me?"</p>
+      <div class="inside-card">
+        <div class="icon">🔄</div>
+        <div class="role">The Pattern</div>
+        <h3>9-Day Cycle Framework</h3>
+        <p>Once you understand the 9-day rhythm, you can predict any month's flow. This section teaches you the underlying pattern so you're never caught off guard.</p>
       </div>
-    </div>
-
-    <div class="bridge-reveal">
-      <h3>Three Systems. One Verdict. <span style="color:var(--amber)">99% Accuracy.</span></h3>
-      <p>When all three systems point in the same direction, the reading stops feeling like astrology and starts feeling like someone handed you the answer sheet to your life.</p>
+      <div class="inside-card">
+        <div class="icon">📐</div>
+        <div class="role">The Rule</div>
+        <h3>The 60/40 Split</h3>
+        <p>This calendar = 60% of the equation (universal energy). Your Personal Life Path = the other 40%. Learn how the two layers interact for precision planning.</p>
+      </div>
+      <div class="inside-card">
+        <div class="icon">⚡</div>
+        <div class="role">The Edge</div>
+        <h3>Strategic Overlays</h3>
+        <p>Scaling revenue? Hiring? Firing? Each goal changes how you use the energy. Specific frameworks for business decisions mapped to daily entries.</p>
+      </div>
+      <div class="inside-card">
+        <div class="icon">🚨</div>
+        <div class="role">The Warnings</div>
+        <h3>Anomaly Flags</h3>
+        <p>Master Numbers and rare alignments flagged throughout. These are the days that can change everything — or destroy everything — depending on how you move.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- ===== ORIGIN STORY — Us vs Them + Reluctant Hero ===== -->
+<!-- ===== BRIDGE — How It Works (3 Steps) — Maciek: compact, easy delivery ===== -->
+<section class="bridge-section">
+  <div class="container">
+    <div class="bridge-intro">
+      <div class="section-label">How It Works</div>
+      <h2>10 Minutes. <em>That's It.</em></h2>
+      <p>This isn't a course. There's no homework. No modules to complete. You open it, check the day, and move accordingly. The calendar does the heavy lifting — you just execute.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h4>Check the Date</h4>
+        <p>Open the playbook. Find today's entry. Read the energy type, the action directive, and the avoidance warning.</p>
+        <div class="step-time">⏱ 2 minutes</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h4>Align Your Calendar</h4>
+        <p>Move the pitch to a High-Output day. Push the deep-work session to a Recovery day. Rearrange — don't add more.</p>
+        <div class="step-time">⏱ 5 minutes</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h4>Execute the Move</h4>
+        <p>You now have something 99% of entrepreneurs don't — visibility into the current. Stop fighting it. Ride it.</p>
+        <div class="step-time">⏱ 3 minutes</div>
+      </div>
+    </div>
+
+    <div class="bridge-reveal">
+      <h3>Everyone Has 24 Hours. <span style="color:var(--amber)">The Difference Is Allocation.</span></h3>
+      <p>High-output people don't work harder. They work on the right things at the right time. This calendar is the filter that tells you which is which.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== ORIGIN STORY — David: reluctant hero + us vs them ===== -->
 <section class="origin-section">
   <div class="container">
-    <div class="origin-photo">
-      <img src="https://iili.io/qJz7S0x.jpg" alt="Rafi" loading="lazy">
-    </div>
-    <div class="origin-text">
-      <div class="section-label">Who Built This</div>
-      <h2>I Never Wanted to Be <em>"The Astrology Guy."</em></h2>
-
-      <p>Honestly? I used to scroll past horoscope content the same way you probably do. It all sounded the same — vague, recycled, and wrong half the time.</p>
-
-      <p>But then friends started sending me tweets and TikToks. "Rafi, look at this — is this true?" And every time I looked, the person was <strong>just making things up.</strong> Saying whatever sounded good for likes. No actual system behind it.</p>
-
-      <p>It bothered me. Not because I cared about astrology — but because <strong>people were making real life decisions based on completely inaccurate information.</strong></p>
-
-      <div class="us-vs-them">
-        So I went down the rabbit hole. Not to become an astrologer — but to find out what was actually real and what was nonsense. That rabbit hole turned into years of studying Vedic Astrology, Numerology, and the Chinese Zodiac — three systems that, when cross-referenced, are <strong>almost impossible to get wrong.</strong>
+    <div class="origin-grid">
+      <div class="origin-photo">
+        <img src="https://iili.io/qJz7S0x.jpg" alt="Rafi" loading="lazy">
       </div>
+      <div class="origin-text">
+        <div class="section-label">Why This Exists</div>
+        <h2>I Wasn't Planning to <em>Release This.</em></h2>
 
-      <p>I didn't choose this. The misinformation dragged me into it. And now I can't unsee what the charts reveal — so I might as well make sure <strong>you</strong> get the real version, not the Twitter version.</p>
+        <p>I built this calendar for myself. Then for my 1-on-1 clients — founders and executives who pay well for strategic timing intel. It was never meant to be a product.</p>
+
+        <p>But after Sara, and then dozens of others in my WhatsApp group kept saying <strong>"I need to plan my weeks with this knowledge"</strong> — I realised I was doing the community a disservice by keeping it locked behind high-ticket calls.</p>
+
+        <div class="us-vs-them">
+          I'm not the "post affirmations and charge you $500 for a course" type. I do chart work. Real analysis. And this playbook is the most accessible version of that work I've ever released — because the timing intel shouldn't be reserved for people who can afford a full reading.
+        </div>
+
+        <p>So here it is. The same system I use with private clients, distilled into a daily playbook that any business owner can pick up and use in 10 minutes.</p>
+
+        <p><strong>Use it. Then decide if you want to go deeper.</strong></p>
+      </div>
     </div>
   </div>
 </section>
@@ -1659,20 +1720,19 @@ strong.white { color: var(--text); }
   <div class="container">
     <div style="text-align:center; margin-bottom:16px;">
       <div class="section-label">The Shift</div>
-      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,3.5vw,40px);">Before Your Reading vs. <em class="gold">After</em></h2>
+      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,3.5vw,40px);">Before the Playbook vs. <em class="gold">After</em></h2>
     </div>
 
     <div class="transform-grid">
       <div class="transform-col before">
         <h4>🔴 Before</h4>
         <ul>
-          <li>"I feel stuck and I don't know why"</li>
-          <li>Decision paralysis at 2AM</li>
-          <li>Attracting the same toxic patterns</li>
-          <li>Grinding hard with zero results</li>
-          <li>Money draining for no logical reason</li>
-          <li>"Am I cursed? Am I broken?"</li>
-          <li>Scattered, anxious, overwhelmed</li>
+          <li>Launching randomly and hoping for the best</li>
+          <li>Same effort, wildly inconsistent results</li>
+          <li>Burning out from non-stop grinding</li>
+          <li>"Why did that post flop?" every other week</li>
+          <li>Scheduling big moves on the wrong days</li>
+          <li>Feeling like you're swimming upstream</li>
         </ul>
       </div>
 
@@ -1681,20 +1741,19 @@ strong.white { color: var(--text); }
       <div class="transform-col after">
         <h4>🟢 After</h4>
         <ul>
-          <li>"I know exactly what season I'm in"</li>
-          <li>Decisions backed by cosmic data</li>
-          <li>Clarity on who's aligned — and who's not</li>
-          <li>Strategic execution in "green light" windows</li>
-          <li>Specific remedies to seal the energy leak</li>
-          <li>"It's a timing issue. I have the roadmap."</li>
-          <li>Calm, targeted, in flow</li>
+          <li>Launching on days that amplify action</li>
+          <li>Same effort, compounding results</li>
+          <li>Built-in recovery days that actually recharge</li>
+          <li>Knowing why Tuesday flopped and Thursday banged</li>
+          <li>Every big move backed by energy data</li>
+          <li>Riding the current instead of fighting it</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== SOCIAL PROOF ===== -->
+<!-- ===== SOCIAL PROOF — David: belief system engineering ===== -->
 <section class="proof-section">
   <div class="container">
     <div style="text-align:center;">
@@ -1702,27 +1761,24 @@ strong.white { color: var(--text); }
       <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,3.5vw,40px);">Don't Take My Word. <em class="gold">Take Theirs.</em></h2>
     </div>
 
-    <div class="proof-cards" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;">
-        <img src="https://iili.io/qJzRWBf.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy">
+    <div class="proof-cards">
+      <div class="proof-card">
+        <img src="https://iili.io/qJzRWBf.jpg" alt="Client testimonial" loading="lazy">
       </div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;">
-        <img src="https://iili.io/qJzRw22.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy">
+      <div class="proof-card">
+        <img src="https://iili.io/qJzRw22.jpg" alt="Client testimonial" loading="lazy">
       </div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;">
-        <img src="https://iili.io/qJzRN7S.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy">
+      <div class="proof-card">
+        <img src="https://iili.io/qJzRN7S.jpg" alt="Client testimonial" loading="lazy">
       </div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;">
-        <img src="https://iili.io/qJzR7gp.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy">
+      <div class="proof-card">
+        <img src="https://iili.io/qJzR7gp.jpg" alt="Client testimonial" loading="lazy">
       </div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;">
-        <img src="https://iili.io/qJzRlet.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy">
+      <div class="proof-card">
+        <img src="https://iili.io/qJzRlet.jpg" alt="Client testimonial" loading="lazy">
       </div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;">
-        <img src="https://iili.io/qJzRadN.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy">
-      </div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;">
-        <img src="https://iili.io/qJzR0mX.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy">
+      <div class="proof-card">
+        <img src="https://iili.io/qJzRadN.jpg" alt="Client testimonial" loading="lazy">
       </div>
     </div>
   </div>
@@ -1730,127 +1786,60 @@ strong.white { color: var(--text); }
 
 <div class="divider"></div>
 
-<!-- ===== OFFER STACK ===== -->
-<section class="offers-section" id="offers">
+<!-- ===== OFFER STACK — Maciek: SLO with perceived value + implementation call bonus ===== -->
+<section class="offer-section" id="offer">
   <div class="container">
-    <div class="section-label" style="display:flex; justify-content:center;">Choose Your Level</div>
-    <h2>Pick The Reading That <em>Matches Your Pain</em></h2>
-    <p class="offers-sub">Every reading includes 5-14 days of personalised chart preparation. This isn't a script. It's surgery.</p>
-
-    <div class="offers-grid">
-
-      <!-- CARD 1: Numerology -->
-      <div class="offer-card">
-        <div class="icon">🔢</div>
-        <h3>Numerology Power Reading</h3>
-        <div class="tagline">The "Quick Clarity" Diagnostic</div>
-        <p class="desc">Know your Life Path number, personal year cycle, and core strengths in 30 focused minutes. Perfect if you need fast strategic intel on what season you're in <em>right now</em>.</p>
-        <div class="price-row">
-          <span class="price">$65</span>
-        </div>
-        <ul class="offer-features">
-          <li>Life Path & Destiny Number decoded</li>
-          <li>Personal Year Cycle (your current "season")</li>
-          <li>Core Strengths Assessment</li>
-          <li><strong>30-min 1-on-1 video call</strong></li>
-          <li>5 days of personalised chart prep</li>
-        </ul>
-        <a href="https://buy.stripe.com/14AcN7epga0UbPA5DYasg04" class="btn-secondary" target="_blank" style="color:var(--amber); border-color:var(--amber);">Book Quick Clarity →</a>
-      </div>
-
-      <!-- CARD 2: FEATURED — Compatibility -->
-      <div class="offer-card featured">
-        <div class="offer-badge">Most Popular</div>
-        <div class="icon">💞</div>
-        <h3>Trinity Compatibility Analysis</h3>
-        <div class="tagline">Is This Person "The One" — or a Karmic Lesson?</div>
-        <p class="desc">The full three-system deep-dive into your relationship. Stop guessing. Get the cold, hard data on whether this connection is destined to thrive — or designed to teach you something and end.</p>
-        <div class="price-row">
-          <span class="price">$131</span>
-          <span class="price-orig">$250</span>
-        </div>
-        <ul class="offer-features">
-          <li><strong>Vedic + Numerology + Chinese Zodiac</strong> combined</li>
-          <li>Complete Synastry (partner comparison)</li>
-          <li>Relationship "Blind Spot" detection</li>
-          <li>Long-term compatibility score</li>
-          <li>Conflict resolution strategy</li>
-          <li><strong>60-min deep-dive call</strong></li>
-          <li>5 days of dual-chart preparation</li>
-        </ul>
-        <a href="https://buy.stripe.com/4gM5kFgxogpif1MgiCasg02" class="btn-primary" target="_blank">Get Clarity On Your Relationship →</a>
-      </div>
-
-      <!-- CARD 3: Career -->
-      <div class="offer-card">
-        <div class="offer-badge" style="background:var(--cyan); color:var(--bg);">New</div>
-        <div class="icon">🚀</div>
-        <h3>Trinity Career Roadmap</h3>
-        <div class="tagline">Stop Climbing The Wrong Ladder</div>
-        <p class="desc">Decode your Dharma. Find out what you're actually built for — and <em>when</em> to make the move. Includes promotion windows, career switch analysis, and specific Vedic remedies for professional breakthroughs.</p>
-        <div class="price-row">
-          <span class="price">$190</span>
-        </div>
-        <ul class="offer-features">
-          <li>Karmic Purpose & "True Calling" analysis</li>
-          <li>Timing: when to push for promotion</li>
-          <li>"Should I switch careers?" chart verdict</li>
-          <li>Specific Vedic career remedies</li>
-          <li>Statistical professional analysis</li>
-          <li><strong>60-min strategy call</strong></li>
-          <li>5 days of career-focused prep</li>
-        </ul>
-        <a href="https://buy.stripe.com/3cI7sNepg7SM06S4zUasg06" class="btn-secondary" target="_blank" style="color:var(--cyan); border-color:var(--cyan);">Book Career Roadmap →</a>
-      </div>
-
-      <!-- CARD 4: Full Blueprint -->
-      <div class="offer-card">
-        <div class="icon">📜</div>
-        <h3>Complete Blueprint Analysis</h3>
-        <div class="tagline">The "Billionaire's Blueprint" — Your Entire Life, Decoded</div>
-        <p class="desc">The full, comprehensive decoding of your design across all systems. Career, wealth, relationships, timing, health, purpose. This is the map for your entire life — not just a chapter.</p>
-        <div class="price-row">
-          <span class="price">$320</span>
-        </div>
-        <ul class="offer-features">
-          <li>Full Vedic Chart (all 12 Houses)</li>
-          <li>Complete Numerology Profile</li>
-          <li>Lifetime timing analysis (Dashas)</li>
-          <li>Career & wealth optimisation</li>
-          <li>Relationship compatibility framework</li>
-          <li>Health & constitutional analysis</li>
-          <li><strong>90-min strategy call</strong></li>
-          <li><strong>14 days</strong> of deep-dive preparation</li>
-        </ul>
-        <a href="https://buy.stripe.com/aFa3cx4OG6OI7zk4zUasg03" class="btn-primary" target="_blank" style="background:linear-gradient(135deg, var(--amber), var(--cyan));">Decode Your Full Blueprint →</a>
-      </div>
+    <div style="text-align:center; margin-bottom:40px;">
+      <div class="section-label" style="display:flex; justify-content:center;">Your Investment</div>
+      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,4vw,44px);">Everything Inside <em class="gold">The Playbook</em></h2>
+      <p style="font-size:16px; color:var(--text-dim); margin-top:8px;">Less than a dollar a week for an unfair timing advantage all year.</p>
     </div>
 
-    <!-- BONUS BANNER — Maciek: bonus that plants high-ticket seeds -->
-    <div class="bonus-banner">
-      <div class="bonus-tag">Free Bonus With Every Reading</div>
-      <h4>3 Months Free Access to the Private Skool Community</h4>
-      <p>Get ongoing guidance, exclusive content, and direct access to Rafi. Plus: a <strong>free implementation call</strong> to make sure you know exactly how to use your reading.</p>
+    <div class="offer-box">
+      <div class="offer-badge-top">Launch Pricing</div>
+      <h3>The Entrepreneur's Numerology Playbook</h3>
+      <p class="offer-sub">2026 Edition — Your Daily Timing Edge</p>
+
+      <ul class="offer-stack">
+        <li><strong>365 Daily Numerology Entries</strong> — action + avoidance for every day of 2026 <span class="value">Value: $97</span></li>
+        <li><strong>High-Output vs Recovery Day Map</strong> — know when to push and when to pull back <span class="value">Value: $27</span></li>
+        <li><strong>9-Day Cycle Framework</strong> — predict the rhythm of any month, forever <span class="value">Value: $37</span></li>
+        <li><strong>The 60/40 Rule Breakdown</strong> — how universal energy interacts with your personal chart <span class="value">Value: $17</span></li>
+        <li><strong>Strategic Overlays</strong> — hiring, firing, launching, pitching mapped to energy types <span class="value">Value: $27</span></li>
+        <li><strong>Anomaly & Master Number Flags</strong> — the days that change everything, flagged in advance <span class="value">Value: $17</span></li>
+      </ul>
+
+      <div class="offer-total">
+        <div class="total-label"><strong>Total Value:</strong> $222</div>
+        <div class="total-price">
+          <span class="orig">$67</span>
+          <span class="now">$28</span>
+        </div>
+      </div>
+
+      <a href="YOUR_STRIPE_LINK_HERE" class="btn-primary" target="_blank">Get The 2026 Playbook — $28 →</a>
+
+      <div class="guarantee-micro">
+        <span>🛡</span> 100% money-back guarantee · Instant delivery · PDF format
+      </div>
+
+      <!-- Bonus — Maciek: implementation call plants high ticket seeds -->
+      <div class="bonus-banner">
+        <div class="bonus-tag">Free Bonus</div>
+        <h4>1-on-1 Implementation Call With Rafi</h4>
+        <p>A personal call to show you how to layer the calendar over <em>your</em> specific business goals. This is where the universal energy meets <strong>your</strong> chart — and where most people realise they want the full reading.</p>
+      </div>
     </div>
   </div>
 </section>
-
-<div class="divider"></div>
 
 <!-- ===== GUARANTEE ===== -->
 <section class="guarantee-section">
   <div class="container">
     <div class="guarantee-box">
       <div class="shield">🛡</div>
-      <h3>The "10x Clarity" <span style="color:var(--amber)">Guarantee</span></h3>
-      <p>If you complete your reading and don't feel it gave you at least 10x the value in clarity and strategic direction, I'll refund 100% of your money. No questions. No hoops. My reputation is on the line with every session — and I'd rather lose the money than lose your trust.</p>
-      <div class="guarantee-sig">
-        <img src="https://iili.io/qJz7S0x.jpg" alt="Rafi" loading="lazy">
-        <div>
-          <div class="name">Rafi</div>
-          <div class="title">Creator, "The Billionaire's Blueprint"</div>
-        </div>
-      </div>
+      <h3>The "First Week" <span style="color:var(--amber)">Guarantee</span></h3>
+      <p>Use the playbook for one week. If the daily entries don't change how you plan, schedule, and move — I'll refund 100% of your money. No questions. No forms. The playbook is $28. The risk is zero. The upside is an entire year of strategic timing intel.</p>
     </div>
   </div>
 </section>
@@ -1865,28 +1854,32 @@ strong.white { color: var(--text); }
 
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-q">Is this just going to tell me what I want to hear?</button>
-        <div class="faq-a"><div class="faq-a-inner">No. This isn't a cold read or a dopamine hit. I spend 5-14 days analysing your chart before we ever speak. The Trinity Method cross-references three independent systems — if they all point in the same direction, the reading is accurate whether you like what it says or not. I tell you what the chart shows, not what makes you feel good.</div></div>
+        <button class="faq-q">Is this like a horoscope app?</button>
+        <div class="faq-a"><div class="faq-a-inner">No. Horoscope apps give you vague personality descriptions. This is a strategic planning tool built on numerological energy cycles. Each day has a specific action directive and avoidance warning tied to mathematical energy patterns — not "Mercury is in retrograde, be careful." You get a concrete instruction you can act on in 10 minutes.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">I'm sceptical of astrology. Will this work for me?</button>
-        <div class="faq-a"><div class="faq-a-inner">Good — sceptics are my best clients. Vedic astrology isn't the fluffy Sun-sign content you see on Instagram. It's a 5,000-year-old mathematical system based on precise astronomical calculations. There's a reason Silicon Valley CEOs and Wall Street traders quietly consult Vedic advisors. This isn't about belief — it's about data.</div></div>
+        <button class="faq-q">I'm sceptical of numerology. Will this work?</button>
+        <div class="faq-a"><div class="faq-a-inner">I get it. I used to scroll past this stuff too. But here's the test: try it for one week. Schedule your high-stakes activities on 1, 8, or 11 Energy days. Move your rest to 7 or 6 Energy days. If you don't notice a difference, I'll give you your money back. That's how confident I am that the pattern holds up once you actually use it.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">How is this different from Western astrology or Co-Star?</button>
-        <div class="faq-a"><div class="faq-a-inner">Western astrology is based on the Sun and focuses on personality ("You're a Gemini, you're fun"). Vedic astrology is based on the Moon and focuses on <strong>timing</strong> — it tells you <em>when</em> things happen, not just who you are. Add Numerology and Chinese Zodiac cross-referencing, and you get a level of specificity that generic apps physically can't offer.</div></div>
+        <button class="faq-q">What's the difference between this and a full reading?</button>
+        <div class="faq-a"><div class="faq-a-inner">The playbook shows you the <strong>universal</strong> energy — what's happening for everyone. That's 60% of the picture. A full 1-on-1 reading layers your Personal Life Path, Vedic chart, and Chinese Zodiac on top of the universal data for complete, individualised timing. Think of the playbook as the weather forecast — the reading is your personalised GPS route through the weather.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Is this fatalistic? Does it mean I have no free will?</button>
-        <div class="faq-a"><div class="faq-a-inner">Not at all. Think of it like a weather report. You don't control the weather, but you control what you wear. Vedic astrology shows you the "weather" of your life — and gives you specific remedies (mantras, gemstones, behavioural shifts) to navigate it. You have about 60% free will. This system optimises how you use it.</div></div>
+        <button class="faq-q">How quickly will I see results?</button>
+        <div class="faq-a"><div class="faq-a-inner">Immediately. Open the playbook, check today's entry, and adjust your schedule accordingly. The first week is when most people have the "why didn't I know this before" moment — because they'll realise their recent wins and losses map perfectly to the energy calendar.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Why do you need 5-14 days to prepare?</button>
-        <div class="faq-a"><div class="faq-a-inner">Because I don't read from a script. I personally spend days studying your chart across all three systems, cross-referencing patterns, and preparing detailed notes. When we get on the call, I already know your chart inside out. That prep time is what separates a strategic audit from a generic reading.</div></div>
+        <button class="faq-q">Is this only for entrepreneurs?</button>
+        <div class="faq-a"><div class="faq-a-inner">It's designed for business owners because the action directives are oriented around revenue-generating activities — launches, pitches, negotiations, hiring, firing. But anyone making strategic decisions (investors, executives, freelancers) will find it immediately useful. If you make decisions for a living, this calendar is for you.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Which reading should I start with?</button>
-        <div class="faq-a"><div class="faq-a-inner">If you're in a relationship (or considering one), start with the <strong>Trinity Compatibility Analysis</strong> — it's the most popular for a reason. If you're focused on career direction, go with the <strong>Career Roadmap</strong>. If you want the full picture of everything, the <strong>Complete Blueprint</strong> covers your entire life map.</div></div>
+        <button class="faq-q">What format is it?</button>
+        <div class="faq-a"><div class="faq-a-inner">PDF. Instant delivery. You can open it on your phone, tablet, or laptop. Most people bookmark the current month and check it each morning alongside their coffee. Takes less time than checking Instagram.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What if I want to go deeper after this?</button>
+        <div class="faq-a"><div class="faq-a-inner">That's exactly what the free Implementation Call is for. On that call, I'll show you how to layer your personal chart over the universal calendar. If you want the full personalised reading after that, we can discuss it — but there's zero pressure. The playbook stands on its own as a complete tool.</div></div>
       </div>
     </div>
   </div>
@@ -1895,31 +1888,31 @@ strong.white { color: var(--text); }
 <!-- ===== FINAL CTA ===== -->
 <section class="final-cta">
   <div class="container">
-    <h2>Stop Guessing.<br>Start <em>Knowing.</em></h2>
-    <p>You can keep swimming upstream. Or you can finally read the map that was written for you the moment you were born.</p>
-    <a href="#offers" class="btn-primary">Choose Your Reading →</a>
+    <h2>Everyone Has 24 Hours.<br>Start Using Yours <em>Strategically.</em></h2>
+    <p>$28 for 365 days of timing intel that 99% of entrepreneurs don't have. Check the date. Read the entry. Execute the move.</p>
+    <a href="YOUR_STRIPE_LINK_HERE" class="btn-primary" target="_blank">Get The 2026 Playbook — $28 →</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  &copy; 2025 Rafi's World. All rights reserved.
+  &copy; 2026 Rafi's World. All rights reserved.
 </footer>
 
 <!-- ===== SOCIAL PROOF POPUP ===== -->
 <div class="popup" id="popup">
-  <div class="emoji">🔥</div>
+  <div class="emoji">📅</div>
   <div class="popup-text" id="popup-text">
-    <p style="margin:0;"><strong>Jean</strong> from France just booked a <span class="product">Trinity Compatibility Reading</span></p>
-    <div class="time-ago">2 minutes ago</div>
+    <p style="margin:0;"><strong>Marcus</strong> from Atlanta just grabbed the <span class="product">2026 Playbook</span></p>
+    <div class="time-ago">3 minutes ago</div>
   </div>
 </div>
 
 <!-- ===== SCRIPTS ===== -->
 <script>
-// COUNTDOWN TIMER — Maciek: urgency code, 48 hours from visit
+// COUNTDOWN TIMER — Maciek: 48hr urgency
 (function() {
-  const key = 'rafy_discount_end';
+  const key = 'rafi_playbook_end';
   let endTime = localStorage.getItem(key);
   if (!endTime) {
     endTime = Date.now() + 48 * 60 * 60 * 1000;
@@ -1943,17 +1936,29 @@ strong.white { color: var(--text); }
   setInterval(update, 1000);
 })();
 
+// ORDER BUMP TOGGLE
+function toggleBump() {
+  const check = document.getElementById('bumpCheck');
+  check.classList.toggle('checked');
+  const cta = document.getElementById('mainCta');
+  if (check.classList.contains('checked')) {
+    cta.textContent = 'Get Playbook + Reading — $77 →';
+  } else {
+    cta.textContent = 'Get The 2026 Playbook — $28 →';
+  }
+}
+
 // SOCIAL PROOF POPUP
 (function() {
   const purchases = [
-    { name: 'Jean', loc: 'France', product: 'Trinity Compatibility Reading' },
-    { name: 'Paul', loc: 'England', product: 'Complete Blueprint Analysis' },
-    { name: 'Mike', loc: 'New York', product: 'Numerology Power Reading' },
-    { name: 'Sarah', loc: 'London', product: 'Trinity Compatibility Reading' },
-    { name: 'Alex', loc: 'Germany', product: 'Complete Blueprint Analysis' },
-    { name: 'David', loc: 'Manchester', product: 'Trinity Career Roadmap' },
-    { name: 'Fatima', loc: 'Dubai', product: 'Trinity Career Roadmap' },
-    { name: 'Chris', loc: 'Australia', product: 'Numerology Power Reading' }
+    { name: 'Marcus', loc: 'Atlanta', product: '2026 Playbook' },
+    { name: 'Priya', loc: 'London', product: '2026 Playbook + Reading' },
+    { name: 'James', loc: 'New York', product: '2026 Playbook' },
+    { name: 'Amira', loc: 'Dubai', product: '2026 Playbook' },
+    { name: 'Tyler', loc: 'Los Angeles', product: '2026 Playbook + Reading' },
+    { name: 'Sophie', loc: 'Manchester', product: '2026 Playbook' },
+    { name: 'Daniel', loc: 'Toronto', product: '2026 Playbook' },
+    { name: 'Fatima', loc: 'Paris', product: '2026 Playbook + Reading' }
   ];
   const popup = document.getElementById('popup');
   const text = document.getElementById('popup-text');
@@ -1965,7 +1970,7 @@ strong.white { color: var(--text); }
     last = i;
     const p = purchases[i];
     const t = Math.floor(Math.random() * 10) + 1;
-    text.innerHTML = `<p style="margin:0;"><strong>${p.name}</strong> from ${p.loc} just booked a <span class="product">${p.product}</span></p><div class="time-ago">${t} minutes ago</div>`;
+    text.innerHTML = `<p style="margin:0;"><strong>${p.name}</strong> from ${p.loc} just grabbed the <span class="product">${p.product}</span></p><div class="time-ago">${t} minutes ago</div>`;
     popup.classList.add('show');
     setTimeout(() => popup.classList.remove('show'), 5000);
   }
