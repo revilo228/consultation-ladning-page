@@ -5,44 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rafi's World — Stop Guessing. Start Knowing.</title>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "u7qcnghg1s");
-</script>
 <script src="https://fast.wistia.com/embed/medias/1mjtycwa3l.jsonp" async></script>
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 <style>
 /* ============================================
-   DESIGN SYSTEM — DARK LUXURY / EDITORIAL
-   Matching Gap & Bridge guide aesthetic
+   DESIGN SYSTEM — LIGHT (Cashvertising readability)
+   Same color principles as calendar landing v3
    ============================================ */
 :root {
-  --bg: #0C0A09;
-  --surface: #1C1917;
-  --surface2: #292524;
-  --surface3: #3B3835;
-  --amber: #F59E0B;
-  --amber-dim: #92400E;
-  --amber-glow: rgba(245, 158, 11, 0.12);
-  --emerald: #34D399;
-  --emerald-dim: #065F46;
-  --rose: #FB7185;
-  --rose-dim: #9F1239;
-  --cyan: #22D3EE;
-  --cyan-dim: #0E7490;
-  --text: #F5F5F4;
-  --text-dim: #A8A29E;
+  --bg: #FAFAF9;
+  --surface: #FFFFFF;
+  --surface2: #F5F5F4;
+  --surface3: #E7E5E4;
+  --text: #1C1917;
+  --text-dim: #44403C;
   --text-muted: #78716C;
-  --violet: #A78BFA;
+  --amber: #F59E0B;
+  --amber-dim: #B45309;
+  --amber-text: #92400E;
+  --amber-glow: rgba(245, 158, 11, 0.2);
+  --emerald: #059669;
+  --emerald-dim: #065F46;
+  --rose: #E11D48;
+  --rose-dim: #9F1239;
+  --cyan: #0891B2;
+  --cyan-dim: #0E7490;
+  --violet: #7C3AED;
+  --red: #DC2626;
+  --red-hover: #B91C1C;
+  --red-glow: rgba(220, 38, 38, 0.28);
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 html { scroll-behavior: smooth; overflow-x: hidden; }
-
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--bg);
@@ -51,17 +45,12 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
-
+img { max-width: 100%; height: auto; display: block; }
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--surface3); border-radius: 3px; }
-
-/* ============================================
-   UTILITY
-   ============================================ */
 .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 .container-wide { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-
 .section-label {
   display: inline-flex;
   align-items: center;
@@ -70,26 +59,23 @@ body {
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--amber);
+  color: var(--amber-dim);
   margin-bottom: 14px;
 }
 .section-label::before {
   content: '';
   width: 20px;
   height: 2px;
-  background: var(--amber);
+  background: var(--amber-dim);
 }
-
 .divider {
   width: 100%;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--surface3), transparent);
   margin: 0;
 }
-
-em.gold { color: var(--amber); font-style: italic; }
+em.gold { color: var(--amber-dim); font-style: italic; }
 strong.white { color: var(--text); }
-
 /* ============================================
    STICKY NAV
    ============================================ */
@@ -97,9 +83,9 @@ strong.white { color: var(--text); }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: rgba(12, 10, 9, 0.88);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(24px);
-  border-bottom: 1px solid var(--surface2);
+  border-bottom: 1px solid var(--surface3);
   padding: 12px 32px;
   display: flex;
   align-items: center;
@@ -108,12 +94,12 @@ strong.white { color: var(--text); }
 .nav-logo {
   font-family: 'Instrument Serif', serif;
   font-size: 20px;
-  color: var(--amber);
+  color: var(--amber-dim);
   text-decoration: none;
 }
 .nav-cta {
-  background: var(--amber);
-  color: var(--bg);
+  background: var(--red);
+  color: #fff;
   padding: 8px 24px;
   border-radius: 6px;
   font-size: 13px;
@@ -123,35 +109,38 @@ strong.white { color: var(--text); }
   letter-spacing: 0.5px;
   transition: all 0.3s;
 }
-.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 20px var(--amber-glow); }
-
+.nav-cta:hover { background: var(--red-hover); box-shadow: 0 4px 20px var(--red-glow); transform: translateY(-1px); }
 /* ============================================
    URGENCY BANNER
    ============================================ */
 .urgency-bar {
-  background: linear-gradient(90deg, var(--amber-dim), rgba(245,158,11,0.15));
-  border-bottom: 1px solid rgba(245,158,11,0.3);
+  background: rgba(245, 158, 11, 0.14);
+  border-bottom: 2px solid var(--amber);
   padding: 10px 24px;
   text-align: center;
   font-size: 13px;
   font-weight: 600;
-  color: var(--amber);
+  color: var(--amber-text);
   margin-top: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
 }
 .urgency-bar .timer {
   display: inline-flex;
   gap: 4px;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 700;
-  background: var(--bg);
-  padding: 2px 10px;
+  background: var(--red);
+  color: #fff;
+  padding: 3px 12px;
   border-radius: 4px;
-  margin-left: 8px;
+  letter-spacing: 0.5px;
 }
-
 /* ============================================
-   HERO / ATF (Above The Fold)
-   Maciek: VSL left, order form right on desktop
+   HERO / ATF
    ============================================ */
 .hero {
   padding: 60px 0 80px;
@@ -164,11 +153,9 @@ strong.white { color: var(--text); }
   top: -300px; left: 50%;
   transform: translateX(-50%);
   width: 1000px; height: 1000px;
-  background: radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(245,158,11,0.1) 0%, transparent 60%);
   pointer-events: none;
 }
-
-/* ICP Callout — Maciek: eyebrow section */
 .icp-callout {
   text-align: center;
   margin-bottom: 12px;
@@ -179,17 +166,13 @@ strong.white { color: var(--text); }
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--amber);
-  background: rgba(245,158,11,0.1);
-  border: 1px solid rgba(245,158,11,0.2);
+  color: var(--amber-dim);
+  background: rgba(245,158,11,0.12);
+  border: 1px solid rgba(245,158,11,0.35);
   padding: 6px 20px;
   border-radius: 100px;
 }
-
-.hero-headline {
-  text-align: center;
-  margin-bottom: 8px;
-}
+.hero-headline { text-align: center; margin-bottom: 8px; }
 .hero-headline h1 {
   font-family: 'Instrument Serif', serif;
   font-size: clamp(36px, 5vw, 64px);
@@ -197,9 +180,9 @@ strong.white { color: var(--text); }
   line-height: 1.15;
   max-width: 800px;
   margin: 0 auto;
+  color: var(--text);
 }
-.hero-headline h1 em { color: var(--amber); font-style: italic; }
-
+.hero-headline h1 em { color: var(--amber-dim); font-style: italic; }
 .hero-sub {
   text-align: center;
   font-size: 17px;
@@ -208,8 +191,7 @@ strong.white { color: var(--text); }
   margin: 16px auto 40px;
   line-height: 1.6;
 }
-
-/* ATF Layout: VSL + Form */
+.hero-sub strong { color: var(--text); }
 .atf-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -218,55 +200,32 @@ strong.white { color: var(--text); }
   max-width: 1000px;
   margin: 0 auto;
 }
-
-@media (max-width: 900px) {
-  .atf-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* VSL */
+@media (max-width: 900px) { .atf-grid { grid-template-columns: 1fr; } }
 .vsl-wrapper {
   background: var(--surface);
-  border: 1px solid var(--surface2);
+  border: 1px solid var(--surface3);
   border-radius: 16px;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
-.vsl-wrapper::after {
-  content: '▶ WATCH: Why 90% of "self-help" fails you';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  background: linear-gradient(0deg, rgba(12,10,9,0.95), transparent);
-  padding: 40px 20px 16px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--amber);
-  text-align: center;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-.vsl-wrapper:hover::after { opacity: 1; }
-
 .wistia_responsive_padding { padding: 56.25% 0 0 0; position: relative; }
 .wistia_responsive_wrapper { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
-
-/* Mini Order Form / CTA Panel */
+/* CTA Panel */
 .cta-panel {
   background: var(--surface);
-  border: 1px solid var(--surface2);
+  border: 2px solid var(--amber);
   border-radius: 16px;
   padding: 32px 28px;
   position: sticky;
   top: 80px;
+  box-shadow: 0 4px 16px rgba(245,158,11,0.08);
 }
 .cta-panel h3 {
   font-family: 'Instrument Serif', serif;
   font-size: 24px;
   margin-bottom: 6px;
+  color: var(--text);
 }
 .cta-panel .sub {
   font-size: 14px;
@@ -282,23 +241,22 @@ strong.white { color: var(--text); }
 .cta-panel .price {
   font-size: 36px;
   font-weight: 800;
-  color: var(--amber);
+  color: var(--red);
 }
 .cta-panel .price-orig {
   font-size: 16px;
-  color: var(--text-muted);
+  color: var(--red);
   text-decoration: line-through;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 2px;
+  font-weight: 600;
 }
 .cta-panel .price-note {
   font-size: 12px;
   color: var(--text-muted);
   margin-bottom: 20px;
 }
-
-.cta-checklist {
-  list-style: none;
-  margin-bottom: 24px;
-}
+.cta-checklist { list-style: none; margin-bottom: 24px; }
 .cta-checklist li {
   font-size: 14px;
   color: var(--text-dim);
@@ -308,17 +266,16 @@ strong.white { color: var(--text); }
   gap: 8px;
 }
 .cta-checklist li::before {
-  content: '✓';
+  content: '\2713';
   color: var(--emerald);
   font-weight: 700;
   flex-shrink: 0;
 }
-
 .btn-primary {
   display: block;
   width: 100%;
-  background: var(--amber);
-  color: var(--bg);
+  background: var(--red);
+  color: #fff;
   padding: 16px;
   border: none;
   border-radius: 8px;
@@ -329,34 +286,32 @@ strong.white { color: var(--text); }
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  transition: all 0.3s;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 16px var(--red-glow);
 }
 .btn-primary:hover {
+  background: var(--red-hover);
+  box-shadow: 0 8px 30px var(--red-glow);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(245,158,11,0.3);
 }
 .btn-primary::after {
   content: '';
   position: absolute;
   top: 0; left: -100%;
   width: 100%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
   animation: shimmer 3s infinite;
 }
-@keyframes shimmer {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
-
+@keyframes shimmer { 0% { left: -100%; } 100% { left: 100%; } }
 .btn-secondary {
   display: block;
   width: 100%;
   background: transparent;
-  color: var(--cyan);
+  color: var(--amber-dim);
   padding: 14px;
-  border: 2px solid var(--cyan);
+  border: 2px solid var(--amber-dim);
   border-radius: 8px;
   font-size: 14px;
   font-weight: 700;
@@ -369,10 +324,9 @@ strong.white { color: var(--text); }
   margin-top: 10px;
 }
 .btn-secondary:hover {
-  background: var(--cyan);
-  color: var(--bg);
+  background: var(--amber-dim);
+  color: #fff;
 }
-
 .guarantee-micro {
   display: flex;
   align-items: center;
@@ -382,17 +336,15 @@ strong.white { color: var(--text); }
   color: var(--text-muted);
 }
 .guarantee-micro span { color: var(--emerald); }
-
 /* ============================================
-   COPY HINGE — Maciek: beneath first CTA
-   Social proof strip + publication features
+   COPY HINGE
    ============================================ */
 .copy-hinge {
   padding: 48px 0;
   text-align: center;
-  background: var(--surface);
-  border-top: 1px solid var(--surface2);
-  border-bottom: 1px solid var(--surface2);
+  background: var(--surface2);
+  border-top: 1px solid var(--surface3);
+  border-bottom: 1px solid var(--surface3);
 }
 .proof-stats {
   display: flex;
@@ -401,13 +353,11 @@ strong.white { color: var(--text); }
   flex-wrap: wrap;
   margin-bottom: 24px;
 }
-.proof-stat {
-  text-align: center;
-}
+.proof-stat { text-align: center; }
 .proof-stat .num {
   font-family: 'Instrument Serif', serif;
   font-size: 36px;
-  color: var(--amber);
+  color: var(--amber-dim);
 }
 .proof-stat .label {
   font-size: 12px;
@@ -421,33 +371,25 @@ strong.white { color: var(--text); }
   gap: 32px;
   flex-wrap: wrap;
   align-items: center;
-  opacity: 0.4;
   font-size: 13px;
   color: var(--text-muted);
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-
 /* ============================================
-   GAP SECTION — "The Real Reason You're Stuck"
-   Gap & Bridge storytelling applied
+   GAP SECTION
    ============================================ */
-.gap-section {
-  padding: 100px 0;
-}
-.gap-content {
-  max-width: 720px;
-  margin: 0 auto;
-}
+.gap-section { padding: 100px 0; }
+.gap-content { max-width: 720px; margin: 0 auto; }
 .gap-content h2 {
   font-family: 'Instrument Serif', serif;
   font-size: clamp(28px, 4vw, 44px);
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 32px;
+  color: var(--text);
 }
-.gap-content h2 em { color: var(--amber); font-style: italic; }
-
+.gap-content h2 em { color: var(--amber-dim); font-style: italic; }
 .gap-content p {
   font-size: 17px;
   color: var(--text-dim);
@@ -456,8 +398,8 @@ strong.white { color: var(--text); }
 }
 .gap-content p strong { color: var(--text); }
 .gap-content .highlight-pain {
-  background: rgba(251, 113, 133, 0.12);
-  border-left: 3px solid var(--rose);
+  background: rgba(220, 38, 38, 0.08);
+  border-left: 3px solid var(--red);
   padding: 16px 20px;
   border-radius: 0 8px 8px 0;
   margin: 28px 0;
@@ -466,8 +408,8 @@ strong.white { color: var(--text); }
   font-style: italic;
 }
 .gap-content .highlight-reveal {
-  background: rgba(245, 158, 11, 0.1);
-  border-left: 3px solid var(--amber);
+  background: rgba(245, 158, 11, 0.12);
+  border-left: 3px solid var(--amber-dim);
   padding: 16px 20px;
   border-radius: 0 8px 8px 0;
   margin: 28px 0;
@@ -475,16 +417,14 @@ strong.white { color: var(--text); }
   color: var(--text);
   font-weight: 500;
 }
-
 /* ============================================
-   FAILED SOLUTIONS — "The Graveyard"
-   Avatar psychographic: tried solutions table
+   FAILED SOLUTIONS
    ============================================ */
 .failed-section {
   padding: 80px 0;
-  background: var(--surface);
-  border-top: 1px solid var(--surface2);
-  border-bottom: 1px solid var(--surface2);
+  background: var(--surface2);
+  border-top: 1px solid var(--surface3);
+  border-bottom: 1px solid var(--surface3);
 }
 .failed-grid {
   display: grid;
@@ -493,14 +433,15 @@ strong.white { color: var(--text); }
   margin-top: 40px;
 }
 .failed-card {
-  background: var(--bg);
-  border: 1px solid var(--surface2);
+  background: var(--surface);
+  border: 1px solid var(--surface3);
   border-radius: 12px;
   padding: 28px;
   position: relative;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
-.failed-card:hover { border-color: var(--rose); }
+.failed-card:hover { border-color: var(--red); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
 .failed-card .emoji { font-size: 28px; margin-bottom: 12px; }
 .failed-card h4 {
   font-size: 15px;
@@ -510,40 +451,34 @@ strong.white { color: var(--text); }
 }
 .failed-card p {
   font-size: 14px;
-  color: var(--text-muted);
+  color: var(--text-dim);
   line-height: 1.5;
 }
 .failed-card .verdict {
   margin-top: 12px;
   font-size: 13px;
-  color: var(--rose);
+  color: var(--red);
   font-weight: 600;
 }
-
 /* ============================================
-   BRIDGE SECTION — "The Trinity Method"
-   The unique mechanism reveal
+   BRIDGE / TRINITY
    ============================================ */
-.bridge-section {
-  padding: 100px 0;
-}
-.bridge-intro {
-  max-width: 720px;
-  margin: 0 auto 60px;
-}
+.bridge-section { padding: 100px 0; }
+.bridge-intro { max-width: 720px; margin: 0 auto 60px; }
 .bridge-intro h2 {
   font-family: 'Instrument Serif', serif;
   font-size: clamp(28px, 4vw, 44px);
   line-height: 1.2;
   margin-bottom: 20px;
+  color: var(--text);
 }
-.bridge-intro h2 em { color: var(--amber); font-style: italic; }
+.bridge-intro h2 em { color: var(--amber-dim); font-style: italic; }
 .bridge-intro p {
   font-size: 17px;
   color: var(--text-dim);
   line-height: 1.7;
 }
-
+.bridge-intro p strong { color: var(--text); }
 .trinity-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -551,27 +486,28 @@ strong.white { color: var(--text); }
   margin-bottom: 60px;
 }
 @media (max-width: 768px) { .trinity-grid { grid-template-columns: 1fr; } }
-
 .trinity-card {
   background: var(--surface);
-  border: 1px solid var(--surface2);
+  border: 1px solid var(--surface3);
   border-radius: 16px;
   padding: 36px 28px;
   text-align: center;
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
 .trinity-card:hover {
   border-color: var(--amber);
   transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 .trinity-card::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--amber), var(--cyan));
+  background: linear-gradient(90deg, var(--amber), var(--red));
   opacity: 0;
   transition: opacity 0.3s;
 }
@@ -581,13 +517,14 @@ strong.white { color: var(--text); }
   font-family: 'Instrument Serif', serif;
   font-size: 22px;
   margin-bottom: 6px;
+  color: var(--text);
 }
 .trinity-card .role {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--amber);
+  color: var(--amber-dim);
   margin-bottom: 12px;
 }
 .trinity-card p {
@@ -595,16 +532,15 @@ strong.white { color: var(--text); }
   color: var(--text-dim);
   line-height: 1.5;
 }
-
-/* Bridge Reveal */
 .bridge-reveal {
   background: var(--surface);
-  border: 1px solid var(--amber);
+  border: 2px solid var(--amber);
   border-radius: 16px;
   padding: 48px;
   text-align: center;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(245,158,11,0.1);
 }
 .bridge-reveal::after {
   content: '';
@@ -620,6 +556,7 @@ strong.white { color: var(--text); }
   margin-bottom: 16px;
   position: relative;
   z-index: 1;
+  color: var(--text);
 }
 .bridge-reveal p {
   font-size: 16px;
@@ -629,16 +566,14 @@ strong.white { color: var(--text); }
   position: relative;
   z-index: 1;
 }
-
 /* ============================================
-   ORIGIN STORY — "Us vs Them" + Reluctant Hero
-   David: story selling, personal branding
+   ORIGIN
    ============================================ */
 .origin-section {
   padding: 80px 0;
-  background: var(--surface);
-  border-top: 1px solid var(--surface2);
-  border-bottom: 1px solid var(--surface2);
+  background: var(--surface2);
+  border-top: 1px solid var(--surface3);
+  border-bottom: 1px solid var(--surface3);
 }
 .origin-grid {
   display: grid;
@@ -649,96 +584,91 @@ strong.white { color: var(--text); }
   margin: 0 auto;
 }
 @media (max-width: 768px) { .origin-grid { grid-template-columns: 1fr; } }
-
 .origin-photo {
   width: 100%;
   aspect-ratio: 3/4;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--surface3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
 }
-.origin-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+.origin-photo img { width: 100%; height: 100%; object-fit: cover; }
 .origin-text h2 {
   font-family: 'Instrument Serif', serif;
   font-size: 32px;
   margin-bottom: 20px;
   line-height: 1.2;
+  color: var(--text);
 }
-.origin-text h2 em { color: var(--amber); font-style: italic; }
+.origin-text h2 em { color: var(--amber-dim); font-style: italic; }
 .origin-text p {
   font-size: 16px;
   color: var(--text-dim);
   margin-bottom: 16px;
   line-height: 1.7;
 }
+.origin-text p strong { color: var(--text); }
 .origin-text .us-vs-them {
-  background: var(--bg);
-  border-left: 3px solid var(--amber);
+  background: var(--surface);
+  border-left: 3px solid var(--amber-dim);
   padding: 16px 20px;
   border-radius: 0 8px 8px 0;
   margin: 24px 0;
   font-size: 15px;
   color: var(--text);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
-
+.origin-text .us-vs-them strong { color: var(--text); }
 /* ============================================
-   PRODUCTS / OFFER STACK
-   Maciek: NESB emotions, perceived value
+   OFFERS
    ============================================ */
-.offers-section {
-  padding: 100px 0;
-}
+.offers-section { padding: 100px 0; }
 .offers-section > .container > h2 {
   font-family: 'Instrument Serif', serif;
   font-size: clamp(28px, 4vw, 44px);
   text-align: center;
   margin-bottom: 8px;
+  color: var(--text);
 }
-.offers-section > .container > h2 em { color: var(--amber); font-style: italic; }
+.offers-section > .container > h2 em { color: var(--amber-dim); font-style: italic; }
 .offers-sub {
   text-align: center;
   font-size: 16px;
   color: var(--text-dim);
   margin-bottom: 48px;
 }
-
 .offers-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 @media (max-width: 900px) { .offers-grid { grid-template-columns: 1fr; } }
-
 .offer-card {
   background: var(--surface);
-  border: 1px solid var(--surface2);
+  border: 1px solid var(--surface3);
   border-radius: 16px;
   padding: 36px;
   display: flex;
   flex-direction: column;
   transition: all 0.3s;
   position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
 .offer-card:hover {
-  border-color: var(--surface3);
+  border-color: var(--amber-dim);
   transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 .offer-card.featured {
   border: 2px solid var(--amber);
   background: linear-gradient(180deg, rgba(245,158,11,0.06) 0%, var(--surface) 40%);
 }
 .offer-card.featured:hover { border-color: var(--amber); }
-
 .offer-badge {
   position: absolute;
   top: -1px; right: 36px;
-  background: var(--amber);
-  color: var(--bg);
+  background: var(--red);
+  color: #fff;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 1px;
@@ -746,17 +676,17 @@ strong.white { color: var(--text); }
   padding: 5px 14px;
   border-radius: 0 0 8px 8px;
 }
-
 .offer-card .icon { font-size: 32px; margin-bottom: 12px; }
 .offer-card h3 {
   font-family: 'Instrument Serif', serif;
   font-size: 24px;
   margin-bottom: 4px;
+  color: var(--text);
 }
 .offer-card .tagline {
   font-size: 14px;
-  color: var(--amber);
-  font-weight: 600;
+  color: var(--amber-dim);
+  font-weight: 700;
   margin-bottom: 12px;
 }
 .offer-card .desc {
@@ -766,6 +696,7 @@ strong.white { color: var(--text); }
   flex-grow: 1;
   line-height: 1.6;
 }
+.offer-card .desc em { color: var(--text); font-style: italic; font-weight: 500; }
 .offer-card .price-row {
   display: flex;
   align-items: baseline;
@@ -775,17 +706,19 @@ strong.white { color: var(--text); }
 .offer-card .price {
   font-size: 32px;
   font-weight: 800;
-  color: var(--amber);
+  color: var(--red);
 }
 .offer-card .price-orig {
   font-size: 16px;
-  color: var(--text-muted);
+  color: var(--red);
   text-decoration: line-through;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 2px;
+  font-weight: 600;
 }
-
 .offer-features {
   list-style: none;
-  background: rgba(0,0,0,0.2);
+  background: var(--surface2);
   border-radius: 10px;
   padding: 16px 20px;
   margin-bottom: 20px;
@@ -799,20 +732,17 @@ strong.white { color: var(--text); }
   gap: 8px;
 }
 .offer-features li::before {
-  content: '✓';
+  content: '\2713';
   color: var(--emerald);
   font-weight: 700;
   flex-shrink: 0;
 }
 .offer-features li strong { color: var(--text); }
-
 .offer-card .btn-primary { margin-top: auto; }
-
-/* Bonus Banner */
 .bonus-banner {
   margin-top: 32px;
-  background: linear-gradient(135deg, rgba(245,158,11,0.1), rgba(34,211,238,0.1));
-  border: 1px dashed var(--amber);
+  background: linear-gradient(135deg, rgba(245,158,11,0.12), rgba(8,145,178,0.08));
+  border: 1px dashed var(--amber-dim);
   border-radius: 12px;
   padding: 24px 32px;
   text-align: center;
@@ -821,15 +751,17 @@ strong.white { color: var(--text); }
   font-family: 'Instrument Serif', serif;
   font-size: 20px;
   margin-bottom: 6px;
+  color: var(--text);
 }
 .bonus-banner p {
   font-size: 14px;
   color: var(--text-dim);
 }
+.bonus-banner p strong { color: var(--text); }
 .bonus-banner .bonus-tag {
   display: inline-block;
-  background: var(--amber);
-  color: var(--bg);
+  background: var(--red);
+  color: #fff;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 1px;
@@ -838,15 +770,14 @@ strong.white { color: var(--text); }
   border-radius: 4px;
   margin-bottom: 10px;
 }
-
 /* ============================================
-   TRANSFORMATION — Before/After
+   TRANSFORMATION
    ============================================ */
 .transform-section {
   padding: 80px 0;
-  background: var(--surface);
-  border-top: 1px solid var(--surface2);
-  border-bottom: 1px solid var(--surface2);
+  background: var(--surface2);
+  border-top: 1px solid var(--surface3);
+  border-bottom: 1px solid var(--surface3);
 }
 .transform-grid {
   display: grid;
@@ -860,14 +791,14 @@ strong.white { color: var(--text); }
   .transform-grid { grid-template-columns: 1fr; }
   .transform-arrow { transform: rotate(90deg) !important; }
 }
-
 .transform-col {
-  background: var(--bg);
+  background: var(--surface);
   border-radius: 12px;
   padding: 32px;
-  border: 1px solid var(--surface2);
+  border: 1px solid var(--surface3);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
-.transform-col.before { border-top: 3px solid var(--rose); }
+.transform-col.before { border-top: 3px solid var(--red); }
 .transform-col.after { border-top: 3px solid var(--emerald); }
 .transform-col h4 {
   font-size: 12px;
@@ -876,33 +807,28 @@ strong.white { color: var(--text); }
   text-transform: uppercase;
   margin-bottom: 16px;
 }
-.transform-col.before h4 { color: var(--rose); }
+.transform-col.before h4 { color: var(--red); }
 .transform-col.after h4 { color: var(--emerald); }
 .transform-col li {
   font-size: 14px;
   color: var(--text-dim);
   padding: 6px 0;
   list-style: none;
-  border-bottom: 1px solid var(--surface2);
+  border-bottom: 1px solid var(--surface3);
 }
 .transform-col li:last-child { border: none; }
-
 .transform-arrow {
   display: flex;
   align-items: center;
   justify-content: center;
   align-self: center;
   font-size: 28px;
-  color: var(--amber);
+  color: var(--red);
 }
-
 /* ============================================
-   SOCIAL PROOF / TESTIMONIALS
-   David: belief system engineering levels
+   PROOF
    ============================================ */
-.proof-section {
-  padding: 100px 0;
-}
+.proof-section { padding: 100px 0; }
 .proof-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -911,12 +837,13 @@ strong.white { color: var(--text); }
 }
 .proof-card {
   background: var(--surface);
-  border: 1px solid var(--surface2);
+  border: 1px solid var(--surface3);
   border-radius: 12px;
   padding: 28px;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
-.proof-card:hover { border-color: var(--amber); }
+.proof-card:hover { border-color: var(--amber-dim); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
 .proof-card .stars { color: var(--amber); font-size: 14px; margin-bottom: 12px; }
 .proof-card .quote {
   font-size: 15px;
@@ -932,33 +859,34 @@ strong.white { color: var(--text); }
 }
 .proof-card .product-bought {
   font-size: 12px;
-  color: var(--amber);
+  color: var(--amber-dim);
   margin-top: 2px;
 }
-
 /* ============================================
    GUARANTEE
    ============================================ */
 .guarantee-section {
   padding: 80px 0;
-  background: var(--surface);
-  border-top: 1px solid var(--surface2);
-  border-bottom: 1px solid var(--surface2);
+  background: var(--surface2);
+  border-top: 1px solid var(--surface3);
+  border-bottom: 1px solid var(--surface3);
 }
 .guarantee-box {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
-  background: var(--bg);
+  background: var(--surface);
   border: 2px solid var(--emerald);
   border-radius: 16px;
   padding: 48px 40px;
+  box-shadow: 0 4px 20px rgba(5,150,105,0.08);
 }
 .guarantee-box .shield { font-size: 48px; margin-bottom: 16px; }
 .guarantee-box h3 {
   font-family: 'Instrument Serif', serif;
   font-size: 28px;
   margin-bottom: 16px;
+  color: var(--text);
 }
 .guarantee-box p {
   font-size: 16px;
@@ -974,35 +902,21 @@ strong.white { color: var(--text); }
   gap: 16px;
   margin-top: 24px;
   padding-top: 24px;
-  border-top: 1px solid var(--surface2);
+  border-top: 1px solid var(--surface3);
 }
 .guarantee-sig img {
   width: 56px; height: 56px;
   border-radius: 50%;
   object-fit: cover;
 }
-.guarantee-sig .name {
-  font-weight: 700;
-  font-size: 14px;
-}
-.guarantee-sig .title {
-  font-size: 12px;
-  color: var(--text-muted);
-}
-
+.guarantee-sig .name { font-weight: 700; font-size: 14px; color: var(--text); }
+.guarantee-sig .title { font-size: 12px; color: var(--text-muted); }
 /* ============================================
    FAQ
    ============================================ */
-.faq-section {
-  padding: 80px 0;
-}
-.faq-list {
-  max-width: 700px;
-  margin: 40px auto 0;
-}
-.faq-item {
-  border-bottom: 1px solid var(--surface2);
-}
+.faq-section { padding: 80px 0; }
+.faq-list { max-width: 700px; margin: 40px auto 0; }
+.faq-item { border-bottom: 1px solid var(--surface3); }
 .faq-q {
   width: 100%;
   background: none;
@@ -1017,27 +931,25 @@ strong.white { color: var(--text); }
   justify-content: space-between;
   align-items: center;
   font-family: 'DM Sans', sans-serif;
+  gap: 12px;
 }
 .faq-q::after {
   content: '+';
   font-size: 22px;
-  color: var(--amber);
+  color: var(--red);
   flex-shrink: 0;
   transition: transform 0.3s;
 }
 .faq-item.open .faq-q::after { transform: rotate(45deg); }
-.faq-a {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-}
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
 .faq-a-inner {
   padding: 0 0 20px;
   font-size: 15px;
   color: var(--text-dim);
   line-height: 1.6;
 }
-
+.faq-a-inner strong { color: var(--text); }
+.faq-a-inner em { color: var(--text); font-style: italic; }
 /* ============================================
    FINAL CTA
    ============================================ */
@@ -1053,7 +965,7 @@ strong.white { color: var(--text); }
   bottom: -200px; left: 50%;
   transform: translateX(-50%);
   width: 800px; height: 800px;
-  background: radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(220,38,38,0.06) 0%, transparent 60%);
   pointer-events: none;
 }
 .final-cta h2 {
@@ -1061,8 +973,9 @@ strong.white { color: var(--text); }
   font-size: clamp(28px, 4vw, 44px);
   margin-bottom: 16px;
   position: relative;
+  color: var(--text);
 }
-.final-cta h2 em { color: var(--amber); font-style: italic; }
+.final-cta h2 em { color: var(--amber-dim); font-style: italic; }
 .final-cta p {
   font-size: 17px;
   color: var(--text-dim);
@@ -1076,16 +989,13 @@ strong.white { color: var(--text); }
   font-size: 16px;
   padding: 18px;
 }
-
-/* FOOTER */
 .footer {
   text-align: center;
   padding: 32px;
   font-size: 13px;
   color: var(--text-muted);
-  border-top: 1px solid var(--surface2);
+  border-top: 1px solid var(--surface3);
 }
-
 /* ============================================
    SOCIAL PROOF POPUP
    ============================================ */
@@ -1093,27 +1003,26 @@ strong.white { color: var(--text); }
   position: fixed;
   bottom: 24px; left: 24px;
   background: var(--surface);
-  border: 1px solid var(--amber);
+  border: 2px solid var(--amber);
   border-radius: 12px;
   padding: 14px 18px;
   display: flex;
   align-items: center;
   gap: 12px;
-  z-index: 999;
+  z-index: 998;
   opacity: 0;
   transform: translateY(16px);
   visibility: hidden;
   transition: all 0.5s ease;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
   max-width: 340px;
 }
 .popup.show { opacity: 1; transform: translateY(0); visibility: visible; }
 .popup .emoji { font-size: 24px; flex-shrink: 0; }
 .popup .popup-text { font-size: 13px; color: var(--text-dim); line-height: 1.4; }
 .popup .popup-text strong { color: var(--text); }
-.popup .popup-text .product { color: var(--amber); font-weight: 600; }
+.popup .popup-text .product { color: var(--amber-dim); font-weight: 700; }
 .popup .time-ago { font-size: 11px; color: var(--text-muted); }
-
 /* ============================================
    ANIMATIONS
    ============================================ */
@@ -1125,75 +1034,36 @@ strong.white { color: var(--text); }
 .fade-up-d1 { animation-delay: 0.1s; }
 .fade-up-d2 { animation-delay: 0.2s; }
 .fade-up-d3 { animation-delay: 0.3s; }
-
 /* ============================================
-   MOBILE OVERHAUL — 768px and below
-   Primary traffic: IG, TikTok, WhatsApp
-   Optimised for thumb-scrolling, fast CTA 
-   visibility, and compact vertical rhythm
+   MOBILE
    ============================================ */
 @media (max-width: 768px) {
-
-  /* --- GLOBAL MOBILE SPACING --- */
   .container, .container-wide { padding: 0 16px; }
-
-  /* --- NAV: Slimmer --- */
   .nav { padding: 10px 16px; }
   .nav-logo { font-size: 17px; }
   .nav-cta { padding: 7px 16px; font-size: 12px; }
-
-  /* --- URGENCY BAR: Compact --- */
   .urgency-bar {
     padding: 8px 16px;
     font-size: 12px;
     margin-top: 43px;
     line-height: 1.4;
+    flex-direction: column;
+    gap: 6px;
   }
-  .urgency-bar .timer { margin-left: 4px; }
-
-  /* --- HERO: Tight, CTA visible within 1-2 scrolls --- */
+  .urgency-bar .timer { margin-left: 0; }
   .hero { padding: 28px 0 40px; }
-
   .icp-callout { margin-bottom: 8px; }
-  .icp-callout span {
-    font-size: 11px;
-    padding: 5px 14px;
-    letter-spacing: 0.5px;
-  }
-
-  .hero-headline h1 {
-    font-size: 28px;
-    padding: 0 4px;
-  }
-
-  .hero-sub {
-    font-size: 15px;
-    margin: 12px auto 24px;
-    padding: 0 4px;
-    line-height: 1.6;
-  }
-
-  /* --- VSL: Full width, no hover overlay on touch --- */
-  .vsl-wrapper {
-    border-radius: 10px;
-    margin-bottom: 18px;
-  }
-  .vsl-wrapper::after { display: none; }
-
-  /* --- CTA PANEL: Static on mobile, not sticky --- */
-  .cta-panel {
-    position: static;
-    padding: 24px 20px;
-    border-radius: 12px;
-  }
+  .icp-callout span { font-size: 11px; padding: 5px 14px; letter-spacing: 0.5px; }
+  .hero-headline h1 { font-size: 28px; padding: 0 4px; }
+  .hero-sub { font-size: 15px; margin: 12px auto 24px; padding: 0 4px; line-height: 1.6; }
+  .vsl-wrapper { border-radius: 10px; margin-bottom: 18px; }
+  .cta-panel { position: static; padding: 24px 20px; border-radius: 12px; }
   .cta-panel h3 { font-size: 20px; }
   .cta-panel .sub { font-size: 13px; margin-bottom: 16px; }
   .cta-panel .price { font-size: 30px; }
   .cta-panel .price-orig { font-size: 15px; }
   .cta-panel .price-note { font-size: 11px; margin-bottom: 16px; }
   .cta-checklist li { font-size: 13px; padding: 5px 0; }
-
-  /* --- BUTTONS: Fat thumb targets (min 48px per Apple/Google guidelines) --- */
   .btn-primary {
     padding: 18px;
     font-size: 15px;
@@ -1203,57 +1073,25 @@ strong.white { color: var(--text); }
     align-items: center;
     justify-content: center;
   }
-  .btn-secondary {
-    padding: 16px;
-    font-size: 14px;
-    border-radius: 10px;
-    min-height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
+  .btn-secondary { padding: 16px; font-size: 14px; border-radius: 10px; min-height: 52px; display: flex; align-items: center; justify-content: center; }
   .guarantee-micro { font-size: 11px; }
-
-  /* --- COPY HINGE --- */
   .copy-hinge { padding: 28px 0; }
-  .proof-stats { gap: 20px; flex-wrap: wrap; justify-content: center; }
+  .proof-stats { gap: 20px; }
   .proof-stat .num { font-size: 26px; }
   .proof-stat .label { font-size: 10px; letter-spacing: 0.5px; }
-  .proof-logos {
-    font-size: 11px;
-    gap: 8px;
-    letter-spacing: 1px;
-    flex-direction: column;
-    line-height: 1.5;
-  }
-
-  /* --- GAP SECTION --- */
+  .proof-logos { font-size: 11px; gap: 8px; letter-spacing: 1px; flex-direction: column; line-height: 1.5; }
   .gap-section { padding: 48px 0; }
   .gap-content h2 { font-size: 24px; }
   .gap-content p { font-size: 15px; margin-bottom: 16px; }
-  .gap-content .highlight-pain,
-  .gap-content .highlight-reveal {
-    padding: 14px 16px;
-    font-size: 14px;
-    margin: 20px 0;
-    line-height: 1.7;
-  }
-
-  /* --- FAILED SOLUTIONS --- */
+  .gap-content .highlight-pain, .gap-content .highlight-reveal { padding: 14px 16px; font-size: 14px; margin: 20px 0; line-height: 1.7; }
   .failed-section { padding: 48px 0; }
   .failed-section h2 { font-size: 24px !important; }
-  .failed-grid {
-    grid-template-columns: 1fr !important;
-    gap: 12px;
-  }
+  .failed-grid { grid-template-columns: 1fr !important; gap: 12px; }
   .failed-card { padding: 20px 18px; border-radius: 10px; }
   .failed-card .emoji { font-size: 22px; margin-bottom: 8px; }
   .failed-card h4 { font-size: 14px; }
   .failed-card p { font-size: 13px; line-height: 1.5; }
   .failed-card .verdict { font-size: 12px; margin-top: 10px; }
-
-  /* --- BRIDGE / TRINITY --- */
   .bridge-section { padding: 48px 0; }
   .bridge-intro { margin-bottom: 36px; }
   .bridge-intro h2 { font-size: 24px; }
@@ -1267,59 +1105,25 @@ strong.white { color: var(--text); }
   .bridge-reveal { padding: 28px 20px; border-radius: 12px; }
   .bridge-reveal h3 { font-size: 20px; }
   .bridge-reveal p { font-size: 14px; }
-
-  /* --- ORIGIN STORY --- */
   .origin-section { padding: 48px 0; }
-  .origin-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .origin-photo {
-    max-width: 200px;
-    margin: 0 auto;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-  }
+  .origin-grid { grid-template-columns: 1fr; gap: 24px; }
+  .origin-photo { max-width: 200px; margin: 0 auto; aspect-ratio: 1/1; border-radius: 50%; }
   .origin-text h2 { font-size: 24px; text-align: center; }
   .origin-text p { font-size: 15px; }
-  .origin-text .us-vs-them {
-    font-size: 14px;
-    padding: 14px 16px;
-    line-height: 1.6;
-  }
-
-  /* --- TRANSFORMATION BEFORE/AFTER --- */
+  .origin-text .us-vs-them { font-size: 14px; padding: 14px 16px; line-height: 1.6; }
   .transform-section { padding: 48px 0; }
   .transform-section h2 { font-size: 24px !important; }
-  .transform-grid {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
+  .transform-grid { grid-template-columns: 1fr; gap: 0; }
   .transform-col { padding: 22px 18px; border-radius: 10px; }
   .transform-col li { font-size: 13px; padding: 5px 0; }
-  .transform-arrow {
-    transform: rotate(90deg);
-    padding: 10px 0;
-    font-size: 20px;
-  }
-
-  /* --- TESTIMONIALS --- */
+  .transform-arrow { transform: rotate(90deg); padding: 10px 0; font-size: 20px; }
   .proof-section { padding: 48px 0; }
   .proof-section h2 { font-size: 24px !important; }
-  .proof-cards {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-    margin-top: 28px;
-  }
-
-  /* --- OFFERS --- */
+  .proof-cards { grid-template-columns: 1fr !important; gap: 12px !important; margin-top: 28px; }
   .offers-section { padding: 48px 0; }
   .offers-section > .container > h2 { font-size: 24px; }
   .offers-sub { font-size: 14px; margin-bottom: 28px; }
-  .offer-card {
-    padding: 24px 20px;
-    border-radius: 12px;
-  }
+  .offer-card { padding: 24px 20px; border-radius: 12px; }
   .offer-card h3 { font-size: 20px; }
   .offer-card .tagline { font-size: 13px; }
   .offer-card .price { font-size: 28px; }
@@ -1327,72 +1131,34 @@ strong.white { color: var(--text); }
   .offer-features { padding: 12px 14px; border-radius: 8px; }
   .offer-features li { font-size: 13px; padding: 4px 0; }
   .offer-badge { right: 20px; font-size: 10px; padding: 4px 10px; }
-  .bonus-banner {
-    padding: 20px 18px;
-    border-radius: 10px;
-    margin-top: 24px;
-  }
+  .bonus-banner { padding: 20px 18px; border-radius: 10px; margin-top: 24px; }
   .bonus-banner h4 { font-size: 17px; }
   .bonus-banner p { font-size: 13px; }
-
-  /* --- GUARANTEE --- */
   .guarantee-section { padding: 48px 0; }
-  .guarantee-box {
-    padding: 28px 20px;
-    border-radius: 12px;
-  }
+  .guarantee-box { padding: 28px 20px; border-radius: 12px; }
   .guarantee-box .shield { font-size: 36px; margin-bottom: 12px; }
   .guarantee-box h3 { font-size: 20px; }
   .guarantee-box p { font-size: 14px; }
   .guarantee-sig { gap: 12px; margin-top: 20px; padding-top: 20px; }
   .guarantee-sig img { width: 48px; height: 48px; }
   .guarantee-sig .name { font-size: 13px; }
-
-  /* --- FAQ --- */
   .faq-section { padding: 48px 0; }
   .faq-section h2 { font-size: 24px !important; }
   .faq-list { margin-top: 28px; }
-  .faq-q {
-    font-size: 15px;
-    padding: 16px 0;
-    gap: 12px;
-  }
+  .faq-q { font-size: 15px; padding: 16px 0; gap: 12px; }
   .faq-q::after { font-size: 20px; }
   .faq-a-inner { font-size: 14px; padding-bottom: 16px; }
-
-  /* --- FINAL CTA --- */
   .final-cta { padding: 48px 0; }
   .final-cta h2 { font-size: 24px; }
   .final-cta p { font-size: 15px; margin-bottom: 24px; }
-  .final-cta .btn-primary {
-    max-width: 100%;
-    padding: 18px;
-    font-size: 15px;
-  }
-
-  /* --- POPUP: Full-width bottom toast on mobile --- */
-  .popup {
-    left: 10px;
-    right: 10px;
-    bottom: 12px;
-    max-width: none;
-    border-radius: 10px;
-    padding: 12px 14px;
-  }
+  .final-cta .btn-primary { max-width: 100%; padding: 18px; font-size: 15px; }
+  .popup { left: 10px; right: 10px; bottom: 12px; max-width: none; border-radius: 10px; padding: 12px 14px; }
   .popup .emoji { font-size: 20px; }
   .popup .popup-text { font-size: 12px; }
-
-  /* --- SECTION LABELS --- */
   .section-label { font-size: 10px; letter-spacing: 1.5px; }
   .section-label::before { width: 16px; }
-
-  /* --- FOOTER --- */
   .footer { padding: 24px 16px; font-size: 12px; }
 }
-
-/* ============================================
-   SMALL PHONES — 390px and below (iPhone SE, etc)
-   ============================================ */
 @media (max-width: 390px) {
   .hero-headline h1 { font-size: 25px; }
   .hero-sub { font-size: 14px; }
@@ -1406,40 +1172,28 @@ strong.white { color: var(--text); }
 </style>
 </head>
 <body>
-
 <!-- ===== NAV ===== -->
 <nav class="nav">
-  <a href="#" class="nav-logo">☿ Rafi's World</a>
-  <a href="#offers" class="nav-cta">Choose Your Reading →</a>
+  <a href="#" class="nav-logo">&#9791; Rafi's World</a>
+  <a href="#offers" class="nav-cta">Choose Your Reading &rarr;</a>
 </nav>
-
 <!-- ===== URGENCY BANNER ===== -->
 <div class="urgency-bar">
-  🔥 Your Exclusive New Client Discount Expires In: <span class="timer" id="countdown">47:59:59</span>
+  Your Exclusive New Client Discount Expires In: <span class="timer" id="countdown">47:59:59</span>
 </div>
-
 <!-- ===== HERO / ATF ===== -->
 <section class="hero">
   <div class="container">
-
-    <!-- ICP Callout — Maciek: eyebrow hook -->
     <div class="icp-callout fade-up">
       <span>For Ambitious People Sick of Guessing Their Way Through Life</span>
     </div>
-
-    <!-- Headline: Gap & Bridge hook -->
     <div class="hero-headline fade-up fade-up-d1">
       <h1>Stop Swimming Upstream.<br>Start Reading <em>The Map.</em></h1>
     </div>
-
     <p class="hero-sub fade-up fade-up-d2">
-      You've tried therapy, manifestation, and grinding harder — but the invisible wall won't move. That's because you're fighting a <strong>timing problem</strong>, not a you problem. Your Vedic birth chart holds the exact dates, directions, and remedies to fix it.
+      You've tried therapy, manifestation, and grinding harder &mdash; but the invisible wall won't move. That's because you're fighting a <strong>timing problem</strong>, not a you problem. Your Vedic birth chart holds the exact dates, directions, and remedies to fix it.
     </p>
-
-    <!-- ATF Grid: VSL + CTA Panel — Maciek: VSL left, form right -->
     <div class="atf-grid fade-up fade-up-d3">
-
-      <!-- VSL -->
       <div class="vsl-wrapper">
         <div class="wistia_responsive_padding">
           <div class="wistia_responsive_wrapper">
@@ -1451,224 +1205,182 @@ strong.white { color: var(--text); }
           </div>
         </div>
       </div>
-
-      <!-- CTA Panel / Mini-Form -->
       <div class="cta-panel">
-        <h3>Start With The <span style="color:var(--amber)">Trinity Career Roadmap</span></h3>
-        <p class="sub">The #1 reading people book first. Find out what you're built for — and exactly when to make the move.</p>
-
+        <h3>Start With The <span style="color:var(--amber-dim)">Trinity Career Roadmap</span></h3>
+        <p class="sub">The #1 reading people book first. Find out what you're built for &mdash; and exactly when to make the move.</p>
         <div class="price-row">
           <span class="price">$392</span>
         </div>
-        <p class="price-note">New client pricing · Limited spots per month</p>
-
+        <p class="price-note">New client pricing &middot; Limited spots per month</p>
         <ul class="cta-checklist">
-          <li>Karmic Purpose & "True Calling" analysis</li>
+          <li>Karmic Purpose &amp; "True Calling" analysis</li>
           <li>Timing: when to push for promotion</li>
           <li>"Should I switch careers?" chart verdict</li>
           <li>Specific Vedic career remedies</li>
           <li>60-minute strategy call with Rafi</li>
         </ul>
-
-        <a href="https://buy.stripe.com/eVqeVfepga0Ug5Q6I2asg0l" class="btn-primary" target="_blank">Get Clarity Now →</a>
+        <a href="https://buy.stripe.com/eVqeVfepga0Ug5Q6I2asg0l" class="btn-primary" target="_blank">Get Clarity Now &rarr;</a>
         <a href="#offers" class="btn-secondary">See All Readings</a>
-
         <div class="guarantee-micro">
-          <span>🛡</span> 100% money-back guarantee if you don't feel 10x the value in clarity.
+          <span>&#128737;</span> 100% money-back guarantee if you don't feel 10x the value in clarity.
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ===== COPY HINGE — Maciek: social proof beneath first CTA ===== -->
+<!-- ===== COPY HINGE ===== -->
 <div class="copy-hinge">
   <div class="container">
     <div class="proof-stats">
-      <div class="proof-stat">
-        <div class="num">500+</div>
-        <div class="label">Charts Decoded</div>
-      </div>
-      <div class="proof-stat">
-        <div class="num">12+</div>
-        <div class="label">Countries Served</div>
-      </div>
-      <div class="proof-stat">
-        <div class="num">99%</div>
-        <div class="label">Accuracy Rate (Trinity)</div>
-      </div>
-      <div class="proof-stat">
-        <div class="num">4.9★</div>
-        <div class="label">Client Rating</div>
-      </div>
+      <div class="proof-stat"><div class="num">500+</div><div class="label">Charts Decoded</div></div>
+      <div class="proof-stat"><div class="num">12+</div><div class="label">Countries Served</div></div>
+      <div class="proof-stat"><div class="num">99%</div><div class="label">Accuracy Rate (Trinity)</div></div>
+      <div class="proof-stat"><div class="num">4.9&#9733;</div><div class="label">Client Rating</div></div>
     </div>
     <div class="proof-logos">
-      <span>Vedic · Numerology · Chinese Zodiac</span>
+      <span>Vedic &middot; Numerology &middot; Chinese Zodiac</span>
       <span>|</span>
       <span>The "Triangulation" System for 99% Accuracy</span>
     </div>
   </div>
 </div>
-
-<!-- ===== GAP SECTION — The core storytelling ===== -->
+<!-- ===== GAP SECTION ===== -->
 <section class="gap-section">
   <div class="container">
     <div class="gap-content">
       <div class="section-label">The Truth No One Tells You</div>
       <h2>You're Not Broken. You're Not Lazy. You're <em>Desynchronised.</em></h2>
-
-      <p>You wake up anxious. You check another horoscope app — it says "expect a surprise." <strong>Useless.</strong> You need to know if you're going to lose your job, if your relationship is going to survive, if this heaviness in your chest will ever lift.</p>
-
+      <p>You wake up anxious. You check another horoscope app &mdash; it says "expect a surprise." <strong>Useless.</strong> You need to know if you're going to lose your job, if your relationship is going to survive, if this heaviness in your chest will ever lift.</p>
       <p>At work, you watch less talented people get promoted while you feel invisible. You think: <em>"Is it my fate to struggle? Is there a block I can't see?"</em></p>
-
       <div class="highlight-pain">
         "I'm working twice as hard as everyone else, but I'm moving half as fast. It feels like there's an invisible wall blocking my blessings, and I don't know how to break it down."
       </div>
-
       <p>So you do what any smart person does. You try harder. More discipline. More books. More "positive thinking."</p>
-
       <p><strong>But the wall doesn't move.</strong></p>
-
       <p>Because the wall was never about your effort. It was never about your mindset. It was never about your childhood trauma.</p>
-
       <div class="highlight-reveal">
-        It's not in your head. It's in your Chart. You're running a "Summer strategy" during a "Winter season" of your life — and no amount of hustle can force a harvest when the soil is frozen.
+        It's not in your head. It's in your Chart. You're running a "Summer strategy" during a "Winter season" of your life &mdash; and no amount of hustle can force a harvest when the soil is frozen.
       </div>
-
       <p>In Vedic Astrology, your life operates on precise planetary cycles called <strong>Dashas</strong>. Each one changes the operating system of your life for years at a time. Right now, you might be in a period designed for <em>stripping away</em>, not building up. Pushing harder during this cycle is like pressing the gas pedal with the car in park.</p>
-
       <p><strong>The engine screams. But you go nowhere.</strong></p>
     </div>
   </div>
 </section>
-
 <div class="divider"></div>
-
-<!-- ===== FAILED SOLUTIONS — Avatar "Graveyard" ===== -->
+<!-- ===== FAILED SOLUTIONS ===== -->
 <section class="failed-section">
   <div class="container">
     <div style="text-align:center; max-width:600px; margin:0 auto;">
       <div class="section-label">Why Nothing Has Worked</div>
-      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,3.5vw,40px); margin-bottom:12px;">The Graveyard of <em class="gold">Tried Solutions</em></h2>
-      <p style="font-size:16px; color:var(--text-dim);">You're not here because you haven't tried. You're here because everything you tried addresses the <em>symptom</em> — not the source.</p>
+      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,3.5vw,40px); margin-bottom:12px; color:var(--text);">The Graveyard of <em class="gold">Tried Solutions</em></h2>
+      <p style="font-size:16px; color:var(--text-dim);">You're not here because you haven't tried. You're here because everything you tried addresses the <em>symptom</em> &mdash; not the source.</p>
     </div>
-
     <div class="failed-grid">
       <div class="failed-card">
-        <div class="emoji">🧠</div>
+        <div class="emoji">&#129504;</div>
         <h4>Talk Therapy / CBT</h4>
-        <p>Gave you coping mechanisms. Helped you understand why you hurt. But it can't explain why bad luck keeps happening — a breakup, then a lost client, then a health scare — all in the same month.</p>
+        <p>Gave you coping mechanisms. Helped you understand why you hurt. But it can't explain why bad luck keeps happening &mdash; a breakup, then a lost client, then a health scare &mdash; all in the same month.</p>
         <div class="verdict">"Therapy holds the umbrella. It doesn't explain why it's been raining on ME for 7 years."</div>
       </div>
       <div class="failed-card">
-        <div class="emoji">✨</div>
+        <div class="emoji">&#10024;</div>
         <h4>Manifestation / Law of Attraction</h4>
-        <p>You visualised the promotion for months. Kept your "vibration high." Then you got laid off anyway. Now you feel guilty — like you didn't believe hard enough.</p>
+        <p>You visualised the promotion for months. Kept your "vibration high." Then you got laid off anyway. Now you feel guilty &mdash; like you didn't believe hard enough.</p>
         <div class="verdict">"You can't manifest a harvest in the middle of winter, no matter how positive your mindset is."</div>
       </div>
       <div class="failed-card">
-        <div class="emoji">📱</div>
+        <div class="emoji">&#128241;</div>
         <h4>Western Astrology Apps</h4>
         <p>Co-Star told you to "expect chaos." Thanks. Very helpful. These apps explain personality but never predict <em>when</em> your life will actually change.</p>
         <div class="verdict">"Entertainment, not a tool. It tells me WHO I am but never WHEN things will shift."</div>
       </div>
       <div class="failed-card">
-        <div class="emoji">🔮</div>
+        <div class="emoji">&#128302;</div>
         <h4>Tarot / Psychic Readings</h4>
         <p>Yesterday the cards said "He's coming back." Today they say "Move on." A dopamine hit that leaves you more confused than when you started.</p>
-        <div class="verdict">"Guesswork without a system. I don't want magic tricks — I want a diagnostic."</div>
+        <div class="verdict">"Guesswork without a system. I don't want magic tricks &mdash; I want a diagnostic."</div>
       </div>
       <div class="failed-card">
-        <div class="emoji">📚</div>
+        <div class="emoji">&#128218;</div>
         <h4>Hustle / Self-Help Books</h4>
-        <p>Atomic Habits. 5 AM Club. You optimised everything. You're still stuck. Because hard work isn't the missing ingredient — <strong>timing</strong> is.</p>
+        <p>Atomic Habits. 5 AM Club. You optimised everything. You're still stuck. Because hard work isn't the missing ingredient &mdash; <strong>timing</strong> is.</p>
         <div class="verdict">"I'm swimming upstream against a current I can't see."</div>
       </div>
       <div class="failed-card">
-        <div class="emoji">💎</div>
-        <h4>Crystals & Light Energy Work</h4>
+        <div class="emoji">&#128142;</div>
+        <h4>Crystals &amp; Light Energy Work</h4>
         <p>Nice placebo. But rose quartz on your desk didn't fix a toxic relationship. The problems you're dealing with need a stronger medicine.</p>
         <div class="verdict">"I'm wearing the stone but my life is still falling apart."</div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ===== BRIDGE — The Trinity Method ===== -->
+<!-- ===== BRIDGE / TRINITY ===== -->
 <section class="bridge-section" id="method">
   <div class="container">
     <div class="bridge-intro">
       <div class="section-label">The Bridge</div>
       <h2>Introducing The <em>Trinity Method</em></h2>
-      <p>Most astrologers use one system. I use three — cross-referenced for a level of precision that borders on uncomfortable. This isn't personality fluff. This is a <strong>strategic life audit</strong> that tells you exactly what's happening, when it changes, and what to do about it.</p>
+      <p>Most astrologers use one system. I use three &mdash; cross-referenced for a level of precision that borders on uncomfortable. This isn't personality fluff. This is a <strong>strategic life audit</strong> that tells you exactly what's happening, when it changes, and what to do about it.</p>
     </div>
-
     <div class="trinity-grid">
       <div class="trinity-card">
-        <div class="icon">🌟</div>
+        <div class="icon">&#127775;</div>
         <div class="role">The "What"</div>
         <h3>Vedic Astrology</h3>
-        <p>The detailed map of your karma, timing windows, and planetary periods. Shows you the exact dates things shift — and the specific remedies to accelerate or ease the transition.</p>
+        <p>The detailed map of your karma, timing windows, and planetary periods. Shows you the exact dates things shift &mdash; and the specific remedies to accelerate or ease the transition.</p>
       </div>
       <div class="trinity-card">
-        <div class="icon">🔢</div>
+        <div class="icon">&#128290;</div>
         <div class="role">The "How"</div>
         <h3>Numerology</h3>
         <p>The underlying frequency code of your life path. Reveals your natural strengths, hidden blind spots, and the personal year cycle you're operating in right now.</p>
       </div>
       <div class="trinity-card">
-        <div class="icon">🐉</div>
+        <div class="icon">&#128009;</div>
         <div class="role">The "When"</div>
         <h3>Chinese Zodiac</h3>
         <p>The primal energy driving your compatibility and yearly cycles. The final cross-reference that pushes accuracy from "good guess" to "how do you know this about me?"</p>
       </div>
     </div>
-
     <div class="bridge-reveal">
-      <h3>Three Systems. One Verdict. <span style="color:var(--amber)">99% Accuracy.</span></h3>
+      <h3>Three Systems. One Verdict. <span style="color:var(--amber-dim)">99% Accuracy.</span></h3>
       <p>When all three systems point in the same direction, the reading stops feeling like astrology and starts feeling like someone handed you the answer sheet to your life.</p>
     </div>
   </div>
 </section>
-
 <div class="divider"></div>
-
-<!-- ===== ORIGIN STORY — Us vs Them + Reluctant Hero ===== -->
+<!-- ===== ORIGIN ===== -->
 <section class="origin-section">
   <div class="container">
-    <div class="origin-photo">
-      <img src="https://iili.io/qJz7S0x.jpg" alt="Rafi" loading="lazy">
-    </div>
-    <div class="origin-text">
-      <div class="section-label">Who Built This</div>
-      <h2>I Never Wanted to Be <em>"The Astrology Guy."</em></h2>
-
-      <p>Honestly? I used to scroll past horoscope content the same way you probably do. It all sounded the same — vague, recycled, and wrong half the time.</p>
-
-      <p>But then friends started sending me tweets and TikToks. "Rafi, look at this — is this true?" And every time I looked, the person was <strong>just making things up.</strong> Saying whatever sounded good for likes. No actual system behind it.</p>
-
-      <p>It bothered me. Not because I cared about astrology — but because <strong>people were making real life decisions based on completely inaccurate information.</strong></p>
-
-      <div class="us-vs-them">
-        So I went down the rabbit hole. Not to become an astrologer — but to find out what was actually real and what was nonsense. That rabbit hole turned into years of studying Vedic Astrology, Numerology, and the Chinese Zodiac — three systems that, when cross-referenced, are <strong>almost impossible to get wrong.</strong>
+    <div class="origin-grid">
+      <div class="origin-photo">
+        <img src="https://iili.io/qJz7S0x.jpg" alt="Rafi" loading="lazy">
       </div>
-
-      <p>I didn't choose this. The misinformation dragged me into it. And now I can't unsee what the charts reveal — so I might as well make sure <strong>you</strong> get the real version, not the Twitter version.</p>
+      <div class="origin-text">
+        <div class="section-label">Who Built This</div>
+        <h2>I Never Wanted to Be <em>"The Astrology Guy."</em></h2>
+        <p>Honestly? I used to scroll past horoscope content the same way you probably do. It all sounded the same &mdash; vague, recycled, and wrong half the time.</p>
+        <p>But then friends started sending me tweets and TikToks. "Rafi, look at this &mdash; is this true?" And every time I looked, the person was <strong>just making things up.</strong> Saying whatever sounded good for likes. No actual system behind it.</p>
+        <p>It bothered me. Not because I cared about astrology &mdash; but because <strong>people were making real life decisions based on completely inaccurate information.</strong></p>
+        <div class="us-vs-them">
+          So I went down the rabbit hole. Not to become an astrologer &mdash; but to find out what was actually real and what was nonsense. That rabbit hole turned into years of studying Vedic Astrology, Numerology, and the Chinese Zodiac &mdash; three systems that, when cross-referenced, are <strong>almost impossible to get wrong.</strong>
+        </div>
+        <p>I didn't choose this. The misinformation dragged me into it. And now I can't unsee what the charts reveal &mdash; so I might as well make sure <strong>you</strong> get the real version, not the Twitter version.</p>
+      </div>
     </div>
   </div>
 </section>
-
-<!-- ===== TRANSFORMATION — Before/After ===== -->
+<!-- ===== TRANSFORMATION ===== -->
 <section class="transform-section">
   <div class="container">
     <div style="text-align:center; margin-bottom:16px;">
       <div class="section-label">The Shift</div>
-      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,3.5vw,40px);">Before Your Reading vs. <em class="gold">After</em></h2>
+      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,3.5vw,40px); color:var(--text);">Before Your Reading vs. <em class="gold">After</em></h2>
     </div>
-
     <div class="transform-grid">
       <div class="transform-col before">
-        <h4>🔴 Before</h4>
+        <h4>Before</h4>
         <ul>
           <li>"I feel stuck and I don't know why"</li>
           <li>Decision paralysis at 2AM</li>
@@ -1679,15 +1391,13 @@ strong.white { color: var(--text); }
           <li>Scattered, anxious, overwhelmed</li>
         </ul>
       </div>
-
-      <div class="transform-arrow">→</div>
-
+      <div class="transform-arrow">&rarr;</div>
       <div class="transform-col after">
-        <h4>🟢 After</h4>
+        <h4>After</h4>
         <ul>
           <li>"I know exactly what season I'm in"</li>
           <li>Decisions backed by cosmic data</li>
-          <li>Clarity on who's aligned — and who's not</li>
+          <li>Clarity on who's aligned &mdash; and who's not</li>
           <li>Strategic execution in "green light" windows</li>
           <li>Specific remedies to seal the energy leak</li>
           <li>"It's a timing issue. I have the roadmap."</li>
@@ -1697,55 +1407,35 @@ strong.white { color: var(--text); }
     </div>
   </div>
 </section>
-
-<!-- ===== SOCIAL PROOF ===== -->
+<!-- ===== PROOF ===== -->
 <section class="proof-section">
   <div class="container">
     <div style="text-align:center;">
       <div class="section-label">Real Results</div>
-      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,3.5vw,40px);">Don't Take My Word. <em class="gold">Take Theirs.</em></h2>
+      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,3.5vw,40px); color:var(--text);">Don't Take My Word. <em class="gold">Take Theirs.</em></h2>
     </div>
-
     <div class="proof-cards" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;">
-        <img src="https://iili.io/qJzRWBf.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy">
-      </div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;">
-        <img src="https://iili.io/qJzRw22.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy">
-      </div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;">
-        <img src="https://iili.io/qJzRN7S.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy">
-      </div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;">
-        <img src="https://iili.io/qJzR7gp.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy">
-      </div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;">
-        <img src="https://iili.io/qJzRlet.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy">
-      </div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;">
-        <img src="https://iili.io/qJzRadN.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy">
-      </div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;">
-        <img src="https://iili.io/qJzR0mX.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy">
-      </div>
+      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;"><img src="https://iili.io/qJzRWBf.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy"></div>
+      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;"><img src="https://iili.io/qJzRw22.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy"></div>
+      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;"><img src="https://iili.io/qJzRN7S.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy"></div>
+      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;"><img src="https://iili.io/qJzR7gp.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy"></div>
+      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;"><img src="https://iili.io/qJzRlet.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy"></div>
+      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;"><img src="https://iili.io/qJzRadN.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy"></div>
+      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;"><img src="https://iili.io/qJzR0mX.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy"></div>
     </div>
   </div>
 </section>
-
 <div class="divider"></div>
-
-<!-- ===== OFFER STACK ===== -->
+<!-- ===== OFFERS ===== -->
 <section class="offers-section" id="offers">
   <div class="container">
     <div class="section-label" style="display:flex; justify-content:center;">Choose Your Level</div>
     <h2>Pick The Reading That <em>Matches Your Pain</em></h2>
     <p class="offers-sub">Every reading includes 5-14 days of personalised chart preparation. This isn't a script. It's surgery.</p>
-
     <div class="offers-grid">
-
       <!-- CARD 1: Numerology -->
       <div class="offer-card">
-        <div class="icon">🔢</div>
+        <div class="icon">&#128290;</div>
         <h3>Numerology Power Reading</h3>
         <div class="tagline">The "Quick Clarity" Diagnostic</div>
         <p class="desc">Know your Life Path number, personal year cycle, and core strengths in 30 focused minutes. Perfect if you need fast strategic intel on what season you're in <em>right now</em>.</p>
@@ -1753,27 +1443,26 @@ strong.white { color: var(--text); }
           <span class="price">$65</span>
         </div>
         <ul class="offer-features">
-          <li>Life Path & Destiny Number decoded</li>
+          <li>Life Path &amp; Destiny Number decoded</li>
           <li>Personal Year Cycle (your current "season")</li>
           <li>Core Strengths Assessment</li>
           <li><strong>30-min 1-on-1 video call</strong></li>
           <li>5 days of personalised chart prep</li>
         </ul>
-        <a href="https://buy.stripe.com/14AcN7epga0UbPA5DYasg04" class="btn-secondary" target="_blank" style="color:var(--amber); border-color:var(--amber);">Book Quick Clarity →</a>
+        <a href="https://buy.stripe.com/14AcN7epga0UbPA5DYasg04" class="btn-secondary" target="_blank">Book Quick Clarity &rarr;</a>
       </div>
-
       <!-- CARD 2: FEATURED — Career -->
       <div class="offer-card featured">
         <div class="offer-badge">Most Popular</div>
-        <div class="icon">🚀</div>
+        <div class="icon">&#128640;</div>
         <h3>Trinity Career Roadmap</h3>
         <div class="tagline">Stop Climbing The Wrong Ladder</div>
-        <p class="desc">Decode your Dharma. Find out what you're actually built for — and <em>when</em> to make the move. Includes promotion windows, career switch analysis, and specific Vedic remedies for professional breakthroughs.</p>
+        <p class="desc">Decode your Dharma. Find out what you're actually built for &mdash; and <em>when</em> to make the move. Includes promotion windows, career switch analysis, and specific Vedic remedies for professional breakthroughs.</p>
         <div class="price-row">
           <span class="price">$392</span>
         </div>
         <ul class="offer-features">
-          <li>Karmic Purpose & "True Calling" analysis</li>
+          <li>Karmic Purpose &amp; "True Calling" analysis</li>
           <li>Timing: when to push for promotion</li>
           <li>"Should I switch careers?" chart verdict</li>
           <li>Specific Vedic career remedies</li>
@@ -1781,15 +1470,14 @@ strong.white { color: var(--text); }
           <li><strong>60-min strategy call</strong></li>
           <li>5 days of career-focused prep</li>
         </ul>
-        <a href="https://buy.stripe.com/eVqeVfepga0Ug5Q6I2asg0l" class="btn-primary" target="_blank">Book Your Career Roadmap →</a>
+        <a href="https://buy.stripe.com/eVqeVfepga0Ug5Q6I2asg0l" class="btn-primary" target="_blank">Book Your Career Roadmap &rarr;</a>
       </div>
-
       <!-- CARD 3: Compatibility -->
       <div class="offer-card">
-        <div class="icon">💞</div>
+        <div class="icon">&#128158;</div>
         <h3>Trinity Compatibility Analysis</h3>
-        <div class="tagline">Is This Person "The One" — or a Karmic Lesson?</div>
-        <p class="desc">The full three-system deep-dive into your relationship. Stop guessing. Get the cold, hard data on whether this connection is destined to thrive — or designed to teach you something and end.</p>
+        <div class="tagline">Is This Person "The One" &mdash; or a Karmic Lesson?</div>
+        <p class="desc">The full three-system deep-dive into your relationship. Stop guessing. Get the cold, hard data on whether this connection is destined to thrive &mdash; or designed to teach you something and end.</p>
         <div class="price-row">
           <span class="price">$347</span>
           <span class="price-orig">$497</span>
@@ -1803,15 +1491,14 @@ strong.white { color: var(--text); }
           <li><strong>60-min deep-dive call</strong></li>
           <li>5 days of dual-chart preparation</li>
         </ul>
-        <a href="https://buy.stripe.com/3cI00lgxo3Cwf1M0jEasg0m" class="btn-secondary" target="_blank" style="color:var(--amber); border-color:var(--amber);">Get Clarity On Your Relationship →</a>
+        <a href="https://buy.stripe.com/3cI00lgxo3Cwf1M0jEasg0m" class="btn-secondary" target="_blank">Get Clarity On Your Relationship &rarr;</a>
       </div>
-
       <!-- CARD 4: Full Blueprint -->
       <div class="offer-card">
-        <div class="icon">📜</div>
+        <div class="icon">&#128220;</div>
         <h3>Complete Blueprint Analysis</h3>
-        <div class="tagline">The "Billionaire's Blueprint" — Your Entire Life, Decoded</div>
-        <p class="desc">The full, comprehensive decoding of your design across all systems. Career, wealth, relationships, timing, health, purpose. This is the map for your entire life — not just a chapter.</p>
+        <div class="tagline">The "Billionaire's Blueprint" &mdash; Your Entire Life, Decoded</div>
+        <p class="desc">The full, comprehensive decoding of your design across all systems. Career, wealth, relationships, timing, health, purpose. This is the map for your entire life &mdash; not just a chapter.</p>
         <div class="price-row">
           <span class="price">$707</span>
         </div>
@@ -1819,17 +1506,15 @@ strong.white { color: var(--text); }
           <li>Full Vedic Chart (all 12 Houses)</li>
           <li>Complete Numerology Profile</li>
           <li>Lifetime timing analysis (Dashas)</li>
-          <li>Career & wealth optimisation</li>
+          <li>Career &amp; wealth optimisation</li>
           <li>Relationship compatibility framework</li>
-          <li>Health & constitutional analysis</li>
+          <li>Health &amp; constitutional analysis</li>
           <li><strong>90-min strategy call</strong></li>
           <li><strong>14 days</strong> of deep-dive preparation</li>
         </ul>
-        <a href="https://buy.stripe.com/cNi28t2Gy8WQ7zk6I2asg0n" class="btn-primary" target="_blank" style="background:linear-gradient(135deg, var(--amber), var(--cyan));">Decode Your Full Blueprint →</a>
+        <a href="https://buy.stripe.com/cNi28t2Gy8WQ7zk6I2asg0n" class="btn-primary" target="_blank">Decode Your Full Blueprint &rarr;</a>
       </div>
     </div>
-
-    <!-- BONUS BANNER — Maciek: bonus that plants high-ticket seeds -->
     <div class="bonus-banner">
       <div class="bonus-tag">Free Bonus With Every Reading</div>
       <h4>3 Months Free Access to the Private Skool Community</h4>
@@ -1837,16 +1522,14 @@ strong.white { color: var(--text); }
     </div>
   </div>
 </section>
-
 <div class="divider"></div>
-
 <!-- ===== GUARANTEE ===== -->
 <section class="guarantee-section">
   <div class="container">
     <div class="guarantee-box">
-      <div class="shield">🛡</div>
-      <h3>The "10x Clarity" <span style="color:var(--amber)">Guarantee</span></h3>
-      <p>If you complete your reading and don't feel it gave you at least 10x the value in clarity and strategic direction, I'll refund 100% of your money. No questions. No hoops. My reputation is on the line with every session — and I'd rather lose the money than lose your trust.</p>
+      <div class="shield">&#128737;</div>
+      <h3>The "10x Clarity" <span style="color:var(--emerald)">Guarantee</span></h3>
+      <p>If you complete your reading and don't feel it gave you at least 10x the value in clarity and strategic direction, I'll refund 100% of your money. No questions. No hoops. My reputation is on the line with every session &mdash; and I'd rather lose the money than lose your trust.</p>
       <div class="guarantee-sig">
         <img src="https://iili.io/qJz7S0x.jpg" alt="Rafi" loading="lazy">
         <div>
@@ -1857,31 +1540,29 @@ strong.white { color: var(--text); }
     </div>
   </div>
 </section>
-
 <!-- ===== FAQ ===== -->
 <section class="faq-section">
   <div class="container">
     <div style="text-align:center;">
       <div class="section-label">Common Questions</div>
-      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,3.5vw,40px);">Before You <em class="gold">Decide</em></h2>
+      <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,3.5vw,40px); color:var(--text);">Before You <em class="gold">Decide</em></h2>
     </div>
-
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-q">Is this just going to tell me what I want to hear?</button>
-        <div class="faq-a"><div class="faq-a-inner">No. This isn't a cold read or a dopamine hit. I spend 5-14 days analysing your chart before we ever speak. The Trinity Method cross-references three independent systems — if they all point in the same direction, the reading is accurate whether you like what it says or not. I tell you what the chart shows, not what makes you feel good.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">No. This isn't a cold read or a dopamine hit. I spend 5-14 days analysing your chart before we ever speak. The Trinity Method cross-references three independent systems &mdash; if they all point in the same direction, the reading is accurate whether you like what it says or not. I tell you what the chart shows, not what makes you feel good.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">I'm sceptical of astrology. Will this work for me?</button>
-        <div class="faq-a"><div class="faq-a-inner">Good — sceptics are my best clients. Vedic astrology isn't the fluffy Sun-sign content you see on Instagram. It's a 5,000-year-old mathematical system based on precise astronomical calculations. There's a reason Silicon Valley CEOs and Wall Street traders quietly consult Vedic advisors. This isn't about belief — it's about data.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Good &mdash; sceptics are my best clients. Vedic astrology isn't the fluffy Sun-sign content you see on Instagram. It's a 5,000-year-old mathematical system based on precise astronomical calculations. There's a reason Silicon Valley CEOs and Wall Street traders quietly consult Vedic advisors. This isn't about belief &mdash; it's about data.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">How is this different from Western astrology or Co-Star?</button>
-        <div class="faq-a"><div class="faq-a-inner">Western astrology is based on the Sun and focuses on personality ("You're a Gemini, you're fun"). Vedic astrology is based on the Moon and focuses on <strong>timing</strong> — it tells you <em>when</em> things happen, not just who you are. Add Numerology and Chinese Zodiac cross-referencing, and you get a level of specificity that generic apps physically can't offer.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Western astrology is based on the Sun and focuses on personality ("You're a Gemini, you're fun"). Vedic astrology is based on the Moon and focuses on <strong>timing</strong> &mdash; it tells you <em>when</em> things happen, not just who you are. Add Numerology and Chinese Zodiac cross-referencing, and you get a level of specificity that generic apps physically can't offer.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Is this fatalistic? Does it mean I have no free will?</button>
-        <div class="faq-a"><div class="faq-a-inner">Not at all. Think of it like a weather report. You don't control the weather, but you control what you wear. Vedic astrology shows you the "weather" of your life — and gives you specific remedies (mantras, gemstones, behavioural shifts) to navigate it. You have about 60% free will. This system optimises how you use it.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Not at all. Think of it like a weather report. You don't control the weather, but you control what you wear. Vedic astrology shows you the "weather" of your life &mdash; and gives you specific remedies (mantras, gemstones, behavioural shifts) to navigate it. You have about 60% free will. This system optimises how you use it.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Why do you need 5-14 days to prepare?</button>
@@ -1889,38 +1570,33 @@ strong.white { color: var(--text); }
       </div>
       <div class="faq-item">
         <button class="faq-q">Which reading should I start with?</button>
-        <div class="faq-a"><div class="faq-a-inner">If you're focused on direction and momentum, start with the <strong>Trinity Career Roadmap</strong> — it's the most popular for a reason. If you're navigating a relationship (or considering one), go with the <strong>Trinity Compatibility Analysis</strong>. If you want the full picture of everything, the <strong>Complete Blueprint</strong> covers your entire life map.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">If you're focused on direction and momentum, start with the <strong>Trinity Career Roadmap</strong> &mdash; it's the most popular for a reason. If you're navigating a relationship (or considering one), go with the <strong>Trinity Compatibility Analysis</strong>. If you want the full picture of everything, the <strong>Complete Blueprint</strong> covers your entire life map.</div></div>
       </div>
     </div>
   </div>
 </section>
-
 <!-- ===== FINAL CTA ===== -->
 <section class="final-cta">
   <div class="container">
     <h2>Stop Guessing.<br>Start <em>Knowing.</em></h2>
     <p>You can keep swimming upstream. Or you can finally read the map that was written for you the moment you were born.</p>
-    <a href="#offers" class="btn-primary">Choose Your Reading →</a>
+    <a href="#offers" class="btn-primary">Choose Your Reading &rarr;</a>
   </div>
 </section>
-
-<!-- FOOTER -->
 <footer class="footer">
-  &copy; 2025 Rafi's World. All rights reserved.
+  &copy; 2026 Rafi's World. All rights reserved.
 </footer>
-
 <!-- ===== SOCIAL PROOF POPUP ===== -->
 <div class="popup" id="popup">
-  <div class="emoji">🔥</div>
+  <div class="emoji">&#128293;</div>
   <div class="popup-text" id="popup-text">
     <p style="margin:0;"><strong>Jean</strong> from France just booked a <span class="product">Trinity Compatibility Reading</span></p>
     <div class="time-ago">2 minutes ago</div>
   </div>
 </div>
-
 <!-- ===== SCRIPTS ===== -->
 <script>
-// COUNTDOWN TIMER — Maciek: urgency code, 48 hours from visit
+// COUNTDOWN TIMER
 (function() {
   const key = 'rafy_discount_end';
   let endTime = localStorage.getItem(key);
@@ -1929,7 +1605,6 @@ strong.white { color: var(--text); }
     localStorage.setItem(key, endTime);
   }
   endTime = parseInt(endTime);
-
   function update() {
     const now = Date.now();
     let diff = Math.max(0, endTime - now);
@@ -1945,7 +1620,6 @@ strong.white { color: var(--text); }
   update();
   setInterval(update, 1000);
 })();
-
 // SOCIAL PROOF POPUP
 (function() {
   const purchases = [
@@ -1961,40 +1635,45 @@ strong.white { color: var(--text); }
   const popup = document.getElementById('popup');
   const text = document.getElementById('popup-text');
   let last = -1;
-
   function show() {
     let i = Math.floor(Math.random() * purchases.length);
     if (i === last) i = (i + 1) % purchases.length;
     last = i;
     const p = purchases[i];
     const t = Math.floor(Math.random() * 10) + 1;
-    text.innerHTML = `<p style="margin:0;"><strong>${p.name}</strong> from ${p.loc} just booked a <span class="product">${p.product}</span></p><div class="time-ago">${t} minutes ago</div>`;
+    text.innerHTML = '<p style="margin:0;"><strong>' + p.name + '</strong> from ' + p.loc + ' just booked a <span class="product">' + p.product + '</span></p><div class="time-ago">' + t + ' minutes ago</div>';
     popup.classList.add('show');
-    setTimeout(() => popup.classList.remove('show'), 5000);
+    setTimeout(function() { popup.classList.remove('show'); }, 5000);
   }
   setTimeout(show, 6000);
   setInterval(show, 18000);
 })();
-
 // FAQ ACCORDION
-document.querySelectorAll('.faq-q').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const item = btn.parentElement;
-    const answer = item.querySelector('.faq-a');
-    const isOpen = item.classList.contains('open');
-
-    document.querySelectorAll('.faq-item.open').forEach(el => {
+document.querySelectorAll('.faq-q').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var item = btn.parentElement;
+    var answer = item.querySelector('.faq-a');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(el) {
       el.classList.remove('open');
       el.querySelector('.faq-a').style.maxHeight = '0';
     });
-
     if (!isOpen) {
       item.classList.add('open');
       answer.style.maxHeight = answer.scrollHeight + 'px';
     }
   });
 });
+// Clarity — deferred so it doesn't block LCP
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "u7qcnghg1s");
+  }, 500);
+});
 </script>
-
 </body>
 </html>
