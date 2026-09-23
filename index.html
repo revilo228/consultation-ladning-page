@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rafi's World — Stop Guessing. Start Knowing.</title>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>Rafi's World | Stop Guessing. Start Knowing.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://fast.wistia.com/embed/medias/1mjtycwa3l.jsonp" async></script>
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 <style>
 /* ============================================
-   DESIGN SYSTEM — LIGHT (Cashvertising readability)
-   Same color principles as calendar landing v3
+   DESIGN SYSTEM (LIGHT, Cashvertising readability)
    ============================================ */
 :root {
   --bg: #FAFAF9;
@@ -111,7 +112,7 @@ strong.white { color: var(--text); }
 }
 .nav-cta:hover { background: var(--red-hover); box-shadow: 0 4px 20px var(--red-glow); transform: translateY(-1px); }
 /* ============================================
-   URGENCY BANNER
+   INFO BANNER (honest scarcity, no fake timer)
    ============================================ */
 .urgency-bar {
   background: rgba(245, 158, 11, 0.14);
@@ -125,20 +126,20 @@ strong.white { color: var(--text); }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 10px;
   flex-wrap: wrap;
 }
-.urgency-bar .timer {
-  display: inline-flex;
-  gap: 4px;
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: 700;
+.urgency-bar a {
+  display: inline-block;
   background: var(--red);
   color: #fff;
   padding: 3px 12px;
   border-radius: 4px;
-  letter-spacing: 0.5px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.3px;
 }
+.urgency-bar a:hover { background: var(--red-hover); }
 /* ============================================
    HERO / ATF
    ============================================ */
@@ -211,7 +212,6 @@ strong.white { color: var(--text); }
 }
 .wistia_responsive_padding { padding: 56.25% 0 0 0; position: relative; }
 .wistia_responsive_wrapper { height: 100%; left: 0; position: absolute; top: 0; width: 100%; }
-/* CTA Panel */
 .cta-panel {
   background: var(--surface);
   border: 2px solid var(--amber);
@@ -243,19 +243,19 @@ strong.white { color: var(--text); }
   font-weight: 800;
   color: var(--red);
 }
-.cta-panel .price-orig {
-  font-size: 16px;
-  color: var(--red);
-  text-decoration: line-through;
-  text-decoration-color: var(--red);
-  text-decoration-thickness: 2px;
-  font-weight: 600;
-}
 .cta-panel .price-note {
   font-size: 12px;
   color: var(--text-muted);
   margin-bottom: 20px;
 }
+.cta-panel .written-link {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+.cta-panel .written-link a { color: var(--red); font-weight: 700; }
 .cta-checklist { list-style: none; margin-bottom: 24px; }
 .cta-checklist li {
   font-size: 14px;
@@ -639,7 +639,7 @@ strong.white { color: var(--text); }
 }
 .offers-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 @media (max-width: 900px) { .offers-grid { grid-template-columns: 1fr; } }
@@ -647,7 +647,7 @@ strong.white { color: var(--text); }
   background: var(--surface);
   border: 1px solid var(--surface3);
   border-radius: 16px;
-  padding: 36px;
+  padding: 32px 28px;
   display: flex;
   flex-direction: column;
   transition: all 0.3s;
@@ -666,7 +666,7 @@ strong.white { color: var(--text); }
 .offer-card.featured:hover { border-color: var(--amber); }
 .offer-badge {
   position: absolute;
-  top: -1px; right: 36px;
+  top: -1px; right: 28px;
   background: var(--red);
   color: #fff;
   font-size: 11px;
@@ -739,6 +739,70 @@ strong.white { color: var(--text); }
 }
 .offer-features li strong { color: var(--text); }
 .offer-card .btn-primary { margin-top: auto; }
+/* ============================================
+   AFFORDABLE WRITTEN READING
+   ============================================ */
+.written-option {
+  margin-top: 32px;
+  background: var(--surface);
+  border: 2px dashed var(--red);
+  border-radius: 16px;
+  padding: 36px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  scroll-margin-top: 90px;
+}
+.written-option .wo-label {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+.written-option h3 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 26px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+.written-option .wo-desc {
+  font-size: 15px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.written-option .offer-features { margin-bottom: 0; }
+.wo-price-box { text-align: center; }
+.wo-compare {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--text-muted);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--surface3);
+}
+.wo-compare .strike {
+  text-decoration: line-through;
+  text-decoration-color: var(--red);
+  text-decoration-thickness: 2px;
+}
+.wo-compare.now {
+  color: var(--text);
+  font-weight: 700;
+  border-bottom: none;
+  margin-bottom: 16px;
+  align-items: baseline;
+}
+.wo-compare.now .wo-price { color: var(--red); font-size: 28px; font-weight: 800; }
 .bonus-banner {
   margin-top: 32px;
   background: linear-gradient(135deg, rgba(245,158,11,0.12), rgba(8,145,178,0.08));
@@ -831,37 +895,20 @@ strong.white { color: var(--text); }
 .proof-section { padding: 100px 0; }
 .proof-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
   margin-top: 40px;
 }
 .proof-card {
   background: var(--surface);
   border: 1px solid var(--surface3);
   border-radius: 12px;
-  padding: 28px;
+  overflow: hidden;
   transition: border-color 0.3s, box-shadow 0.3s;
   box-shadow: 0 1px 3px rgba(0,0,0,0.04);
 }
 .proof-card:hover { border-color: var(--amber-dim); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
-.proof-card .stars { color: var(--amber); font-size: 14px; margin-bottom: 12px; }
-.proof-card .quote {
-  font-size: 15px;
-  color: var(--text-dim);
-  line-height: 1.6;
-  margin-bottom: 16px;
-  font-style: italic;
-}
-.proof-card .author {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--text);
-}
-.proof-card .product-bought {
-  font-size: 12px;
-  color: var(--amber-dim);
-  margin-top: 2px;
-}
+.proof-card img { width: 100%; height: auto; display: block; }
 /* ============================================
    GUARANTEE
    ============================================ */
@@ -989,6 +1036,13 @@ strong.white { color: var(--text); }
   font-size: 16px;
   padding: 18px;
 }
+.final-cta .final-alt {
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--text-dim);
+  position: relative;
+}
+.final-cta .final-alt a { color: var(--red); font-weight: 700; }
 .footer {
   text-align: center;
   padding: 32px;
@@ -996,33 +1050,6 @@ strong.white { color: var(--text); }
   color: var(--text-muted);
   border-top: 1px solid var(--surface3);
 }
-/* ============================================
-   SOCIAL PROOF POPUP
-   ============================================ */
-.popup {
-  position: fixed;
-  bottom: 24px; left: 24px;
-  background: var(--surface);
-  border: 2px solid var(--amber);
-  border-radius: 12px;
-  padding: 14px 18px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  z-index: 998;
-  opacity: 0;
-  transform: translateY(16px);
-  visibility: hidden;
-  transition: all 0.5s ease;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-  max-width: 340px;
-}
-.popup.show { opacity: 1; transform: translateY(0); visibility: visible; }
-.popup .emoji { font-size: 24px; flex-shrink: 0; }
-.popup .popup-text { font-size: 13px; color: var(--text-dim); line-height: 1.4; }
-.popup .popup-text strong { color: var(--text); }
-.popup .popup-text .product { color: var(--amber-dim); font-weight: 700; }
-.popup .time-ago { font-size: 11px; color: var(--text-muted); }
 /* ============================================
    ANIMATIONS
    ============================================ */
@@ -1050,7 +1077,6 @@ strong.white { color: var(--text); }
     flex-direction: column;
     gap: 6px;
   }
-  .urgency-bar .timer { margin-left: 0; }
   .hero { padding: 28px 0 40px; }
   .icp-callout { margin-bottom: 8px; }
   .icp-callout span { font-size: 11px; padding: 5px 14px; letter-spacing: 0.5px; }
@@ -1061,7 +1087,6 @@ strong.white { color: var(--text); }
   .cta-panel h3 { font-size: 20px; }
   .cta-panel .sub { font-size: 13px; margin-bottom: 16px; }
   .cta-panel .price { font-size: 30px; }
-  .cta-panel .price-orig { font-size: 15px; }
   .cta-panel .price-note { font-size: 11px; margin-bottom: 16px; }
   .cta-checklist li { font-size: 13px; padding: 5px 0; }
   .btn-primary {
@@ -1119,7 +1144,7 @@ strong.white { color: var(--text); }
   .transform-arrow { transform: rotate(90deg); padding: 10px 0; font-size: 20px; }
   .proof-section { padding: 48px 0; }
   .proof-section h2 { font-size: 24px !important; }
-  .proof-cards { grid-template-columns: 1fr !important; gap: 12px !important; margin-top: 28px; }
+  .proof-cards { grid-template-columns: 1fr; gap: 12px; margin-top: 28px; }
   .offers-section { padding: 48px 0; }
   .offers-section > .container > h2 { font-size: 24px; }
   .offers-sub { font-size: 14px; margin-bottom: 28px; }
@@ -1131,6 +1156,9 @@ strong.white { color: var(--text); }
   .offer-features { padding: 12px 14px; border-radius: 8px; }
   .offer-features li { font-size: 13px; padding: 4px 0; }
   .offer-badge { right: 20px; font-size: 10px; padding: 4px 10px; }
+  .written-option { grid-template-columns: 1fr; padding: 24px 20px; gap: 20px; border-radius: 12px; }
+  .written-option h3 { font-size: 21px; }
+  .written-option .wo-desc { font-size: 14px; }
   .bonus-banner { padding: 20px 18px; border-radius: 10px; margin-top: 24px; }
   .bonus-banner h4 { font-size: 17px; }
   .bonus-banner p { font-size: 13px; }
@@ -1152,9 +1180,6 @@ strong.white { color: var(--text); }
   .final-cta h2 { font-size: 24px; }
   .final-cta p { font-size: 15px; margin-bottom: 24px; }
   .final-cta .btn-primary { max-width: 100%; padding: 18px; font-size: 15px; }
-  .popup { left: 10px; right: 10px; bottom: 12px; max-width: none; border-radius: 10px; padding: 12px 14px; }
-  .popup .emoji { font-size: 20px; }
-  .popup .popup-text { font-size: 12px; }
   .section-label { font-size: 10px; letter-spacing: 1.5px; }
   .section-label::before { width: 16px; }
   .footer { padding: 24px 16px; font-size: 12px; }
@@ -1177,9 +1202,10 @@ strong.white { color: var(--text); }
   <a href="#" class="nav-logo">&#9791; Rafi's World</a>
   <a href="#offers" class="nav-cta">Choose Your Reading &rarr;</a>
 </nav>
-<!-- ===== URGENCY BANNER ===== -->
+<!-- ===== INFO BANNER ===== -->
 <div class="urgency-bar">
-  Your Exclusive New Client Discount Expires In: <span class="timer" id="countdown">47:59:59</span>
+  Limited consultation spots each month
+  <a href="#written-reading">New: written readings from $98 &rarr;</a>
 </div>
 <!-- ===== HERO / ATF ===== -->
 <section class="hero">
@@ -1191,7 +1217,7 @@ strong.white { color: var(--text); }
       <h1>Stop Swimming Upstream.<br>Start Reading <em>The Map.</em></h1>
     </div>
     <p class="hero-sub fade-up fade-up-d2">
-      You've tried therapy, manifestation, and grinding harder &mdash; but the invisible wall won't move. That's because you're fighting a <strong>timing problem</strong>, not a you problem. Your Vedic birth chart holds the exact dates, directions, and remedies to fix it.
+      You've tried therapy, manifestation, and grinding harder, but the invisible wall won't move. That's because you're fighting a <strong>timing problem</strong>, not a you problem. Your Vedic birth chart holds the exact dates, directions, and remedies to fix it.
     </p>
     <div class="atf-grid fade-up fade-up-d3">
       <div class="vsl-wrapper">
@@ -1207,7 +1233,7 @@ strong.white { color: var(--text); }
       </div>
       <div class="cta-panel">
         <h3>Start With The <span style="color:var(--amber-dim)">Trinity Career Roadmap</span></h3>
-        <p class="sub">The #1 reading people book first. Find out what you're built for &mdash; and exactly when to make the move.</p>
+        <p class="sub">The #1 reading people book first. Find out what you're built for, and exactly when to make the move.</p>
         <div class="price-row">
           <span class="price">$392</span>
         </div>
@@ -1219,8 +1245,9 @@ strong.white { color: var(--text); }
           <li>Specific Vedic career remedies</li>
           <li>60-minute strategy call with Rafi</li>
         </ul>
-        <a href="https://buy.stripe.com/eVqeVfepga0Ug5Q6I2asg0l" class="btn-primary" target="_blank">Get Clarity Now &rarr;</a>
+        <a href="https://buy.stripe.com/eVqeVfepga0Ug5Q6I2asg0l" class="btn-primary" target="_blank" rel="noopener">Get Clarity Now &rarr;</a>
         <a href="#offers" class="btn-secondary">See All Readings</a>
+        <p class="written-link">Prefer no call? <a href="#written-reading">Get a written reading for $98</a></p>
         <div class="guarantee-micro">
           <span>&#128737;</span> 100% money-back guarantee if you don't feel 10x the value in clarity.
         </div>
@@ -1229,18 +1256,19 @@ strong.white { color: var(--text); }
   </div>
 </section>
 <!-- ===== COPY HINGE ===== -->
+<!-- VERIFY: only keep numbers here that you can back up. Edit or delete any that aren't true. -->
 <div class="copy-hinge">
   <div class="container">
     <div class="proof-stats">
       <div class="proof-stat"><div class="num">500+</div><div class="label">Charts Decoded</div></div>
       <div class="proof-stat"><div class="num">12+</div><div class="label">Countries Served</div></div>
-      <div class="proof-stat"><div class="num">99%</div><div class="label">Accuracy Rate (Trinity)</div></div>
+      <div class="proof-stat"><div class="num">3</div><div class="label">Systems Cross-Referenced</div></div>
       <div class="proof-stat"><div class="num">4.9&#9733;</div><div class="label">Client Rating</div></div>
     </div>
     <div class="proof-logos">
       <span>Vedic &middot; Numerology &middot; Chinese Zodiac</span>
       <span>|</span>
-      <span>The "Triangulation" System for 99% Accuracy</span>
+      <span>The "Triangulation" System</span>
     </div>
   </div>
 </div>
@@ -1250,7 +1278,7 @@ strong.white { color: var(--text); }
     <div class="gap-content">
       <div class="section-label">The Truth No One Tells You</div>
       <h2>You're Not Broken. You're Not Lazy. You're <em>Desynchronised.</em></h2>
-      <p>You wake up anxious. You check another horoscope app &mdash; it says "expect a surprise." <strong>Useless.</strong> You need to know if you're going to lose your job, if your relationship is going to survive, if this heaviness in your chest will ever lift.</p>
+      <p>You wake up anxious. You check another horoscope app. It says "expect a surprise." <strong>Useless.</strong> You need to know if you're going to lose your job, if your relationship is going to survive, if this heaviness in your chest will ever lift.</p>
       <p>At work, you watch less talented people get promoted while you feel invisible. You think: <em>"Is it my fate to struggle? Is there a block I can't see?"</em></p>
       <div class="highlight-pain">
         "I'm working twice as hard as everyone else, but I'm moving half as fast. It feels like there's an invisible wall blocking my blessings, and I don't know how to break it down."
@@ -1259,7 +1287,7 @@ strong.white { color: var(--text); }
       <p><strong>But the wall doesn't move.</strong></p>
       <p>Because the wall was never about your effort. It was never about your mindset. It was never about your childhood trauma.</p>
       <div class="highlight-reveal">
-        It's not in your head. It's in your Chart. You're running a "Summer strategy" during a "Winter season" of your life &mdash; and no amount of hustle can force a harvest when the soil is frozen.
+        It's not in your head. It's in your Chart. You're running a "Summer strategy" during a "Winter season" of your life. No amount of hustle can force a harvest when the soil is frozen.
       </div>
       <p>In Vedic Astrology, your life operates on precise planetary cycles called <strong>Dashas</strong>. Each one changes the operating system of your life for years at a time. Right now, you might be in a period designed for <em>stripping away</em>, not building up. Pushing harder during this cycle is like pressing the gas pedal with the car in park.</p>
       <p><strong>The engine screams. But you go nowhere.</strong></p>
@@ -1273,19 +1301,19 @@ strong.white { color: var(--text); }
     <div style="text-align:center; max-width:600px; margin:0 auto;">
       <div class="section-label">Why Nothing Has Worked</div>
       <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,3.5vw,40px); margin-bottom:12px; color:var(--text);">The Graveyard of <em class="gold">Tried Solutions</em></h2>
-      <p style="font-size:16px; color:var(--text-dim);">You're not here because you haven't tried. You're here because everything you tried addresses the <em>symptom</em> &mdash; not the source.</p>
+      <p style="font-size:16px; color:var(--text-dim);">You're not here because you haven't tried. You're here because everything you tried addresses the <em>symptom</em>, not the source.</p>
     </div>
     <div class="failed-grid">
       <div class="failed-card">
         <div class="emoji">&#129504;</div>
         <h4>Talk Therapy / CBT</h4>
-        <p>Gave you coping mechanisms. Helped you understand why you hurt. But it can't explain why bad luck keeps happening &mdash; a breakup, then a lost client, then a health scare &mdash; all in the same month.</p>
+        <p>Gave you coping mechanisms. Helped you understand why you hurt. But it can't explain why bad luck keeps happening: a breakup, then a lost client, then a health scare, all in the same month.</p>
         <div class="verdict">"Therapy holds the umbrella. It doesn't explain why it's been raining on ME for 7 years."</div>
       </div>
       <div class="failed-card">
         <div class="emoji">&#10024;</div>
         <h4>Manifestation / Law of Attraction</h4>
-        <p>You visualised the promotion for months. Kept your "vibration high." Then you got laid off anyway. Now you feel guilty &mdash; like you didn't believe hard enough.</p>
+        <p>You visualised the promotion for months. Kept your "vibration high." Then you got laid off anyway. Now you feel guilty, like you didn't believe hard enough.</p>
         <div class="verdict">"You can't manifest a harvest in the middle of winter, no matter how positive your mindset is."</div>
       </div>
       <div class="failed-card">
@@ -1298,12 +1326,12 @@ strong.white { color: var(--text); }
         <div class="emoji">&#128302;</div>
         <h4>Tarot / Psychic Readings</h4>
         <p>Yesterday the cards said "He's coming back." Today they say "Move on." A dopamine hit that leaves you more confused than when you started.</p>
-        <div class="verdict">"Guesswork without a system. I don't want magic tricks &mdash; I want a diagnostic."</div>
+        <div class="verdict">"Guesswork without a system. I don't want magic tricks. I want a diagnostic."</div>
       </div>
       <div class="failed-card">
         <div class="emoji">&#128218;</div>
         <h4>Hustle / Self-Help Books</h4>
-        <p>Atomic Habits. 5 AM Club. You optimised everything. You're still stuck. Because hard work isn't the missing ingredient &mdash; <strong>timing</strong> is.</p>
+        <p>Atomic Habits. 5 AM Club. You optimised everything. You're still stuck. Because hard work isn't the missing ingredient. <strong>Timing</strong> is.</p>
         <div class="verdict">"I'm swimming upstream against a current I can't see."</div>
       </div>
       <div class="failed-card">
@@ -1321,30 +1349,30 @@ strong.white { color: var(--text); }
     <div class="bridge-intro">
       <div class="section-label">The Bridge</div>
       <h2>Introducing The <em>Trinity Method</em></h2>
-      <p>Most astrologers use one system. I use three &mdash; cross-referenced for a level of precision that borders on uncomfortable. This isn't personality fluff. This is a <strong>strategic life audit</strong> that tells you exactly what's happening, when it changes, and what to do about it.</p>
+      <p>Most astrologers use one system. I use three, cross-referenced for a level of precision that borders on uncomfortable. This isn't personality fluff. This is a <strong>strategic life audit</strong> that tells you what's happening, when it changes, and what to do about it.</p>
     </div>
     <div class="trinity-grid">
       <div class="trinity-card">
         <div class="icon">&#127775;</div>
         <div class="role">The "What"</div>
         <h3>Vedic Astrology</h3>
-        <p>The detailed map of your karma, timing windows, and planetary periods. Shows you the exact dates things shift &mdash; and the specific remedies to accelerate or ease the transition.</p>
+        <p>The detailed map of your karma, timing windows, and planetary periods. Shows you the dates things shift, and the specific remedies to accelerate or ease the transition.</p>
       </div>
       <div class="trinity-card">
         <div class="icon">&#128290;</div>
         <div class="role">The "How"</div>
         <h3>Numerology</h3>
-        <p>The underlying frequency code of your life path. Reveals your natural strengths, hidden blind spots, and the personal year cycle you're operating in right now.</p>
+        <p>The underlying code of your life path. Reveals your natural strengths, hidden blind spots, and the personal year cycle you're operating in right now.</p>
       </div>
       <div class="trinity-card">
         <div class="icon">&#128009;</div>
         <div class="role">The "When"</div>
         <h3>Chinese Zodiac</h3>
-        <p>The primal energy driving your compatibility and yearly cycles. The final cross-reference that pushes accuracy from "good guess" to "how do you know this about me?"</p>
+        <p>The primal energy driving your compatibility and yearly cycles. The final cross-reference that takes a reading from "good guess" to "how do you know this about me?"</p>
       </div>
     </div>
     <div class="bridge-reveal">
-      <h3>Three Systems. One Verdict. <span style="color:var(--amber-dim)">99% Accuracy.</span></h3>
+      <h3>Three Systems. <span style="color:var(--amber-dim)">One Verdict.</span></h3>
       <p>When all three systems point in the same direction, the reading stops feeling like astrology and starts feeling like someone handed you the answer sheet to your life.</p>
     </div>
   </div>
@@ -1360,13 +1388,13 @@ strong.white { color: var(--text); }
       <div class="origin-text">
         <div class="section-label">Who Built This</div>
         <h2>I Never Wanted to Be <em>"The Astrology Guy."</em></h2>
-        <p>Honestly? I used to scroll past horoscope content the same way you probably do. It all sounded the same &mdash; vague, recycled, and wrong half the time.</p>
-        <p>But then friends started sending me tweets and TikToks. "Rafi, look at this &mdash; is this true?" And every time I looked, the person was <strong>just making things up.</strong> Saying whatever sounded good for likes. No actual system behind it.</p>
-        <p>It bothered me. Not because I cared about astrology &mdash; but because <strong>people were making real life decisions based on completely inaccurate information.</strong></p>
+        <p>Honestly? I used to scroll past horoscope content the same way you probably do. It all sounded the same: vague, recycled, and wrong half the time.</p>
+        <p>But then friends started sending me tweets and TikToks. "Rafi, look at this. Is this true?" And every time I looked, the person was <strong>just making things up.</strong> Saying whatever sounded good for likes. No actual system behind it.</p>
+        <p>It bothered me. Not because I cared about astrology, but because <strong>people were making real life decisions based on completely inaccurate information.</strong></p>
         <div class="us-vs-them">
-          So I went down the rabbit hole. Not to become an astrologer &mdash; but to find out what was actually real and what was nonsense. That rabbit hole turned into years of studying Vedic Astrology, Numerology, and the Chinese Zodiac &mdash; three systems that, when cross-referenced, are <strong>almost impossible to get wrong.</strong>
+          So I went down the rabbit hole. Not to become an astrologer, but to find out what was actually real and what was nonsense. That rabbit hole turned into years of studying Vedic Astrology, Numerology, and the Chinese Zodiac: three systems that, cross-referenced, give <strong>a level of precision no single system can.</strong>
         </div>
-        <p>I didn't choose this. The misinformation dragged me into it. And now I can't unsee what the charts reveal &mdash; so I might as well make sure <strong>you</strong> get the real version, not the Twitter version.</p>
+        <p>I didn't choose this. The misinformation dragged me into it. And now I can't unsee what the charts reveal, so I might as well make sure <strong>you</strong> get the real version, not the Twitter version.</p>
       </div>
     </div>
   </div>
@@ -1396,8 +1424,8 @@ strong.white { color: var(--text); }
         <h4>After</h4>
         <ul>
           <li>"I know exactly what season I'm in"</li>
-          <li>Decisions backed by cosmic data</li>
-          <li>Clarity on who's aligned &mdash; and who's not</li>
+          <li>Decisions backed by your chart</li>
+          <li>Clarity on who's aligned, and who's not</li>
           <li>Strategic execution in "green light" windows</li>
           <li>Specific remedies to seal the energy leak</li>
           <li>"It's a timing issue. I have the roadmap."</li>
@@ -1414,14 +1442,14 @@ strong.white { color: var(--text); }
       <div class="section-label">Real Results</div>
       <h2 style="font-family:'Instrument Serif',serif; font-size:clamp(28px,3.5vw,40px); color:var(--text);">Don't Take My Word. <em class="gold">Take Theirs.</em></h2>
     </div>
-    <div class="proof-cards" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;"><img src="https://iili.io/qJzRWBf.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy"></div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;"><img src="https://iili.io/qJzRw22.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy"></div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;"><img src="https://iili.io/qJzRN7S.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy"></div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;"><img src="https://iili.io/qJzR7gp.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy"></div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;"><img src="https://iili.io/qJzRlet.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy"></div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;"><img src="https://iili.io/qJzRadN.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy"></div>
-      <div class="proof-card" style="padding:0; overflow:hidden; border-radius:12px;"><img src="https://iili.io/qJzR0mX.jpg" alt="Client testimonial" style="width:100%; height:auto; display:block;" loading="lazy"></div>
+    <div class="proof-cards">
+      <div class="proof-card"><img src="https://iili.io/qJzRWBf.jpg" alt="Client testimonial" loading="lazy"></div>
+      <div class="proof-card"><img src="https://iili.io/qJzRw22.jpg" alt="Client testimonial" loading="lazy"></div>
+      <div class="proof-card"><img src="https://iili.io/qJzRN7S.jpg" alt="Client testimonial" loading="lazy"></div>
+      <div class="proof-card"><img src="https://iili.io/qJzR7gp.jpg" alt="Client testimonial" loading="lazy"></div>
+      <div class="proof-card"><img src="https://iili.io/qJzRlet.jpg" alt="Client testimonial" loading="lazy"></div>
+      <div class="proof-card"><img src="https://iili.io/qJzRadN.jpg" alt="Client testimonial" loading="lazy"></div>
+      <div class="proof-card"><img src="https://iili.io/qJzR0mX.jpg" alt="Client testimonial" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -1431,33 +1459,15 @@ strong.white { color: var(--text); }
   <div class="container">
     <div class="section-label" style="display:flex; justify-content:center;">Choose Your Level</div>
     <h2>Pick The Reading That <em>Matches Your Pain</em></h2>
-    <p class="offers-sub">Every reading includes 5-14 days of personalised chart preparation. This isn't a script. It's surgery.</p>
+    <p class="offers-sub">Every consultation includes 5 to 14 days of personalised chart preparation. This isn't a script. It's surgery.</p>
     <div class="offers-grid">
-      <!-- CARD 1: Numerology -->
-      <div class="offer-card">
-        <div class="icon">&#128290;</div>
-        <h3>Numerology Power Reading</h3>
-        <div class="tagline">The "Quick Clarity" Diagnostic</div>
-        <p class="desc">Know your Life Path number, personal year cycle, and core strengths in 30 focused minutes. Perfect if you need fast strategic intel on what season you're in <em>right now</em>.</p>
-        <div class="price-row">
-          <span class="price">$65</span>
-        </div>
-        <ul class="offer-features">
-          <li>Life Path &amp; Destiny Number decoded</li>
-          <li>Personal Year Cycle (your current "season")</li>
-          <li>Core Strengths Assessment</li>
-          <li><strong>30-min 1-on-1 video call</strong></li>
-          <li>5 days of personalised chart prep</li>
-        </ul>
-        <a href="https://buy.stripe.com/14AcN7epga0UbPA5DYasg04" class="btn-secondary" target="_blank">Book Quick Clarity &rarr;</a>
-      </div>
-      <!-- CARD 2: FEATURED — Career -->
+      <!-- CARD 1: FEATURED Career -->
       <div class="offer-card featured">
         <div class="offer-badge">Most Popular</div>
         <div class="icon">&#128640;</div>
         <h3>Trinity Career Roadmap</h3>
         <div class="tagline">Stop Climbing The Wrong Ladder</div>
-        <p class="desc">Decode your Dharma. Find out what you're actually built for &mdash; and <em>when</em> to make the move. Includes promotion windows, career switch analysis, and specific Vedic remedies for professional breakthroughs.</p>
+        <p class="desc">Decode your Dharma. Find out what you're actually built for, and <em>when</em> to make the move. Includes promotion windows, career switch analysis, and specific Vedic remedies for professional breakthroughs.</p>
         <div class="price-row">
           <span class="price">$392</span>
         </div>
@@ -1466,18 +1476,17 @@ strong.white { color: var(--text); }
           <li>Timing: when to push for promotion</li>
           <li>"Should I switch careers?" chart verdict</li>
           <li>Specific Vedic career remedies</li>
-          <li>Statistical professional analysis</li>
           <li><strong>60-min strategy call</strong></li>
           <li>5 days of career-focused prep</li>
         </ul>
-        <a href="https://buy.stripe.com/eVqeVfepga0Ug5Q6I2asg0l" class="btn-primary" target="_blank">Book Your Career Roadmap &rarr;</a>
+        <a href="https://buy.stripe.com/eVqeVfepga0Ug5Q6I2asg0l" class="btn-primary" target="_blank" rel="noopener">Book Your Career Roadmap &rarr;</a>
       </div>
-      <!-- CARD 3: Compatibility -->
+      <!-- CARD 2: Compatibility -->
       <div class="offer-card">
         <div class="icon">&#128158;</div>
         <h3>Trinity Compatibility Analysis</h3>
-        <div class="tagline">Is This Person "The One" &mdash; or a Karmic Lesson?</div>
-        <p class="desc">The full three-system deep-dive into your relationship. Stop guessing. Get the cold, hard data on whether this connection is destined to thrive &mdash; or designed to teach you something and end.</p>
+        <div class="tagline">Is This Person "The One", or a Karmic Lesson?</div>
+        <p class="desc">The full three-system deep dive into your relationship. Stop guessing. Get the cold, hard data on whether this connection is built to thrive, or designed to teach you something and end.</p>
         <div class="price-row">
           <span class="price">$347</span>
           <span class="price-orig">$497</span>
@@ -1491,14 +1500,14 @@ strong.white { color: var(--text); }
           <li><strong>60-min deep-dive call</strong></li>
           <li>5 days of dual-chart preparation</li>
         </ul>
-        <a href="https://buy.stripe.com/3cI00lgxo3Cwf1M0jEasg0m" class="btn-secondary" target="_blank">Get Clarity On Your Relationship &rarr;</a>
+        <a href="https://buy.stripe.com/3cI00lgxo3Cwf1M0jEasg0m" class="btn-secondary" target="_blank" rel="noopener">Get Clarity On Your Relationship &rarr;</a>
       </div>
-      <!-- CARD 4: Full Blueprint -->
+      <!-- CARD 3: Full Blueprint -->
       <div class="offer-card">
         <div class="icon">&#128220;</div>
         <h3>Complete Blueprint Analysis</h3>
-        <div class="tagline">The "Billionaire's Blueprint" &mdash; Your Entire Life, Decoded</div>
-        <p class="desc">The full, comprehensive decoding of your design across all systems. Career, wealth, relationships, timing, health, purpose. This is the map for your entire life &mdash; not just a chapter.</p>
+        <div class="tagline">Your Entire Life, Decoded</div>
+        <p class="desc">The full decoding of your design across all systems. Career, wealth, relationships, timing, health, purpose. This is the map for your entire life, not just a chapter.</p>
         <div class="price-row">
           <span class="price">$707</span>
         </div>
@@ -1512,11 +1521,31 @@ strong.white { color: var(--text); }
           <li><strong>90-min strategy call</strong></li>
           <li><strong>14 days</strong> of deep-dive preparation</li>
         </ul>
-        <a href="https://buy.stripe.com/cNi28t2Gy8WQ7zk6I2asg0n" class="btn-primary" target="_blank">Decode Your Full Blueprint &rarr;</a>
+        <a href="https://buy.stripe.com/cNi28t2Gy8WQ7zk6I2asg0n" class="btn-primary" target="_blank" rel="noopener">Decode Your Full Blueprint &rarr;</a>
+      </div>
+    </div>
+    <!-- AFFORDABLE WRITTEN READING -->
+    <div class="written-option" id="written-reading">
+      <div>
+        <div class="wo-label">The More Affordable Option</div>
+        <h3>Not ready for a full consultation? Get your answers in writing.</h3>
+        <p class="wo-desc">Send me your 5 biggest questions. I'll answer each one from your birth chart and numerology in a personal PDF report.</p>
+        <ul class="offer-features">
+          <li><strong>5 questions</strong> answered from your chart</li>
+          <li>No call needed</li>
+          <li>Delivered within 48 hours of your intake form</li>
+          <li>Your $98 counts toward a full consultation if you upgrade within 14 days</li>
+        </ul>
+      </div>
+      <div class="wo-price-box">
+        <div class="wo-compare"><span>Full consultation</span><span class="strike">from $347</span></div>
+        <div class="wo-compare now"><span>Written reading</span><span class="wo-price">$98</span></div>
+        <!-- REPLACE with your $98 Stripe link. Set Stripe's success redirect to your intake form. -->
+        <a href=https://buy.stripe.com/eVq3cxch82ysaLw3vQasg0A class="btn-primary" target="_blank" rel="noopener">Get My Written Reading, $98 &rarr;</a>
       </div>
     </div>
     <div class="bonus-banner">
-      <div class="bonus-tag">Free Bonus With Every Reading</div>
+      <div class="bonus-tag">Free Bonus With Every Consultation</div>
       <h4>3 Months Free Access to the Private Skool Community</h4>
       <p>Get ongoing guidance, exclusive content, and direct access to Rafi. Plus: a <strong>free implementation call</strong> to make sure you know exactly how to use your reading.</p>
     </div>
@@ -1529,12 +1558,12 @@ strong.white { color: var(--text); }
     <div class="guarantee-box">
       <div class="shield">&#128737;</div>
       <h3>The "10x Clarity" <span style="color:var(--emerald)">Guarantee</span></h3>
-      <p>If you complete your reading and don't feel it gave you at least 10x the value in clarity and strategic direction, I'll refund 100% of your money. No questions. No hoops. My reputation is on the line with every session &mdash; and I'd rather lose the money than lose your trust.</p>
+      <p>If you complete your reading and don't feel it gave you at least 10x the value in clarity and strategic direction, I'll refund 100% of your money. No questions. No hoops. My reputation is on the line with every session, and I'd rather lose the money than lose your trust.</p>
       <div class="guarantee-sig">
         <img src="https://iili.io/qJz7S0x.jpg" alt="Rafi" loading="lazy">
         <div>
           <div class="name">Rafi</div>
-          <div class="title">Creator, "The Billionaire's Blueprint"</div>
+          <div class="title">Creator of the Trinity Method</div>
         </div>
       </div>
     </div>
@@ -1550,27 +1579,31 @@ strong.white { color: var(--text); }
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-q">Is this just going to tell me what I want to hear?</button>
-        <div class="faq-a"><div class="faq-a-inner">No. This isn't a cold read or a dopamine hit. I spend 5-14 days analysing your chart before we ever speak. The Trinity Method cross-references three independent systems &mdash; if they all point in the same direction, the reading is accurate whether you like what it says or not. I tell you what the chart shows, not what makes you feel good.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">No. This isn't a cold read or a dopamine hit. I spend 5 to 14 days analysing your chart before we ever speak. The Trinity Method cross-references three independent systems. When they point in the same direction, I tell you what the chart shows, not what makes you feel good.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">I'm sceptical of astrology. Will this work for me?</button>
-        <div class="faq-a"><div class="faq-a-inner">Good &mdash; sceptics are my best clients. Vedic astrology isn't the fluffy Sun-sign content you see on Instagram. It's a 5,000-year-old mathematical system based on precise astronomical calculations. There's a reason Silicon Valley CEOs and Wall Street traders quietly consult Vedic advisors. This isn't about belief &mdash; it's about data.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Good. Sceptics are my best clients. Vedic astrology isn't the fluffy Sun-sign content you see on Instagram. It's a mathematical system built on precise astronomical calculations. This isn't about belief. It's about a system you can test against your own life, and see for yourself.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">How is this different from Western astrology or Co-Star?</button>
-        <div class="faq-a"><div class="faq-a-inner">Western astrology is based on the Sun and focuses on personality ("You're a Gemini, you're fun"). Vedic astrology is based on the Moon and focuses on <strong>timing</strong> &mdash; it tells you <em>when</em> things happen, not just who you are. Add Numerology and Chinese Zodiac cross-referencing, and you get a level of specificity that generic apps physically can't offer.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Western astrology is based on the Sun and focuses on personality ("You're a Gemini, you're fun"). Vedic astrology is based on the Moon and focuses on <strong>timing</strong>. It tells you <em>when</em> things happen, not just who you are. Add Numerology and Chinese Zodiac cross-referencing, and you get a level of specificity generic apps can't offer.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Is this fatalistic? Does it mean I have no free will?</button>
-        <div class="faq-a"><div class="faq-a-inner">Not at all. Think of it like a weather report. You don't control the weather, but you control what you wear. Vedic astrology shows you the "weather" of your life &mdash; and gives you specific remedies (mantras, gemstones, behavioural shifts) to navigate it. You have about 60% free will. This system optimises how you use it.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Not at all. Think of it like a weather report. You don't control the weather, but you control what you wear. Vedic astrology shows you the "weather" of your life and gives you specific remedies (mantras, gemstones, behavioural shifts) to navigate it.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Why do you need 5-14 days to prepare?</button>
+        <button class="faq-q">What's the difference between the written reading and a consultation?</button>
+        <div class="faq-a"><div class="faq-a-inner">The <strong>written reading ($98)</strong> answers 5 specific questions from your chart in a PDF, delivered within 48 hours, with no call. A <strong>consultation</strong> is a full deep dive with days of preparation and a live call where you can ask follow-up questions. If you start with the written reading, your $98 counts toward a consultation if you upgrade within 14 days.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Why do you need 5 to 14 days to prepare for a consultation?</button>
         <div class="faq-a"><div class="faq-a-inner">Because I don't read from a script. I personally spend days studying your chart across all three systems, cross-referencing patterns, and preparing detailed notes. When we get on the call, I already know your chart inside out. That prep time is what separates a strategic audit from a generic reading.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Which reading should I start with?</button>
-        <div class="faq-a"><div class="faq-a-inner">If you're focused on direction and momentum, start with the <strong>Trinity Career Roadmap</strong> &mdash; it's the most popular for a reason. If you're navigating a relationship (or considering one), go with the <strong>Trinity Compatibility Analysis</strong>. If you want the full picture of everything, the <strong>Complete Blueprint</strong> covers your entire life map.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">If you're focused on direction and momentum, start with the <strong>Trinity Career Roadmap</strong>. It's the most popular for a reason. If you're navigating a relationship, go with the <strong>Trinity Compatibility Analysis</strong>. If you want everything, the <strong>Complete Blueprint</strong> covers your entire life map. If you just have a few specific questions, start with the <strong>written reading</strong>.</div></div>
       </div>
     </div>
   </div>
@@ -1581,73 +1614,14 @@ strong.white { color: var(--text); }
     <h2>Stop Guessing.<br>Start <em>Knowing.</em></h2>
     <p>You can keep swimming upstream. Or you can finally read the map that was written for you the moment you were born.</p>
     <a href="#offers" class="btn-primary">Choose Your Reading &rarr;</a>
+    <p class="final-alt">Or start smaller: <a href="#written-reading">a written reading for $98</a></p>
   </div>
 </section>
 <footer class="footer">
-  &copy; 2026 Rafi's World. All rights reserved.
+  &copy; 2026 Rafi's World. All rights reserved. Readings are for guidance and coaching purposes and are not a substitute for medical, legal, financial, or psychological advice.
 </footer>
-<!-- ===== SOCIAL PROOF POPUP ===== -->
-<div class="popup" id="popup">
-  <div class="emoji">&#128293;</div>
-  <div class="popup-text" id="popup-text">
-    <p style="margin:0;"><strong>Jean</strong> from France just booked a <span class="product">Trinity Compatibility Reading</span></p>
-    <div class="time-ago">2 minutes ago</div>
-  </div>
-</div>
 <!-- ===== SCRIPTS ===== -->
 <script>
-// COUNTDOWN TIMER
-(function() {
-  const key = 'rafy_discount_end';
-  let endTime = localStorage.getItem(key);
-  if (!endTime) {
-    endTime = Date.now() + 48 * 60 * 60 * 1000;
-    localStorage.setItem(key, endTime);
-  }
-  endTime = parseInt(endTime);
-  function update() {
-    const now = Date.now();
-    let diff = Math.max(0, endTime - now);
-    const h = Math.floor(diff / 3600000); diff %= 3600000;
-    const m = Math.floor(diff / 60000); diff %= 60000;
-    const s = Math.floor(diff / 1000);
-    const el = document.getElementById('countdown');
-    if (el) el.textContent =
-      String(h).padStart(2,'0') + ':' +
-      String(m).padStart(2,'0') + ':' +
-      String(s).padStart(2,'0');
-  }
-  update();
-  setInterval(update, 1000);
-})();
-// SOCIAL PROOF POPUP
-(function() {
-  const purchases = [
-    { name: 'Jean', loc: 'France', product: 'Trinity Compatibility Reading' },
-    { name: 'Paul', loc: 'England', product: 'Complete Blueprint Analysis' },
-    { name: 'Mike', loc: 'New York', product: 'Numerology Power Reading' },
-    { name: 'Sarah', loc: 'London', product: 'Trinity Compatibility Reading' },
-    { name: 'Alex', loc: 'Germany', product: 'Complete Blueprint Analysis' },
-    { name: 'David', loc: 'Manchester', product: 'Trinity Career Roadmap' },
-    { name: 'Fatima', loc: 'Dubai', product: 'Trinity Career Roadmap' },
-    { name: 'Chris', loc: 'Australia', product: 'Numerology Power Reading' }
-  ];
-  const popup = document.getElementById('popup');
-  const text = document.getElementById('popup-text');
-  let last = -1;
-  function show() {
-    let i = Math.floor(Math.random() * purchases.length);
-    if (i === last) i = (i + 1) % purchases.length;
-    last = i;
-    const p = purchases[i];
-    const t = Math.floor(Math.random() * 10) + 1;
-    text.innerHTML = '<p style="margin:0;"><strong>' + p.name + '</strong> from ' + p.loc + ' just booked a <span class="product">' + p.product + '</span></p><div class="time-ago">' + t + ' minutes ago</div>';
-    popup.classList.add('show');
-    setTimeout(function() { popup.classList.remove('show'); }, 5000);
-  }
-  setTimeout(show, 6000);
-  setInterval(show, 18000);
-})();
 // FAQ ACCORDION
 document.querySelectorAll('.faq-q').forEach(function(btn) {
   btn.addEventListener('click', function() {
@@ -1664,7 +1638,7 @@ document.querySelectorAll('.faq-q').forEach(function(btn) {
     }
   });
 });
-// Clarity — deferred so it doesn't block LCP
+// Clarity, deferred so it doesn't block LCP
 window.addEventListener('load', function() {
   setTimeout(function() {
     (function(c,l,a,r,i,t,y){
